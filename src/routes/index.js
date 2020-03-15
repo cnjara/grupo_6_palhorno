@@ -42,4 +42,8 @@ router.get('/registro', function(req, res, next) {
   res.render('registro', { title: 'Express' });
 });
 
+router.get('/editar', function(req, res, next) {
+  res.render('editar', { title: 'Express' });
+});
+
 module.exports = router;
