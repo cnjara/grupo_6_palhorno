@@ -1,6 +1,8 @@
 # Grupo 6: Pal Horno
 
 ## Productos y Servicios
+ # Somos un negocio especializado en la producción y venta de diferentes tipos de pan, facturas, galletas y galletitas, masas finas, tortas, muffins, masa para pizzas, tartas y en algunos casos también comidas saladas.
+ # Así como también de todo tipo de productos hechos en base a la harina y a los bollos de masa.
 
 ## Público Objetivo
 
