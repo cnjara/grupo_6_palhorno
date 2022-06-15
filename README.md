@@ -5,10 +5,13 @@
  # Así como también de todo tipo de productos hechos en base a la harina y a los bollos de masa.
 
 ## Público Objetivo
+# Brindamos un buen servicio, para satifacer a todos los consumidores produciendo gran variedad de produtos con excelente valor nutricional.
 
 ## Integrantes
-
--
+# Cristian Jara
+# Bettina Oña Ventura
+# Jose Betancur
+# Leonardo Gomez
 -
 -
 -
