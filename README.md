@@ -32,3 +32,4 @@ Somos un negocio especializado en la producción y venta de diferentes tipos de 
 
 ## Diseño Final
 - Bettina Oña Ventura - <https://www.figma.com/file/NoMcVEveyEN4Jp142S7QXI/Untitled?node-id=2%3A2>
+- Wireframe Desktop / Tablet / Mobile - <https://www.figma.com/file/T8y0VqFkXKWQZz2b3ELyd2/Pal-Horno---Dise%C3%B1o-Base?node-id=0%3A1>
