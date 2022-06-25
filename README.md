@@ -11,25 +11,27 @@ Somos un negocio especializado en la producción y venta de diferentes tipos de 
 
 ## Integrantes
 
-- Bettina Oña Ventura, 24 años, Piedra del Águila, Neuquén.
-- Cristian Jara, 36 años, Lanús, Buenos Aires.
-- Jose Betancur
-- Leonardo Gomez
+* Bettina Oña Ventura, 24 años, Piedra del Águila, Neuquén.
+* Cristian Jara, 36 años, Lanús, Buenos Aires.
+* Jose Betancur
+* Leonardo Gomez
 
 ## Sitios de referencia
 
-- <http://www.laalvear.com.ar/> de este sitio me gustó la presentación de las categorías y descripciones de los productos en el inicio.
-- <https://confiterialaslomas.com.ar/product-category/dulce/> de este sitio me gustó el detalle de los productos.
-- <http://www.eventosdelvalle.com.ar> - Minimalista con un diseño simple pero funcional, la página principal no está recargada de información.
-- <https://www.pertutti.com.ar> - Utilización de los espacios y fotografías como parte del diseño y una estética muy cuidada.
-- <https://thedelight.com.ar/> - Presentación de productos muy llamativa y espaciada.
+* <http://www.laalvear.com.ar/> de este sitio me gustó la presentación de las categorías y descripciones de los productos en el inicio.
+* <https://confiterialaslomas.com.ar/product-category/dulce/> de este sitio me gustó el detalle de los productos.
+* <http://www.eventosdelvalle.com.ar> - Minimalista con un diseño simple pero funcional, la página principal no está recargada de información.
+* <https://www.pertutti.com.ar> - Utilización de los espacios y fotografías como parte del diseño y una estética muy cuidada.
+* <https://thedelight.com.ar/> - Presentación de productos muy llamativa y espaciada.
 
 ## Diseños Iniciales
-- Bettina Oña Ventura - <https://www.figma.com/file/NoMcVEveyEN4Jp142S7QXI/Untitled?node-id=2%3A2>
-- Cristian Jara - <https://www.figma.com/file/BnzNh04MWlwtDcfigZLVJb/Pal-Horno---General?node-id=0%3A1>
-- Jose Betancur - 
-- Leonardo Gomez - 
+
+* Bettina Oña Ventura - <https://www.figma.com/file/NoMcVEveyEN4Jp142S7QXI/Untitled?node-id=2%3A2>
+* Cristian Jara - <https://www.figma.com/file/BnzNh04MWlwtDcfigZLVJb/Pal-Horno---General?node-id=0%3A1>
+* Jose Betancur - 
+* Leonardo Gomez - 
 
 ## Diseño Final
-- Bettina Oña Ventura - <https://www.figma.com/file/NoMcVEveyEN4Jp142S7QXI/Untitled?node-id=2%3A2>
-- Wireframe Desktop / Tablet / Mobile - <https://www.figma.com/file/T8y0VqFkXKWQZz2b3ELyd2/Pal-Horno---Dise%C3%B1o-Base?node-id=0%3A1>
+
+* Bettina Oña Ventura - <https://www.figma.com/file/NoMcVEveyEN4Jp142S7QXI/Untitled?node-id=2%3A2>
+* Wireframe Desktop / Tablet / Mobile - <https://www.figma.com/file/T8y0VqFkXKWQZz2b3ELyd2/Pal-Horno---Dise%C3%B1o-Base?node-id=0%3A1>
