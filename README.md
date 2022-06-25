@@ -12,6 +12,11 @@ Brindamos un buen servicio, para satifacer a todos los consumidores produciendo 
 ## Integrantes
 
 - Cristian Jara
-- Bettina Oña Ventura
+- Bettina Oña Ventura, 24 años, Piedra del Águila, Neuquén.
 - Jose Betancur
 - Leonardo Gomez
+
+## Sitios de referencia
+
+- <http://www.laalvear.com.ar/> de este sitio me gustó la presentación de las categorías y descripciones de los productos en el inicio.
+- <https://confiterialaslomas.com.ar/product-category/dulce/> de este sitio me gustó el detalle de los productos.
