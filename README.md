@@ -13,7 +13,7 @@ Somos un negocio especializado en la producción y venta de diferentes tipos de 
 
 * Bettina Oña Ventura, 24 años, Piedra del Águila, Neuquén.
 * Cristian Jara, 36 años, Lanús, Buenos Aires.
-* Jose Betancur
+* Jose Betancur, 22 años, Cutral.co, Neuquén.
 * Leonardo Gomez
 
 ## Sitios de referencia
@@ -28,7 +28,7 @@ Somos un negocio especializado en la producción y venta de diferentes tipos de 
 
 * Bettina Oña Ventura - <https://www.figma.com/file/NoMcVEveyEN4Jp142S7QXI/Untitled?node-id=2%3A2>
 * Cristian Jara - <https://www.figma.com/file/BnzNh04MWlwtDcfigZLVJb/Pal-Horno---General?node-id=0%3A1>
-* Jose Betancur - 
+* Jose Betancur - <https://wireframe.cc/ozu105>
 * Leonardo Gomez - 
 
 ## Diseño Final
