@@ -22,7 +22,7 @@ Somos un negocio especializado en la producción y venta de diferentes tipos de 
 * <https://confiterialaslomas.com.ar/product-category/dulce/> de este sitio me gustó el detalle de los productos.
 * <http://www.eventosdelvalle.com.ar> - Minimalista con un diseño simple pero funcional, la página principal no está recargada de información.
 * <https://www.pertutti.com.ar> - Utilización de los espacios y fotografías como parte del diseño y una estética muy cuidada.
-* <https://thedelight.com.ar/> - Presentación de productos muy llamativa y espaciada.
+* <https://thedelight.com.ar> - Presentación de productos muy llamativa y espaciada.
 
 ## Diseños Iniciales
 
