@@ -1,0 +1,23 @@
+{
+  "name": "grupo_6_palhorno",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador, Comisión 15, Grupo 6, Pal Horno.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cnjara/grupo_6_palhorno.git"
+  },
+  "author": "Bettina Oña Ventura, Cristian Jara, Jose Betancur, Leonardo Gómez.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cnjara/grupo_6_palhorno/issues"
+  },
+  "homepage": "https://github.com/cnjara/grupo_6_palhorno#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
