@@ -1,0 +1,101 @@
+.body__header {
+	background: url("/images/header-background.webp");
+	background-size: cover;
+	background-position: center bottom;
+	/* filter: blur(8px); */
+	display: flex;
+	flex-direction: row;
+	padding: 15px;
+}
+.body__header a {
+	color: var(--Blanco)
+}
+
+
+
+.body__header--section-1 {
+	/* border: solid 1px red; */
+	width: 33%;
+	display: flex;
+	align-items: center;
+	align-self: stretch;
+}
+.body__header--section-2 {
+	/* border: solid 1px red; */
+	width: 34%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: stretch;
+}
+.body__header--section-3 {
+	/* border: solid 1px red; */
+	display: none;
+	justify-content: center;
+	align-items: center;
+	align-self: stretch;
+}
+.body__header--section-4 {
+	/* border: solid 1px red; */
+	width: 33%;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	align-self: stretch;
+}
+
+
+
+
+.body__header--hamburguesa {
+	padding: 10px;
+	display: inline-block;
+}
+.body__header--logo {
+	display: flex;
+	justify-content: center;
+}
+.body__header--logo img {
+	width: 100%;
+}
+.body__header--menu {
+	display: flex;
+	flex-direction: row;
+	text-transform: uppercase;
+}
+.body__header--menu ul {
+	display: flex;
+	flex-direction: row;
+}
+.body__header--menu ul li {
+	padding: 10px;
+}
+
+.body__header--user i {
+	padding: 10px;
+	display: inline-block;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+	
+}
+@media (min-width: 1024px) {
+	.body__header--section-1 {
+		display: none;
+	}
+	.body__header--section-2 {
+		width: 20%;
+	}
+	.body__header--section-3 {
+		width: 60%;
+		display: flex;
+		justify-content: center;
+	}
+	.body__header--section-4 {
+		width: 20%;
+	}
+}
