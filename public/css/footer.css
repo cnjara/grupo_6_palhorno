@@ -1,9 +1,16 @@
 .body__footer {
-	background-color: orange; /* ! BORRAR */
+	background-color: var(--CaobaOscuro);
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
 	padding: 20px;
+	font-family: 'Uchen', serif;
+	font-weight: 400;
+}
+.body__footer a {
+	color: var(--Blanco);
 }
 .body__footer--logo {
 	display: none;
@@ -13,23 +20,27 @@
 	flex-direction: row;
 	width: 100%;
 	flex-wrap: wrap;
+	line-height: 1.8em;
+	text-transform: uppercase;
+	padding-bottom: 20px;
 }
 .body__footer--menu ul {
 	width: 50%;
 }
-.body__footer--menu ul {
-	text-align: center;
+.body__footer--menu a:hover {
+	color: var(--KakiOscuro);
 }
 .body__footer--social {
 	width: 80%;
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
-
 }
 .body__footer--social i {
-	background-color: white;
-	border: 1px solid white;
+	background-color: var(--Blanco);
+	border: 1px solid var(--Blanco);
+	color: var(--CaobaOscuro);
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
@@ -39,25 +50,56 @@
 }
 
 
-
-
+.body__footer--social a:hover {
+	transform: scale(1.3);
+}
 .body__footer--social .fa-facebook-f:hover {
 	background-color: #4267B2;
 	color: var(--Blanco);
-	transition: 500ms;
 }
 .body__footer--social .fa-instagram:hover {
 	background-color: #E1306C;
 	color: var(--Blanco);
-	transition: 500ms;
 }
 .body__footer--social .fa-at:hover {
 	background-color: #898F9C;
 	color: var(--Blanco);
-	transition: 500ms;
 }
 .body__footer--social .fa-whatsapp:hover {
 	background-color: #25D366;
 	color: var(--Blanco);
-	transition: 500ms;
+}
+
+
+
+@media (min-width: 768px) {
+	.body__footer {
+		flex-direction: row;
+	}
+	.body__footer--menu {
+		width: 50%;
+		padding-bottom: 0;
+	}
+	.body__footer--social {
+		width: 50%;
+	}
+}
+@media (min-width: 1024px) {
+	.body__footer--logo {
+		width: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-self: stretch;
+	}
+	.body__footer--menu {
+		width: 40%;
+	}
+	.body__footer--menu ul {
+		padding-left: 45px;
+	}
+	.body__footer--social {
+		width: 40%;
+		padding: 0 60px;
+	}
 }

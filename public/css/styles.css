@@ -2,6 +2,8 @@
 @import url('header.css');
 @import url('main.css');
 @import url('footer.css');
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 /* https://coolors.co/262322-63372c-8e3200-ffbcb5-f2e5d7 */
 
@@ -9,20 +11,39 @@
 	--CaobaOscuro: #8E3200;
 	--CaobaClaro: #A64B2A;
 	--Melon: #FFBCB5;
+	--MarronCeniza: #6B5A53;
 	--KakiOscuro: #D7A86E;
 	--KakiClaro: #FFEBC1;
 	--Almendra: #F2E5D7;
 	--NegroPasa: #262322;
 	--Blanco: #FFFFFF;
 	--Negro: #000000;
-	--tamañoNormal: 12px;
-	--tamañoTitular: 24px;
-	--tamañoDescripciones: 16px;
-	--tamañoIconoGrande: 2em;
-	--tamañoIconoMediano: 24px;
+	--tamañoNormal: 16px;
+	--tamañoDescripciones: 22px;
+	--tamañoTitular1: 32px;
+	--tamañoTitular2: 30px;
+	--tamañoTitular3: 28px;
+	--tamañoTitular4: 26px;
 	--tamañoIconoPequeño: 16px;
+	--tamañoIconoMediano: 22px;
+	--tamañoIconoGrande: 32px;
 }
 
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	background: url("/images/full-background.webp") no-repeat fixed;
+	background-size: cover;
+	background-position: center bottom;
+	width: 100%;
+	height: 100%;
+}
 * {
 	box-sizing: border-box;
 }
@@ -32,8 +53,16 @@ a {
 a:hover {
 	color: var(--CaobaOscuro);
 	transition: 500ms;
-	transform: scale(1.3);
 }
 a:not(:hover) {
 	transition: 500ms;
+}
+#contenedor {
+	width: 100%;
+}
+
+@media (min-width: 1300px) {
+	#contenedor {
+		width: 1300px;
+	}
 }

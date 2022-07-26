@@ -1,3 +1,51 @@
 .body__main {
-	background-color: royalblue; /* ! BORRAR */
+	background-color: var(--Almendra);
+	padding: 20px;
+	color: var(--NegroPasa);
+	font-family: 'Ibarra Real Nova', serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.3em;
+}
+.body__main a {
+	color: var(--CaobaClaro);
+}
+.body__main a:hover {
+	color: var(--KakiOscuro);
+}
+.body__main h1 {
+	font-size: var(--tamañoTitular1);
+	line-height: 1.4em;
+	border-bottom: 4px solid var(--CaobaOscuro);
+	color: var(--CaobaOscuro);
+	font-weight: 700;
+}
+.body__main h2 {
+	font-size: var(--tamañoTitular2);
+	line-height: 1.4em;
+	color: var(--CaobaClaro);
+	font-weight: 600;
+}
+.body__main h3 {
+	font-size: var(--tamañoTitular3);
+	line-height: 1.4em;
+	color: var(--CaobaClaro);
+	font-weight: 600;
+}
+.body__main h4 {
+	font-size: var(--tamañoTitular4);
+	line-height: 1.4em;
+	color: var(--CaobaClaro);
+	font-weight: 600;
+}
+
+
+
+@media (min-width: 768px) {
+	.body__main {
+		padding: 40px;
+	}
+}
+@media (min-width: 1024px) {
+	
 }
