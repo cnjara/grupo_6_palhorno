@@ -1,12 +1,12 @@
 const { log } = require( 'console' );
 
+require( 'dotenv' ).config();
 const express = require( 'express' );
 const app = express();
 const ruta = require( 'path' );
-const puerto = 3030;
 
-app.listen( puerto, () => {
-	log( `Servidor corriendo en el puerto http://localhost:${puerto}` )
+app.listen( process.env.PORT || 3030, () => {
+	log( `Servidor corriendo en el puerto http://localhost:${process.env.PORT}` )
 });
 
 app.use( express.static( 'public' ));
