@@ -21,6 +21,8 @@
 	border-bottom: 4px solid var(--CaobaOscuro);
 	color: var(--CaobaOscuro);
 	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 15px;
 }
 .body__main h2 {
 	font-size: var(--tamañoTitular2);
@@ -28,18 +30,21 @@
 	border-bottom: 4px solid var(--CaobaClaro);
 	color: var(--CaobaClaro);
 	font-weight: 600;
+	margin-top: 20px;
 }
 .body__main h3 {
 	font-size: var(--tamañoTitular3);
 	line-height: 1.4em;
 	color: var(--CaobaClaro);
 	font-weight: 600;
+	margin-top: 20px;
 }
 .body__main h4 {
 	font-size: var(--tamañoTitular4);
 	line-height: 1.4em;
 	color: var(--CaobaClaro);
 	font-weight: 600;
+	margin-top: 20px;
 }
 
 
