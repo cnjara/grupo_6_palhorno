@@ -1,5 +1,6 @@
-.body__main__contacto {
-	
+.body__main__contacto li {
+	margin-left: 30px;
+	list-style: square;
 }
 .body__main__contacto iframe {
 	width: 100%;
