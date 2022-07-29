@@ -38,3 +38,6 @@ app.get( '/login', ( req, res ) => {
 app.get( '/carrito', ( req, res ) => {
 	res.sendFile( ruta.join( __dirname, 'views', 'carrito.html' ))
 });
+app.get( '/registro', ( req, res ) => {
+	res.sendFile( ruta.join( __dirname, 'views', 'registro.html' ))
+});

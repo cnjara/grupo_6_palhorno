@@ -1,0 +1,96 @@
+.formulario {
+    padding: 20px 15px;
+    background-color: #ffff;
+    text-align: center;
+}
+.control-formulario {
+    margin-bottom: 45px;
+    text-align: left; 
+    margin-left: 10%;
+    margin-top: 70px;
+}
+
+.control-formulario h3 {
+    margin: -22.5px 0 22.5px;
+    display: block;
+    text-align: left;
+}
+.control{
+    width: 88.5%;
+    padding: 8px;
+    border-radius: 30px;
+    border: solid 1px var(--NegroPasa);
+
+}
+.radio{
+    margin-left: 25px;
+}
+.radio input{
+    margin-right: 25px;
+}
+.check{
+    margin-left: 25px
+}
+.check input{
+    margin: 0 25px 40px 0;
+}
+.boton-formulario:hover{
+    background-color:var(--KakiOscuro);
+}
+.boton-formulario{
+    width: 50%;
+    background-color:var(--KakiOscuro);
+    border: none;
+    font-size: 25px;
+    color:black;
+    padding: 3px 10px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    transition: all 450ms;
+}
+.password{
+    color: #0022AA;
+    padding: 10px;
+}
+
+
+@media (min-width: 320px){
+    .registro{
+        display: flex;
+        position: relative;
+        margin: -12px 0px 60px 48px;
+        font-size: 14px;
+        margin-top: -10px;
+    }
+    .boton-formulario{
+        width: 225px;
+    }
+}
+
+@media (min-width: 768px){
+.registro{
+    display: flex;
+    position: relative;
+
+    margin: -22px 0px 60px 109px;
+    margin-top: -10px;
+}
+}
+.boton-formulario{
+    width: 78%;
+}
+
+
+@media (min-width:1024px){
+.registro{
+    display: flex;
+    position: relative;
+
+margin: -14px 0px 60px 261px;
+margin-top: -10px;
+
+}
+.boton-formulario{
+    width: 50%;
+}
+}

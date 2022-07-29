@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pal Horno - Home</title>
+	<title>Pal Horno - Cómo comprar</title>
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="https://kit.fontawesome.com/ae7c764a16.js" crossorigin="anonymous"></script>
 </head>
@@ -31,27 +31,38 @@
 				<div class="body__header--user">
 					<a href="/login" title="Inicia sesión con tu usuario"><i class="fa-solid fa-user"></i></a>
 					<a href="/carrito" title="Tu carrito de compras"><i class="fa-solid fa-cart-shopping"></i></a>
-					
 				</div>
 			</div>
 		</header>
 		<main class="body__main">
-			<h1>Login</h1>
-			<form action="/" method="GET" class="formulario">
-				<div class="control-formulario">
-					<input type="text" name="nombreUsuario" placeholder="Nombre de usuario" class="control" >
+			<h1>Registro</h1>
+			<form action="/" method="GET" class="formularios">
+				<img class="img" src="/stock-photos/mini-torta-red-velvet-2.jpg" alt="">
+				<div class="control-formularios">
+					<input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3" class="controls" >
 				</div>
-				<div class="control-formulario">
-					<input type="password" name="contrasena" placeholder="Contraseña" class="control" >
-					<div class="password">
-					<p  >Forgot your password ?</p>
-					</div>
+				<div class="control-formularios">
+					<input type="text" name="phone" placeholder="Phone Number" class="controls" >
 				</div>
+				<div class="control-formularios">
+					<input type="email" name="email" placeholder="E-mail" class="controls" >
+				</div>
+			   
 				
-				<button type="submit" class="boton-formulario">Login</button>
-			   <div class="registro">
-				<p> Need an Account ?</p><a href="/registro" title="crea tu usuario">Register</a>
-				</div>   
+				
+					 
+				<div class="control-formularios">
+					
+					<input type="password" name="contrasena" placeholder="Contraseña" class="controls" >
+				</div>
+			   
+				<button type="submit" class="boton-formularios">Register</button>
+				<div class="registros">
+					<p   >Already menber?</p><a href="/login" title="ingresa con tu usuario">Login</a>
+					
+					</div>   
+				
+			   
 			</form>
 		</main>
 <footer class="body__footer">
