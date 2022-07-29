@@ -39,9 +39,7 @@ body {
 	flex-direction: column;
 	justify-content: start;
 	align-items: center;
-	background: url("/images/full-background.webp") no-repeat fixed;
-	background-size: cover;
-	background-position: center bottom;
+	background: url("/images/repeat-background.webp") repeat;
 	width: 100%;
 	height: 100%;
 }

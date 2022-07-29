@@ -3,15 +3,90 @@
 .body__main--fix {
     padding: 0px;
 }
-.body__main__home--carousel {
+
+
+/* * START | Pure CSS Carousel [Dissolving Images] - Denys Mishunov */
+.carousel {
 	width: 100%;
 	background-color: var(--Melon);
-	height: 300px;
+	height: 30vh;
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	border-bottom: 10px solid var(--MarronCeniza);
 }
+.carousel img {
+	width: 100%;
+	display: block;
+}
+.dissolve {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.dissolve .item {
+	position: absolute;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	animation: dissolve 20s linear infinite;
+}
+.dissolve .item:nth-child(2) {
+	animation-delay: 5s;
+}
+.dissolve .item:nth-child(3) {
+	animation-delay: 10s;
+}
+.dissolve .item:nth-child(4) {
+	animation-delay: 15s;
+}
+@-webkit-keyframes dissolve {
+	0%,
+	30%,
+	100% {
+		opacity: 0;
+	}
+	5%,
+	25% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes dissolve {
+	0%,
+	30%,
+	100% {
+		opacity: 0;
+	}
+	5%,
+	25% {
+		opacity: 1;
+	}
+}
+@-ms-keyframes dissolve {
+	0%,
+	30%,
+	100% {
+		opacity: 0;
+	}
+	5%,
+	25% {
+		opacity: 1;
+	}
+}
+@keyframes dissolve {
+	0%,
+	30%,
+	100% {
+		opacity: 0;
+	}
+	5%,
+	25% {
+		opacity: 1;
+	}
+}
+/* * END | Pure CSS Carousel [Dissolving Images] - Denys Mishunov */
+
+
 .body__main__home--cartelera {
 	width: 100%;
 	background-color: var(--NegroPasa);
@@ -49,6 +124,7 @@
 }
 .cartelera__divisiones--baldosa a h2 {
 	color: var(--Blanco);
+	border-bottom: 0;
 }
 .cartelera__divisiones--baldosa a:hover {
 	background-color: var(--CaobaOscuro);

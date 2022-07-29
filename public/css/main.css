@@ -25,6 +25,7 @@
 .body__main h2 {
 	font-size: var(--tamañoTitular2);
 	line-height: 1.4em;
+	border-bottom: 4px solid var(--CaobaClaro);
 	color: var(--CaobaClaro);
 	font-weight: 600;
 }
