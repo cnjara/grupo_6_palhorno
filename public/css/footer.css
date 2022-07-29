@@ -51,7 +51,7 @@
 
 
 .body__footer--social a:hover {
-	transform: scale(1.3);
+	transform: scale(1.1);
 }
 .body__footer--social .fa-facebook-f:hover {
 	background-color: #4267B2;

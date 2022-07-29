@@ -6,6 +6,8 @@
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 1.3em;
+	border-top: 10px solid var(--MarronCeniza);
+	border-bottom: 10px solid var(--CaobaClaro);
 }
 .body__main a {
 	color: var(--CaobaClaro);
@@ -19,24 +21,30 @@
 	border-bottom: 4px solid var(--CaobaOscuro);
 	color: var(--CaobaOscuro);
 	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 15px;
 }
 .body__main h2 {
 	font-size: var(--tamañoTitular2);
 	line-height: 1.4em;
+	border-bottom: 4px solid var(--CaobaClaro);
 	color: var(--CaobaClaro);
 	font-weight: 600;
+	margin-top: 20px;
 }
 .body__main h3 {
 	font-size: var(--tamañoTitular3);
 	line-height: 1.4em;
 	color: var(--CaobaClaro);
 	font-weight: 600;
+	margin-top: 20px;
 }
 .body__main h4 {
 	font-size: var(--tamañoTitular4);
 	line-height: 1.4em;
 	color: var(--CaobaClaro);
 	font-weight: 600;
+	margin-top: 20px;
 }
 
 
