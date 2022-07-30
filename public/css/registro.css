@@ -1,0 +1,134 @@
+
+.formularios {
+    padding: 20px 15px;
+    background-color: #ffff;
+    text-align: center;
+}
+.control-formularios {
+    margin-bottom: 45px;
+    text-align: left; 
+    margin-left: 10%;
+    margin-top: 70px;
+  
+}
+
+/*.control-formularios h3 {
+    margin: -22.5px 0 22.5px;
+    display: block;
+    text-align: left;*/
+
+.controls{
+    width: 88.5%;
+    padding: 8px;
+    border-radius: 30px;
+    border: solid 1px var(--NegroPasa);
+
+}
+.radios{
+    margin-left: 25px;
+}
+.radios input{
+    margin-right: 25px;
+}
+.checks{
+    margin-left: 25px
+}
+.check inputs{
+    margin: 0 25px 40px 0;
+}
+.boton-formularios:hover{
+    background-color: var(--KakiOscuro);
+}
+.boton-formularios{
+    width: 81%;
+    background-color:var(--KakiOscuro);
+    border: none;
+    font-size: 33px;
+    color: black;
+    padding: 1px 10px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    transition: all 450ms;
+}
+.img{
+
+position: relative;
+
+}
+
+a{
+    color: red;
+}
+
+@media (min-width:320px){
+    .img{
+    display: none;
+    }
+   .registros{
+    font-size: 10px;
+   }
+}
+
+
+@media (min-width:768px){
+.img{
+    display: none;
+}
+}
+
+@media (min-width:1024px){
+    .control-formularios {
+       
+        margin-left: 55%;
+       
+    }
+    .boton-formularios{
+        width: 41%;
+        margin-left: 485px;
+    }
+    .img{
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 398px;
+        height: 514px;
+        left: 93px;
+        top: 637px;
+        background: #F5F5F5;
+        border: 1px solid #000000;
+        border-radius: 100px 0px 0px 100px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     /*   border-radius: 100px;*/
+    }
+    .registros{
+        display: flex;
+        position: relative;
+    
+        margin: -13px 0px 60px 560px;
+    margin-top: -10px;
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*.control-formularios {
+position: absolute;
+width: 362px;
+height: 47px;
+left: 840px;
+top: 482px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 100px;
+}*/
