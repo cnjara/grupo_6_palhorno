@@ -1,7 +1,7 @@
 
 .formularios {
     padding: 20px 15px;
-    background-color: #ffff;
+  /* background-color: #ffff;*/
     text-align: center;
 }
 .control-formularios {
@@ -52,7 +52,8 @@
 }
 .img{
 
-position: relative;
+position: absolute;
+left: 150px;
 
 }
 
@@ -93,7 +94,7 @@ a{
         width: 398px;
         height: 514px;
         left: 93px;
-        top: 637px;
+        top:700px;
         background: #F5F5F5;
         border: 1px solid #000000;
         border-radius: 100px 0px 0px 100px;
