@@ -2,11 +2,16 @@
 @import url('header.css');
 @import url('main.css');
 @import url('footer.css');
+@import url('productosdetalles.css');
+@import url('login.css');
+@import url('registro.css');
 @import url('home.css'); /* * Página index.html */
 @import url('productos.css'); /* * Página productos.html */
+@import url('contacto.css'); /* * Página contacto.html */
 @import url('carrito.css');
 @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 
 /* https://coolors.co/262322-63372c-8e3200-ffbcb5-f2e5d7 */
 
