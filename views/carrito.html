@@ -41,67 +41,91 @@
 			<h2>Carrito</h2>
 			<div class="body__main__carrito--contenedor">
 				<section class="body__main__carrito--descripcion">
-						<button><i class="fa-solid fa-xmark"></i></button>
-						<div class="body__main__carrito--imagen">
-							<img src="/stock-photos/producto-item.png" alt="">
+					<div class="body__main__carrito--button">
+					<button><i class="fa-solid fa-xmark"></i></button>
+					</div>
+					<hr>
+					<div class="body__main__carrito--imagen">
+						<img src="/stock-photos/producto-item.png" alt="">
+					</div>
+					<div class="body__main__carrito--detalle">
+						<p class="p1">Producto:</p>
+						<p class="descripcion--producto">Descripción del producto</p>
+					</div>
+					<hr>
+					<div class="body__main__carrito--detalle">
+						<p class="p1">Precio:</p>
+						<p class="descripcion--producto">$400</p>
+					</div>
+					<hr>
+					<div class="body__main__carrito--detalle">
+						<p class="p1">Cantidad:</p>
+						<div class="detalle--cantidad">
+							<span>-</span><input type="number"><span>+</span>
 						</div>
-						<div class="body__main__carrito--detalle">
-							<p class="p1">Producto:</p>
-							<p class="descripcion--producto">Descripción del producto</p></div>
-						<hr>
-						<div class="body__main__carrito--detalle">
-							<p class="p1">Precio:</p><p class="descripcion--producto">$400</p></div>
-						<hr>
-						<div class="body__main__carrito--detalle">
-							<p class="p1">Cantidad:</p><span>-</span><input type="number"><span>+</span>
-						</div>
-						<hr>
-						<div class="body__main__carrito--detalle">
-							<p class="p1">Subtotal</p>
-							<p class="descripcion--producto">$400</p>
-						</div>
+					</div>
+					<hr>
+					<div class="body__main__carrito--detalle">
+						<p class="p1">Subtotal</p>
+						<p class="descripcion--producto">$400</p>
+					</div>
 				</section>
 				<section class="body__main__carrito--descripcion">
-						<button><i class="fa-solid fa-xmark"></i></button>
-						<div class="body__main__carrito--imagen">
-							<img src="/stock-photos/producto-item.png" alt="">
+					<div class="body__main__carrito--button">
+					<button><i class="fa-solid fa-xmark"></i></button>
+				</div>
+				<hr>
+					<div class="body__main__carrito--imagen">
+						<img src="/stock-photos/producto-item.png" alt="">
+					</div>
+					<div class="body__main__carrito--detalle">
+						<p class="p1">Producto:</p>
+						<p class="descripcion--producto">Descripción del producto</p>
+					</div>
+					<hr>
+					<div class="body__main__carrito--detalle">
+						<p class="p1">Precio:</p>
+						<p class="descripcion--producto">$400</p>
+					</div>
+					<hr>
+					<div class="body__main__carrito--detalle">
+						<p class="p1">Cantidad:</p>
+						<div class="detalle--cantidad">
+							<span>-</span><input type="number"><span>+</span>
 						</div>
-						<div class="body__main__carrito--detalle">
-							<p class="p1">Producto:</p><p class="descripcion--producto">Descripción del producto</p>
-						</div>
-						<hr>
-						<div class="body__main__carrito--detalle">
-							<p class="p1">Precio:</p><p class="descripcion--producto">$400</p>
-						</div>
-						<hr>
-						<div class="body__main__carrito--detalle">
-							<p class="p1">Cantidad:</p><span>-</span><input type="number"><span>+</span>
-						</div>
-						<hr>
-						<div class="body__main__carrito--detalle">
-							<p class="p1">Subtotal</p><p class="descripcion--producto">$400</p>
-						</div>
+					</div>
+					<hr>
+					<div class="body__main__carrito--detalle">
+						<p class="p1">Subtotal</p>
+						<p class="descripcion--producto">$400</p>
+					</div>
 				</section>
 			</div>
-			<h2>Total del carrito</h2>
-			<div class="body__main__carrito--finalizar">
-				<div>
-					<p>subtotal</p>
-				</div>
-				<hr>
-				<div>
-					<p>envío</p>
-				</div>
-				<form action="">
-					<label for=""><input type="radio" name="envio">Costo de envío $200</label>
-					<label for=""><input type="radio" name="envio">Retirar en sucursal</label>
-				</form>
-				<hr>
-				<div>
-					<p>total</p>
-				</div>
-				<a href="">finalizar compra</a>
+			<h2 class="h2">Total del carrito</h2>
+			<div class="body__main__carrito--finalizar-contenedor">
+				<section class="body__main__carrito--finalizar">
+					<div class="body__main__carrito--finalizar-detalle">
+						<p class="p1-2">Subtotal</p>
+						<p class="descripcion--finalizar">$800</p>
+					</div class="body__main__carrito--finalizar-detalle">
+					<hr>
+					<div class="body__main__carrito--finalizar-detalle">
+						<p class="p1-2">Envío</p>
+						<div class="formulario--envio">
+							<form class="form" action="">
+								<label for=""><input type="radio" name="envio">Costo de envío $200</label>
+								<label for=""><input type="radio" name="envio">Retirar en sucursal</label>
+							</form>
+						</div>
+					</div>
+					<hr>
+					<div class="body__main__carrito--finalizar-detalle">
+						<p class="p1-2">Total</p>
+						<p class="descripcion--finalizar">$800</p>
+					</div>
+						<a href="">finalizar compra</a>
 			</div>
+			</section>
 		</main>
 		<footer class="body__footer">
 			<h2 class="body__footer--logo"><a href="/" title="Pal Horno"><img src="/images/logo-mini-blanco.webp"
