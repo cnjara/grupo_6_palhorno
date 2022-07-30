@@ -20,6 +20,9 @@ app.get( '/nosotros', ( req, res ) => {
 app.get( '/productos', ( req, res ) => {
 	res.sendFile( ruta.join( __dirname, 'views', 'productos.html' ))
 });
+app.get( '/productos-detalles', ( req, res ) => {
+	res.sendFile( ruta.join( __dirname, 'views', 'productos-detalles.html' ))
+});
 app.get( '/catering', ( req, res ) => {
 	res.sendFile( ruta.join( __dirname, 'views', 'catering.html' ))
 });
