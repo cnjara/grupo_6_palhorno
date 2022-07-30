@@ -1,0 +1,180 @@
+/* https://ishadeed.com/article/css-has-parent-selector/ */
+
+.body__main--fix {
+    padding: 0px;
+}
+
+
+/* * START | Pure CSS Carousel [Dissolving Images] - Denys Mishunov */
+.carousel {
+	width: 100%;
+	background-color: var(--Melon);
+	height: 30vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 10px solid var(--MarronCeniza);
+}
+.carousel img {
+	width: 100%;
+	display: block;
+}
+.dissolve {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.dissolve .item {
+	position: absolute;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	animation: dissolve 20s linear infinite;
+}
+.dissolve .item:nth-child(2) {
+	animation-delay: 5s;
+}
+.dissolve .item:nth-child(3) {
+	animation-delay: 10s;
+}
+.dissolve .item:nth-child(4) {
+	animation-delay: 15s;
+}
+@-webkit-keyframes dissolve {
+	0%,
+	30%,
+	100% {
+		opacity: 0;
+	}
+	5%,
+	25% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes dissolve {
+	0%,
+	30%,
+	100% {
+		opacity: 0;
+	}
+	5%,
+	25% {
+		opacity: 1;
+	}
+}
+@-ms-keyframes dissolve {
+	0%,
+	30%,
+	100% {
+		opacity: 0;
+	}
+	5%,
+	25% {
+		opacity: 1;
+	}
+}
+@keyframes dissolve {
+	0%,
+	30%,
+	100% {
+		opacity: 0;
+	}
+	5%,
+	25% {
+		opacity: 1;
+	}
+}
+/* * END | Pure CSS Carousel [Dissolving Images] - Denys Mishunov */
+
+
+.body__main__home--cartelera {
+	width: 100%;
+	background-color: var(--NegroPasa);
+	color: var(--Blanco);
+}
+.body__main__home--cartelera--divisiones {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+}
+.cartelera__divisiones--baldosa {
+	background-color: rgba(38, 35, 34, .6);
+	width: 100%;
+	height: 300px;
+}
+.cartelera__divisiones--baldosa {
+	z-index: 2;
+}
+.cartelera__divisiones--baldosa:nth-child(2n) {
+	position: absolute;
+	z-index: 1;
+}
+.cartelera__divisiones--baldosa a {
+	color: var(--Blanco);
+	padding: 40px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* text-shadow: 3px 2px 2px #000000; */
+}
+.cartelera__divisiones--baldosa a h2 {
+	color: var(--Blanco);
+	border-bottom: 0;
+}
+.cartelera__divisiones--baldosa a:hover {
+	background-color: var(--CaobaOscuro);
+	transition: 1s;
+	color: var(--Blanco);
+}
+.cartelera__divisiones--baldosa iframe {
+	width: 100%;
+	height: 100%;
+}
+.body__main__home--cartelera--divisiones:last-child div:first-child {
+	display: none;
+}
+.body__main__home--cartelera--divisiones:last-child div:last-child {
+	position: relative;
+}
+
+
+.producto__panes {
+	
+	background: url(/images/home-panes.webp) no-repeat center center;
+	background-size: cover;
+}
+.producto__facturas {
+	
+	background: url(/images/home-facturas.webp) no-repeat center center;
+	background-size: cover;
+}
+.producto__tortas {
+	
+	background: url(/images/home-tortas.webp) no-repeat center center;
+	background-size: cover;
+}
+
+
+
+@media (min-width: 768px) {
+
+}
+@media (min-width: 1024px) {
+	.body__main__home--cartelera--divisiones:nth-child(2n) {
+		flex-direction: row-reverse;
+	}
+	.cartelera__divisiones--baldosa {
+		width: 50%;
+	}
+	.cartelera__divisiones--baldosa:nth-child(2n) {
+		position: relative;
+	}
+	.body__main__home--cartelera--divisiones:last-child div:first-child {
+		display: block;
+	}
+}
