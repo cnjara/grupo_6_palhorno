@@ -1,0 +1,51 @@
+.body__main__detalles--contenedor {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.body__main__detalles--contenedor h2 {
+	margin-bottom: 1em;
+	margin-top: 0;
+}
+.body__main__detalles--contenedor div {
+	width: 100%;
+}
+.body__main__detalles--contenedor div img {
+	width: 100%;
+	border-radius: 4px;
+}
+.body__main__detalles--formulario {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+.body__main__detalles--formulario input[type=number] {
+	padding: 1em;
+	margin: 1em 0;
+	width: 100px;
+	border-radius: 4px;
+	border: none;
+}
+.body__main__detalles--precio {
+	font-size: var(--tamañoGrande);
+	margin-bottom: .9em;
+}
+.body__main__detalles--descripcion {
+	background-color: var(--Blanco);
+	padding: 1em;
+	margin-top: 1em;
+	border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+	.body__main__detalles--contenedor div:first-child {
+		width: 60%;
+	}
+	.body__main__detalles--contenedor div:last-child {
+		width: 35%;
+	}
+}
+@media (min-width: 1024px) {
+	
+}

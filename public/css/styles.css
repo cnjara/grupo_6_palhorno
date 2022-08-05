@@ -2,7 +2,7 @@
 @import url('header.css');
 @import url('main.css');
 @import url('footer.css');
-@import url('productosdetalles.css');
+@import url('detalles.css');
 @import url('login.css');
 @import url('registro.css');
 @import url('home.css'); /* * Página index.html */
@@ -27,6 +27,8 @@
 	--Blanco: #FFFFFF;
 	--Negro: #000000;
 	--tamañoNormal: 16px;
+	--tamañoMedio: 20px;
+	--tamañoGrande: 28px;
 	--tamañoDescripciones: 22px;
 	--tamañoTitular1: 32px;
 	--tamañoTitular2: 30px;
@@ -72,4 +74,23 @@ a:not(:hover) {
 	#contenedor {
 		width: 1300px;
 	}
+}
+.boton-universal {
+	padding: 1em;
+	font-size: var(--tamañoMedio);
+	border: none;
+	border-radius: 4px;
+	background-color: var(--NegroPasa);
+	color: var(--Blanco);
+	font-family: 'Ibarra Real Nova', serif;
+	font-weight: 600;
+}
+.boton-universal:hover {
+	background-color: var(--CaobaOscuro);
+	color: var(--Blanco);
+	transition: 500ms;
+	cursor: pointer;
+}
+.boton-universal:not(:hover) {
+	transition: 500ms;
 }
