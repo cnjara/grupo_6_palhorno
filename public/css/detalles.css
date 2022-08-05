@@ -40,12 +40,17 @@
 
 @media (min-width: 768px) {
 	.body__main__detalles--contenedor div:first-child {
+		width: 50%;
+	}
+	.body__main__detalles--contenedor div:last-child {
+		width: 45%;
+	}
+}
+@media (min-width: 1024px) {
+	.body__main__detalles--contenedor div:first-child {
 		width: 60%;
 	}
 	.body__main__detalles--contenedor div:last-child {
 		width: 35%;
 	}
-}
-@media (min-width: 1024px) {
-	
 }
