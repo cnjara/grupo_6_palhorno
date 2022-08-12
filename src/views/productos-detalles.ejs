@@ -1,0 +1,28 @@
+<%- include('./partials/head', {
+	title: 'Pal Horno - Productos'
+}) %>
+<body>
+	<div id="contenedor">
+		<%- include('./partials/header') %>
+		<main class="body__main">
+			<section class="body__main__detalles--contenedor">
+				<div>
+					<img src="/images/producto-item.webp" >
+				</div>
+				<div>
+					<h2>Nombre del producto</h2>
+					<p class="body__main__detalles--precio">$1000</p>
+					<p>Disponibilidad: en stock</p>
+					<form class="body__main__detalles--formulario" action="/carrito">
+						<label for="cantidad">Cantidad:</label>
+						<input type="number" value="1" name="cantidad" id="cantidad">
+						<button class="boton-universal" type="submit">Añadir al carrito</button>
+					</form>
+					<p class="body__main__detalles--descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus pellentesque ante, a consectetur neque. Duis eu mauris aliquam sapien commodo pretium convallis nec ligula.</p>
+				</div>
+			</section>
+		</main>
+		<%- include('./partials/footer') %>
+	</div>
+</body>
+</html>

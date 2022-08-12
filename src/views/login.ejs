@@ -1,0 +1,28 @@
+<%- include('./partials/head', {
+	title: 'Pal Horno - Home'
+}) %>
+<body>
+	<div id="contenedor">
+		<%- include('./partials/header') %>
+		<main class="body__main">
+			<h1>Login</h1>
+			<form action="/" method="GET" class="formulario">
+				<div class="control-formulario">
+					<input type="text" name="nombreUsuario" placeholder="Nombre de usuario" class="control" >
+				</div>
+				<div class="control-formulario">
+					<input type="password" name="contrasena" placeholder="Contraseña" class="control" >
+					<div class="password">
+					<p  >Olvidaste tu contraseña ?</p>
+					</div>
+				</div>
+				<button type="submit" class="boton-formulario">Login</button>
+				<div class="registro">
+				<p> Necesito una cuenta ?</p><a href="/registro" title="crea tu usuario">Registro</a>
+				</div>   
+			</form>
+		</main>
+		<%- include('./partials/footer') %>
+	</div>
+</body>
+</html>

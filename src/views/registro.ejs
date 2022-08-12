@@ -1,0 +1,32 @@
+<%- include('./partials/head', {
+	title: 'Pal Horno - Cómo comprar'
+}) %>
+<body>
+	<div id="contenedor">
+		<%- include('./partials/header') %>
+		<main class="body__main">
+			<h1>Registro</h1>
+			<form action="/" method="GET" class="formularios">
+				<img class="img" src="/stock-photos/mini-torta-red-velvet-2.jpg" alt="">
+				<div class="control-formularios">
+					<input type="text" name="nombre" placeholder="Nombre y apellido" minlength="3" class="controls" >
+				</div>
+				<div class="control-formularios">
+					<input type="text" name="phone" placeholder="Número de teléfono" class="controls" >
+				</div>
+				<div class="control-formularios">
+					<input type="email" name="email" placeholder="E-mail" class="controls" >
+				</div>
+				<div class="control-formularios">
+					<input type="password" name="contrasena" placeholder="Contraseña" class="controls" >
+				</div>
+				<button type="submit" class="boton-formularios">Registro</button>
+				<div class="registros">
+					<p>Ya miembro?</p><a href="/login" title="ingresa con tu usuario">Login</a>
+				</div>   
+			</form>
+		</main>
+		<%- include('./partials/footer') %>
+	</div>
+</body>
+</html>
