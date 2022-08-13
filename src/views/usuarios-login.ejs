@@ -1,6 +1,4 @@
-<%- include('./partials/head', {
-	title: 'Pal Horno - Home'
-}) %>
+<%- include('./partials/head') %>
 <body>
 	<div id="contenedor">
 		<%- include('./partials/header') %>
@@ -13,12 +11,12 @@
 				<div class="control-formulario">
 					<input type="password" name="contrasena" placeholder="Contraseña" class="control" >
 					<div class="password">
-					<p  >Olvidaste tu contraseña ?</p>
+					<p>Olvidaste tu contraseña ?</p>
 					</div>
 				</div>
 				<button type="submit" class="boton-formulario">Login</button>
 				<div class="registro">
-				<p> Necesito una cuenta ?</p><a href="/registro" title="crea tu usuario">Registro</a>
+				<p>Necesito una cuenta ?</p><a href="/usuarios/registro" title="crea tu usuario">Registro</a>
 				</div>   
 			</form>
 		</main>
