@@ -37,7 +37,17 @@
 	margin-top: 1em;
 	border-radius: 4px;
 }
-
+.button-detalle{
+	display: flex;
+    position: relative;
+    /* justify-content: flex-start; */
+    /* width: 30%; */
+    padding-block: 6px;
+    border-radius: 23%;
+    left: 92%;
+    background: var(--KakiOscuro);
+    color: blue;
+}
 @media (min-width: 768px) {
 	.body__main__detalles--contenedor div:first-child {
 		width: 50%;

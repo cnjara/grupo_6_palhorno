@@ -1,0 +1,109 @@
+
+.modi_general{
+    position: relative;
+    text-align: center;
+    
+}
+.modi_formulario{
+  /*  justify-content: center; */
+    /* padding-block: 10px; */
+    display: flex;
+    position: relative;
+    top: 10px;
+    text-align: justify;
+    left: 56px;
+    flex-direction: column-reverse;
+    height: 109px;
+    padding-block: 25px;
+}
+.modi_input{
+    width: 57%;
+    border-radius: 50px;
+}
+.select{
+    width: 57%;
+    border-radius: 50px;
+    height: 110px;
+}
+
+.div_button{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+
+.button{
+    background-color:var(--KakiOscuro);
+    border-radius: 10px;
+    font-size: 18px;
+    /* height: 62%; */
+    width: 40%;
+}
+.body__footer{
+    width: 100%;
+}
+/*.producto{
+    top: 10px;
+    display: flex;
+    left: 50px;
+    position: absolute;
+}*/
+
+/*//////////telephone////////////////*/
+@media (min-width: 320px){
+    .select{
+        height: 110px;
+    }
+    .modi_input{
+      height: 50px;
+    }
+}
+
+
+/*---------tablet-----------------*/
+@media (min-width: 768px){
+
+    .modi_formulario{
+        /*  justify-content: center; */
+          /* padding-block: 10px; */
+         font-size: 25px;
+          top: -20px;
+          left: 132px;
+          padding-block: 25px;
+    }
+    .button{
+        background-color:var(--KakiOscuro);
+        border-radius: 10px;
+        font-size: 18px;
+        /* height: 62%; */
+        width: 30%;
+        padding-block: 3px;
+    }
+}
+/*++++++escritorio++++++++++*/
+
+@media (min-width: 1024px) {
+    .modi_formulario{
+        /*  justify-content: center; */
+          /* padding-block: 10px; */
+          top: -20px;
+          left: 186px;
+          margin-block: 1px;
+          padding-block: 17px;
+          font-size: 26px;
+      }
+.button{
+    background-color:var(--KakiOscuro);
+    border-radius: 10px;
+    font-size: 25px;
+    /* height: 62%; */
+    width: 30%;
+    padding-block: 7px;
+}
+.modi_input{
+    font-size: 20px;
+}
+.select{
+    font-size: 25px;
+}
+}

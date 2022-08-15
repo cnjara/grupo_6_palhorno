@@ -4,12 +4,47 @@
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<!-- CONTENIDO - INICIO -->
-
+			<h1>Modificar</h1>
+			<div class="modi_general">
 			
+				<div class="modi_formulario">
+				
+					<p class="producto ">Producto</p><input type="text" name="texto1" placeholder="Texto 1" class="modi_input">
+			</div>
+			
+			<div class="modi_formulario">	
+				<p class="precio ">Precio</p><input type="text" name="texto2" placeholder="Texto 2" class="modi_input">
+		</div>
+		
+		<div class="modi_formulario">	
+			<p class="stock"  >Stock</p><input type="text" name="texto3" placeholder="Texto 3" class="modi_input">
+	</div>
+		
+	<div class="modi_formulario">	
+		
+		<p class="cantidad ">Cantidad</p>	<input type="text" name="texto4" placeholder="Texto 4" class="modi_input">
+		</div>	
+		
+			<div class="modi_formulario">		
+				<p class="categoria ">Categoria</p><select name="menu" class="select">
+				<option>...</option>
+				<option >Panaderia</option>
+				<option>Confiteria</option>
+				<option>Pasteleria</option>
+			  </select>
+			</div>
+
+			<div class="div_button">
+			  <button class="button"><a href="/productos" title="atras" >Atras</a></button>
+			  <button class="button"><a href="/productos" title="modificar">Modificar</a></button>
+			</div>
+			</div>
 
 			<!-- CONTENIDO - FINAL -->
 		</main>
-		<%- include('./partials/footer') %>
+		
+	</div>  
+	<%- include('./partials/footer') %>
 	</div>
 </body>
 </html>
