@@ -51,6 +51,12 @@
     margin: 0 25px 0 0;
 }
 
+.crear__textarea {
+    width: 80%;
+    border: 1px solid var(--NegroPasa);
+    border-radius: 5px;
+}
+
 
 
 .form__box__crear--row {
