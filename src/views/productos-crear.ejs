@@ -3,11 +3,40 @@
 	<div id="contenedor">
 		<%- include('./partials/header') %>
 		<main class="body__main">
-			<!-- CONTENIDO - INICIO -->
-
-			
-
-			<!-- CONTENIDO - FINAL -->
+			<section class="section__crear">
+			<h1>crear producto</h1>
+			<form class="form__crear" action="">
+				<div class="form__box__crear">
+					<label class="crear__label" for="nombre">Producto</label>
+					<input class="crear__input" type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
+				</div>
+				<div class="form__box__crear">
+                    <label class="crear__label" for="imagen">Imagen del producto</label>
+                    <input class="crear__input--imagen" type="file" name="imagen" accept=".jpg">
+                </div>
+				<div class="form__box__crear">
+					<label class="crear__label" for="categoria">Categoría</label>
+					<select class="crear__select" name="categoria" id="categoria">
+						<option value="" hidden selected>Seleccione una categoría</option>
+						<option value="panaderia">Panadería</option>
+						<option value="confiteria">Confitería</option>
+						<option value="pasteleria">Pastelería</option>
+					</select>
+				</div>
+				<div class="form__box__crear">
+					<label class="crear__label" for="precio">Precio</label>
+					<input class="crear__input" type="number" name="precio" id="precio" placeholder="Precio">
+				</div>
+				<div class="form__box__crear">
+					<label class="crear__label" for="stock">Stock</label>
+					<input class="crear__input" type="number" name="stock" id="stock" placeholder="1 - 100">
+				</div>
+				<div class="form__box__crear--row">
+					<button class="button__crear button__crear--margin" type="reset">Cancelar</button>
+                    <button class="button__crear" type="submit">Enviar</button>
+                </div>
+			</form>
+		</section>
 		</main>
 		<%- include('./partials/footer') %>
 	</div>
