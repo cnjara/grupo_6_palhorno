@@ -33,6 +33,15 @@
     padding: 0 15px 15px;
     
 }
+.productos__button__crear {
+    border-radius: 5px;
+    padding: 8px;
+    background-color: var(--CaobaClaro);
+    border: none;
+}
+.productos__button__crear a {
+    color: var(--Blanco);
+}
 
 @media (min-width: 768px) {
 	.productos__contenedor--item {
