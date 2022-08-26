@@ -2,23 +2,92 @@
 	{
 		"id": 1,
 		"titulo": "Producto 1",
-		"descripcion": "Descripción de producto 1",
-		"descripcion_detallada": "",
 		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
 		"imagen": "1.jpg"
 	},
 	{
 		"id" : 2,
-		"title" : "2",
-		"description" : "2",
-		"price" : 2,
-		"image": "2.jpg"
+		"titulo": "Producto 1",
+		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
+		"imagen": "1.jpg"
 	},
 	{
 		"id": 3,
-		"title": "3",
-		"description": "3",
-		"price": 3,
-		"image": "3.jpg"
+		"titulo": "Producto 1",
+		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
+		"imagen": "1.jpg"
+	},
+	{
+		"id": 4,
+		"titulo": "Producto 1",
+		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
+		"imagen": "1.jpg"
+	},
+	{
+		"id": 5,
+		"titulo": "Producto 1",
+		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
+		"imagen": "1.jpg"
+	},
+	{
+		"id": 6,
+		"titulo": "Producto 1",
+		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
+		"imagen": "1.jpg"
+	},
+	{
+		"id": 7,
+		"titulo": "Producto 1",
+		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
+		"imagen": "1.jpg"
+	},
+	{
+		"id": 8,
+		"titulo": "Producto 1",
+		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
+		"imagen": "1.jpg"
+	},
+	{
+		"id": 9,
+		"titulo": "Producto 1",
+		"precio": 1000,
+		"stock": "disponible",
+		"cantidad": 11,
+		"descripcion": "Descripción de producto 1",
+		"categori":"pasteleria",
+		"imagen": "1.jpg"
 	}
+	
 ]
