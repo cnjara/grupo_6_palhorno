@@ -7,100 +7,54 @@
 			<p>Aquí encontrarás todos los productos que con tanto cariño creamos para que los disfrutes.</p>
 			<p>Puedes adquirir algunos en la tienda online y todos en la tienda física.</p>
 			<button class="productos__button__crear"><a class="enlace" href="/productos/crear">agregar producto</a></button>
-			<h2 id="panaderia">Panadería</h2>
+			<h2 id="Pasteleria">Pasteleria</h2>
 			<div class="body__main__productos--contenedor">
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-			</div>
-			<h2 id="confiteria">Confitería</h2>
+				<% productosPasteleria.forEach(({id,name,precio,imagen}) => { %>
+					<div class="productos__contenedor--item">
+					
+						<a href="/productos/detalles/<%= id %>">
+							<img src="/stock-photos/<%=imagen %>" alt="produtos imagen">
+							<p class="productos__contenedor--item--nombre " ><%= name %></p>
+							<p class="productos__contenedor--item--precio">$<%= precio %></p>
+						</a>
+					</div>
+					
+				<% }) %>
+				
+			</div> 
+			<!--confiteria-->
+			
+			<h2 id="Confiteria">Confitería</h2>
 			<div class="body__main__productos--contenedor">
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-			</div>
-			<h2 id="pasteleria">Pastelería</h2>
+				<% productosConfiteria.forEach(({id,name,precio,imagen}) => { %>
+					<div class="productos__contenedor--item">
+					
+						<a href="/productos/detalles/<%= id %>">
+							<img src="/stock-photos/<%=imagen %>" alt="produtos imagen">
+							<p class="productos__contenedor--item--nombre " ><%= name %></p>
+							<p class="productos__contenedor--item--precio">$<%= precio %></p>
+						</a>
+					</div>
+					
+				<% }) %>
+				
+			</div> 
+			
+			<h2 id="Panaderia">Panaderia</h2>
 			<div class="body__main__productos--contenedor">
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-				<div class="productos__contenedor--item">
-					<a href="/productos/detalles">
-						<img src="/images/producto-item.webp" alt="Item">
-						<p class="productos__contenedor--item--nombre">Nombre de producto</p>
-						<p class="productos__contenedor--item--precio">$1000</p>
-					</a>
-				</div>
-			</div>
-		
+				<% productosPanaderia.forEach(({id,name,precio,imagen}) => { %>
+					<div class="productos__contenedor--item">
+					
+						<a href="/productos/detalles/<%= id %>">
+							<img src="/stock-photos/<%=imagen %>" alt="produtos imagen">
+							<p class="productos__contenedor--item--nombre " ><%= name %></p>
+							<p class="productos__contenedor--item--precio">$<%= precio %></p>
+						</a>
+					</div>
+					
+				<% }) %>
+				
+			</div> 
 			
 		</main>
 

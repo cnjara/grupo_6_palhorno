@@ -1,6 +1,6 @@
 module.exports = {
 	index: (req, res, next) => {
-		res.render('index', { title: 'Inicio' });
+	return	res.render('index', { title: 'Inicio' });
 	},
 	nosotros: (req, res, next) => {
 		res.render('nosotros', { title: 'Nosotros' });
