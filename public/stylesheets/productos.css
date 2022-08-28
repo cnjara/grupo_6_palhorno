@@ -24,7 +24,7 @@
     transition: 1s;
 }
 .productos__contenedor--item img {
-    width: 100%;
+   height: 100%;
 }
 .productos__contenedor--item--nombre {
     padding: 15px;
