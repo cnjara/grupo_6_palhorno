@@ -100,3 +100,6 @@ a:not(:hover) {
 .peligro {
 	background-color: var(--Rojo);
 }
+.boton-fix {
+	color: white;
+}

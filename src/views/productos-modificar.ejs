@@ -4,46 +4,47 @@
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<!-- CONTENIDO - INICIO -->
-			<h1>Modificar</h1>
-			<div class="modi_general">
-			
-				<div class="modi_formulario">
-				
-					<p class="producto ">Producto</p><input type="text" name="texto1" placeholder="Texto 1" class="modi_input">
-			</div>
-			
-			<div class="modi_formulario">	
-				<p class="precio ">Precio</p><input type="text" name="texto2" placeholder="Texto 2" class="modi_input">
-		</div>
-		
-		<div class="modi_formulario">	
-			<p class="stock"  >Stock</p><input type="text" name="texto3" placeholder="Texto 3" class="modi_input">
-	</div>
-		
-	<div class="modi_formulario">	
-		
-		<p class="cantidad ">Cantidad</p>	<input type="text" name="texto4" placeholder="Texto 4" class="modi_input">
-		</div>	
-		
-			<div class="modi_formulario">		
-				<p class="categoria ">Categoria</p><select name="menu" class="select">
-				<option>...</option>
-				<option >Panaderia</option>
-				<option>Confiteria</option>
-				<option>Pasteleria</option>
-			  </select>
-			</div>
 
-			<div class="div_button">
-			  <button class="button"><a href="/productos" title="atras" >Atras</a></button>
-			  <button class="button"><a href="/productos" title="modificar">Modificar</a></button>
-			</div>
-			</div>
+			<h1>Modificar</h1>
+			<section class="section__crear">
+				<form class="form__crear" action="/productos/actualizar/<%= producto.id %>?_method=PUT" method="POST">
+					<div class="form__box__crear">
+						<label class="crear__label" for="nombre">Producto</label>
+						<input class="crear__input" type="text" name="nombre" id="nombre" value="<%= producto.nombre %>">
+					</div>
+					<div class="form__box__crear">
+						<label class="crear__label" for="imagen">Imagen del producto</label>
+						<input class="crear__input--imagen" type="file" name="imagen" accept=".jpg">
+					</div>
+					<div class="form__box__crear">
+						<label class="crear__label" for="categoria">Categoría</label>
+						<select class="crear__select" name="categoria" id="categoria">
+							<option value="Panaderia" <%= producto.categoria === 'Panaderia' ? 'selected' : null %>>Panadería</option>
+							<option value="Confiteria" <%= producto.categoria === 'Confiteria' ? 'selected' : null %>>Confitería</option>
+							<option value="Pasteleria" <%= producto.categoria === 'Pasteleria' ? 'selected' : null %>>Pastelería</option>
+						</select>
+					</div>
+					<div class="form__box__crear">
+						<label class="crear__label" for="precio">Precio</label>
+						<input class="crear__input" type="number" name="precio" id="precio" value="<%= producto.precio %>">
+					</div>
+					<div class="form__box__crear">
+						<label class="crear__label" for="stock">Stock</label>
+						<input class="crear__input" type="number" name="stock" id="stock" value="<%= producto.stock %>">
+					</div>
+					<div class="form__box__crear">
+						<label class="crear__label" for="descripcion">Descripción del producto</label>
+						<textarea class="crear__textarea" name="descripcion" id="descripcion" cols="30" rows="8"><%= producto.descripcion %></textarea>
+					</div>
+					<div class="form__box__crear--row">
+						<button class="button__crear button__crear--margin" type="reset">Cancelar</button>
+						<button class="button__crear" type="submit">Enviar</button>
+					</div>
+				</form>
+			</section>
 
 			<!-- CONTENIDO - FINAL -->
 		</main>
-		
-	
 	<%- include('./partials/footer') %>
 	</div>
 </body>

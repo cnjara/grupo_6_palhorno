@@ -6,17 +6,19 @@
 			<h1>Productos</h1>
 			<p>Aquí encontrarás todos los productos que con tanto cariño creamos para que los disfrutes.</p>
 			<p>Puedes adquirir algunos en la tienda online y todos en la tienda física.</p>
-			<button class="productos__button__crear"><a class="enlace" href="/productos/crear">agregar producto</a></button>
+			<form class="body__main__detalles--formulario__mini" action="/productos/crear" method="get">
+				<button class="boton-universal" type="submit">Agregar producto</button>
+			</form>
 			<h2 id="Pasteleria">Pasteleria</h2>
 			<div class="body__main__productos--contenedor">
-				<% productosPasteleria.forEach(({id,name,precio,imagen}) => { %>
+				<% productosPasteleria.forEach(({id,nombre,precio,imagen}) => { %>
 					<div class="productos__contenedor--item">
 					
 						<a href="/productos/detalles/<%= id %>">
 							<div style="height: 250px; overflow: hidden;">
 							<img src="/stock-photos/<%=imagen %>" >
 						</div>
-							<p class="productos__contenedor--item--nombre " ><%= name %></p>
+							<p class="productos__contenedor--item--nombre " ><%= nombre %></p>
 							<p class="productos__contenedor--item--precio">$<%= precio %></p>
 						</a>
 					</div>
@@ -28,14 +30,13 @@
 			
 			<h2 id="Confiteria">Confitería</h2>
 			<div class="body__main__productos--contenedor">
-				<% productosConfiteria.forEach(({id,name,precio,imagen}) => { %>
+				<% productosConfiteria.forEach(({id,nombre,precio,imagen}) => { %>
 					<div class="productos__contenedor--item">
-					
 						<a href="/productos/detalles/<%= id %>">
 							<div style="height: 250px; overflow: hidden;">
 							<img src="/stock-photos/<%=imagen %>" >
 						</div>
-							<p class="productos__contenedor--item--nombre " ><%= name %></p>
+							<p class="productos__contenedor--item--nombre " ><%= nombre %></p>
 							<p class="productos__contenedor--item--precio">$<%= precio %></p>
 						</a>
 					</div>
@@ -46,14 +47,14 @@
 			
 			<h2 id="Panaderia">Panaderia</h2>
 			<div class="body__main__productos--contenedor">
-				<% productosPanaderia.forEach(({id,name,precio,imagen}) => { %>
+				<% productosPanaderia.forEach(({id,nombre,precio,imagen}) => { %>
 					<div class="productos__contenedor--item">
 					
 						<a href="/productos/detalles/<%= id %>">
 							<div style="height: 250px; overflow: hidden;">
 							<img src="/stock-photos/<%=imagen %>" >
 						</div>
-							<p class="productos__contenedor--item--nombre " ><%= name %></p>
+							<p class="productos__contenedor--item--nombre " ><%= nombre %></p>
 							<p class="productos__contenedor--item--precio">$<%= precio %></p>
 						</a>
 					</div>

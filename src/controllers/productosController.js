@@ -1,9 +1,9 @@
-const {loadProducts}=require("../data/dbModule")
+const {loadProducts, loadUsers, storeProducts} = require("../data/dbModule");
 
-const productos =loadProducts();
+let productos = loadProducts();
 const controller = {
 	
-	productos: (req, res, next) => {
+	productos: (req, res) => {
 		
 		
 		let productosPasteleria = productos.filter(producto => producto.categoria === "Pasteleria");
@@ -17,7 +17,7 @@ const controller = {
 		})
 		//res.render('productos', { title: 'Productos',productos });//
 	},
-	detalles: (req, res, next) => {
+	detalles: (req, res) => {
 		//const id= req.params.id//
 		
 		let  producto = productos.find(producto => producto.id === +req.params.id );
@@ -29,15 +29,63 @@ const controller = {
 	},
 
 
-	
-	crear: (req, res, next) => {
+	crear: (req, res) => {
 		res.render('productos-crear', { title: 'Crear productos' });
 	},
-	modificar: (req, res, next) => {
-		res.render('productos-modificar', { title: 'Modificar productos' });
+
+
+	modificar: (req, res) => {
+		let  producto = productos.find(producto => producto.id === +req.params.id );
+		return res.render('productos-modificar', { title: 'Modificar productos', producto });
 	},
-	borrar: (req, res, next) => {
-		res.render('productos-borrar', { title: 'Borrar productos' });
+
+
+	actualizar: (req, res) => {
+
+
+		//const productos = loadProducts();
+        const {id} = req.params;
+
+            const {nombre, precio, stock, descripcion, categoria} = req.body;
+
+            const productosModificar = productos.map(producto => {
+                if (producto.id === +id ){
+                    return {
+                        ...producto,
+                        nombre : nombre.trim(),
+                        precio : +precio,
+                        stock : +stock,
+						descripcion,
+                        categoria
+                    }
+                }
+                return producto;
+            })
+
+            storeProducts(productosModificar);
+			productos = loadProducts();
+            return res.redirect('/productos/detalles/' + req.params.id);
+
+
+
+
+		/* let  producto = productos.find(producto => producto.id === +req.params.id );
+		return res.render('productos-modificar', { title: 'Modificar productos', producto }); */
+	},
+
+
+	borrar: (req, res) => {
+
+		const productosModificar = productos.filter(producto => producto.id !== +req.params.id);
+		storeProducts(productosModificar);
+
+		productos = loadProducts();
+		return res.redirect('/productos');
+
+		//res.render('productos-borrar', { title: 'Borrar productos' });
 	}
+
+
 }
+
 module.exports = controller;
