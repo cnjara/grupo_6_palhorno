@@ -6,9 +6,9 @@ const controller = {
 	productos: (req, res) => {
 		
 		
-		let productosPasteleria = productos.filter(producto => producto.categoria === "Pasteleria");
-		let productosConfiteria = productos.filter(producto => producto.categoria === "Confiteria");
-		let productosPanaderia = productos.filter(producto => producto.categoria === "Panaderia");
+		let productosPasteleria = productos.filter(producto => producto.categoria === "pasteleria");
+		let productosConfiteria = productos.filter(producto => producto.categoria === "confiteria");
+		let productosPanaderia = productos.filter(producto => producto.categoria === "panaderia");
 		
 		return res.render('productos',{title:  'Productos', 
 			productosPasteleria,

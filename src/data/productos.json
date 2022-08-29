@@ -5,7 +5,7 @@
       "precio": 100,
       "stock": 5,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Pasteleria",
+      "categoria": "pasteleria",
       "imagen": "DSC_3586web.jpg"
    },
    {
@@ -14,7 +14,7 @@
       "precio": 1000,
       "stock": 30,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Pasteleria",
+      "categoria": "pasteleria",
       "imagen": "DSC1197-1-1.jpg"
    },
    {
@@ -23,7 +23,7 @@
       "precio": 1000,
       "stock": 25,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Pasteleria",
+      "categoria": "pasteleria",
       "imagen": "DSC1224-2.jpg"
    },
    {
@@ -32,7 +32,7 @@
       "precio": 1000,
       "stock": 40,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Panaderia",
+      "categoria": "panaderia",
       "imagen": "mausi-facturas.jpg"
    },
    {
@@ -41,7 +41,7 @@
       "precio": 1000,
       "stock": 23,
       "descripcion": "pano 1",
-      "categoria": "Panaderia",
+      "categoria": "panaderia",
       "imagen": "PER_8383.jpg"
    },
    {
@@ -50,7 +50,7 @@
       "precio": 1000,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Panaderia",
+      "categoria": "panaderia",
       "imagen": "factura.webp"
    },
    {
@@ -59,7 +59,7 @@
       "precio": 1000,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Confiteria",
+      "categoria": "confiteria",
       "imagen": "confi-pascuas.jpg"
    },
    {
@@ -68,7 +68,7 @@
       "precio": 1000,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Confiteria",
+      "categoria": "confiteria",
       "imagen": "bombones.jpg"
    },
    {
@@ -77,7 +77,7 @@
       "precio": 1400,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Confiteria",
+      "categoria": "confiteria",
       "imagen": "candy.png"
    },
    {
@@ -86,7 +86,7 @@
       "precio": 1000,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Confiteria",
+      "categoria": "confiteria",
       "imagen": "masafina.jpg"
    },
    {
@@ -95,7 +95,7 @@
       "precio": 1000,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Pasteleria",
+      "categoria": "pasteleria",
       "imagen": "torta-princesa.jpg"
    },
    {
@@ -104,7 +104,7 @@
       "precio": 1000,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Panaderia",
+      "categoria": "panaderia",
       "imagen": "cañoncito.jpg"
    }
 ]
