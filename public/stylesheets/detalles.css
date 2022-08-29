@@ -27,6 +27,9 @@
 	border-radius: 4px;
 	border: none;
 }
+.body__main__detalles--formulario__mini {
+	display: inline-block;
+}
 .body__main__detalles--precio {
 	font-size: var(--tamañoGrande);
 	margin-bottom: .9em;
@@ -34,7 +37,7 @@
 .body__main__detalles--descripcion {
 	background-color: var(--Blanco);
 	padding: 1em;
-	margin-top: 1em;
+	margin: 1em 0;
 	border-radius: 4px;
 }
 .button-detalle{

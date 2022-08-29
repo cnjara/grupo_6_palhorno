@@ -28,6 +28,7 @@
 	--NegroPasa: #262322;
 	--Blanco: #FFFFFF;
 	--Negro: #000000;
+	--Rojo: #CC0808;
 	--tamañoNormal: 16px;
 	--tamañoMedio: 20px;
 	--tamañoGrande: 28px;
@@ -95,4 +96,7 @@ a:not(:hover) {
 }
 .boton-universal:not(:hover) {
 	transition: 500ms;
+}
+.peligro {
+	background-color: var(--Rojo);
 }
