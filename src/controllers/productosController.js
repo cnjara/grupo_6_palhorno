@@ -33,6 +33,26 @@ const controller = {
 		res.render('productos-crear', { title: 'Crear productos' });
 	},
 
+	tienda : (req,res) => {
+		const {nombre,precio,stock,imagen} = req.body;
+
+		const id = productos[productos.length - 1].id;
+
+		const nuevoProducto = {
+			id : id + 1,
+			...req.body,
+			nombre : nombre.trim(),
+			precio : +precio,
+			stock : +stock,
+			imagen : "producto-item.png"
+		}
+
+		const productosNuevos = [...productos, nuevoProducto];
+
+		storeProducts(productosNuevos);
+
+		res.redirect('/');
+	},
 
 	modificar: (req, res) => {
 		let  producto = productos.find(producto => producto.id === +req.params.id );

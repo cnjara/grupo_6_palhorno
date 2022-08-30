@@ -1,0 +1,42 @@
+[
+    {
+        "identificador" : "1",
+        "nombre" : "Tomás",
+        "apellido" : "Hernández",
+        "telefono" : "1189631478",
+        "email" : "aodoogan6@blogtalkradio.com",
+        "contraseña" : "Tomas2580"
+    },
+    {
+        "identificador" : "2",
+        "nombre" : "Romina",
+        "apellido" : "Pérez",
+        "telefono" : "1112547632",
+        "email" : "tmoresby7@scribd.com",
+        "contraseña" : "3990RominA"
+    },
+    {
+        "identificador" : "3",
+        "nombre" : "Sofia",
+        "apellido" : "López",
+        "telefono" : "2995631478",
+        "email" : "svokesa@yahoo.com",
+        "contraseña" : "sofi896521"
+    },
+    {
+        "identificador" : "4",
+        "nombre" : "Esteban",
+        "apellido" : "Márquez",
+        "telefono" : "2942986321",
+        "email" : "snewhamg@shareasale.com",
+        "contraseña" : "Esteban98521a"
+    },
+    {
+        "identificador" : "5",
+        "nombre" : "Marina",
+        "apellido" : "Rodriguez",
+        "telefono" : "1189652147",
+        "email" : "mdealeyl@tinyurl.com",
+        "contraseña" : "MariRo12"
+    }
+]

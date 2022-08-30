@@ -1,110 +1,110 @@
 [
-	{
-		"id": 1,
-		"nombre": "Pastel Rosa",
-		"precio": 100,
-		"stock": 5,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Pasteleria",
-		"imagen": "DSC_3586web.jpg"
-	},
-	{
-		"id": 2,
-		"nombre": "Torta",
-		"precio": 1000,
-		"stock": 30,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Pasteleria",
-		"imagen": "DSC1197-1-1.jpg"
-	},
-	{
-		"id": 3,
-		"nombre": "Torta",
-		"precio": 1000,
-		"stock": 25,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Pasteleria",
-		"imagen": "DSC1224-2.jpg"
-	},
-	{
-		"id": 4,
-		"nombre": "Mausi",
-		"precio": 1000,
-		"stock": 40,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Panaderia",
-		"imagen": "mausi-facturas.jpg"
-	},
-	{
-		"id": 5,
-		"nombre": "Pan Dulce",
-		"precio": 1000,
-		"stock": 23,
-		"descripcion": "pano 1",
-		"categoria": "Panaderia",
-		"imagen": "PER_8383.jpg"
-	},
-	{
-		"id": 6,
-		"nombre": "Facturas",
-		"precio": 1000,
-		"stock": 10,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Panaderia",
-		"imagen": "factura.webp"
-	},
-	{
-		"id": 7,
-		"nombre": "Confite",
-		"precio": 1000,
-		"stock": 10,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Confiteria",
-		"imagen": "confi-pascuas.jpg"
-	},
-	{
-		"id": 8,
-		"nombre": "Bombones",
-		"precio": 1000,
-		"stock": 10,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Confiteria",
-		"imagen": "bombones.jpg"
-	},
-	{
-		"id": 9,
-		"nombre": "Candy",
-		"precio": 1400,
-		"stock": 10,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Confiteria",
-		"imagen": "candy.png"
-	},
-	{
-		"id": 10,
-		"nombre": "Masas finas",
-		"precio": 1000,
-		"stock": 10,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Confiteria",
-		"imagen": "masafina.jpg"
-	},
-	{
-		"id": 11,
-		"nombre": "Torta Princesa",
-		"precio": 1000,
-		"stock": 10,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Pasteleria",
-		"imagen": "torta-princesa.jpg"
-	},
-	{
-		"id": 12,
-		"nombre": "Cañoncito",
-		"precio": 1000,
-		"stock": 10,
-		"descripcion": "Descripción de producto 1",
-		"categoria": "Panaderia",
-		"imagen": "cañoncito.jpg"
-	}
+   {
+      "id": 1,
+      "nombre": "Pastel Rosa",
+      "precio": 100,
+      "stock": 5,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Pasteleria",
+      "imagen": "DSC_3586web.jpg"
+   },
+   {
+      "id": 2,
+      "nombre": "Torta",
+      "precio": 1000,
+      "stock": 30,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Pasteleria",
+      "imagen": "DSC1197-1-1.jpg"
+   },
+   {
+      "id": 3,
+      "nombre": "Torta",
+      "precio": 1000,
+      "stock": 25,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Pasteleria",
+      "imagen": "DSC1224-2.jpg"
+   },
+   {
+      "id": 4,
+      "nombre": "Mausi",
+      "precio": 1000,
+      "stock": 40,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Panaderia",
+      "imagen": "mausi-facturas.jpg"
+   },
+   {
+      "id": 5,
+      "nombre": "Pan Dulce",
+      "precio": 1000,
+      "stock": 23,
+      "descripcion": "pano 1",
+      "categoria": "Panaderia",
+      "imagen": "PER_8383.jpg"
+   },
+   {
+      "id": 6,
+      "nombre": "Facturas",
+      "precio": 1000,
+      "stock": 10,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Panaderia",
+      "imagen": "factura.webp"
+   },
+   {
+      "id": 7,
+      "nombre": "Confite",
+      "precio": 1000,
+      "stock": 10,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Confiteria",
+      "imagen": "confi-pascuas.jpg"
+   },
+   {
+      "id": 8,
+      "nombre": "Bombones",
+      "precio": 1000,
+      "stock": 10,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Confiteria",
+      "imagen": "bombones.jpg"
+   },
+   {
+      "id": 9,
+      "nombre": "Candy",
+      "precio": 1400,
+      "stock": 10,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Confiteria",
+      "imagen": "candy.png"
+   },
+   {
+      "id": 10,
+      "nombre": "Masas finas",
+      "precio": 1000,
+      "stock": 10,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Confiteria",
+      "imagen": "masafina.jpg"
+   },
+   {
+      "id": 11,
+      "nombre": "Torta Princesa",
+      "precio": 1000,
+      "stock": 10,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Pasteleria",
+      "imagen": "torta-princesa.jpg"
+   },
+   {
+      "id": 12,
+      "nombre": "Cañoncito",
+      "precio": 1000,
+      "stock": 10,
+      "descripcion": "Descripción de producto 1",
+      "categoria": "Panaderia",
+      "imagen": "cañoncito.jpg"
+   }
 ]

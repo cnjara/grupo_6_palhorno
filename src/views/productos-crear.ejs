@@ -5,23 +5,10 @@
 		<main class="body__main">
 			<section class="section__crear">
 			<h1>crear producto</h1>
-			<form class="form__crear" action="">
+			<form class="form__crear" action="" method="POST">
 				<div class="form__box__crear">
 					<label class="crear__label" for="nombre">Producto</label>
 					<input class="crear__input" type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
-				</div>
-				<div class="form__box__crear">
-                    <label class="crear__label" for="imagen">Imagen del producto</label>
-                    <input class="crear__input--imagen" type="file" name="imagen" accept=".jpg">
-                </div>
-				<div class="form__box__crear">
-					<label class="crear__label" for="categoria">Categoría</label>
-					<select class="crear__select" name="categoria" id="categoria">
-						<option value="" hidden selected>Seleccione una categoría</option>
-						<option value="panaderia">Panadería</option>
-						<option value="confiteria">Confitería</option>
-						<option value="pasteleria">Pastelería</option>
-					</select>
 				</div>
 				<div class="form__box__crear">
 					<label class="crear__label" for="precio">Precio</label>
@@ -35,9 +22,22 @@
 					<label class="crear__label" for="descripcion">Descripción del producto</label>
 					<textarea class="crear__textarea" name="descripcion" id="descripcion" cols="30" rows="8">Añada una descripción</textarea>
 				</div>
+				<div class="form__box__crear">
+					<label class="crear__label" for="categoria">Categoría</label>
+					<select class="crear__select" name="categoria" id="categoria">
+						<option value="" hidden selected>Seleccione una categoría</option>
+						<option value="panaderia">Panadería</option>
+						<option value="confiteria">Confitería</option>
+						<option value="pasteleria">Pastelería</option>
+					</select>
+				</div>
+				<div class="form__box__crear">
+                    <label class="crear__label" for="imagen">Imagen del producto</label>
+                    <input class="crear__input--imagen" type="file" name="imagen" accept=".jpg">
+                </div>
 				<div class="form__box__crear--row">
 					<button class="button__crear button__crear--margin" type="reset">Cancelar</button>
-                    <button class="button__crear" type="submit">Enviar</button>
+                    <button class="button__crear" type="submit">Guardar</button>
                 </div>
 			</form>
 		</section>
