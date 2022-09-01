@@ -16,11 +16,15 @@ const loadUsers = () => {
 
 const storeProducts = (productos) => {
     fs.writeFileSync(path.join(__dirname,'./productos.json'), JSON.stringify(productos, null, 3),'utf8')
+};
+const storeUsers = (usuarios) => {
+    fs.writeFileSync(path.join(__dirname,'usuarios.json'), JSON.stringify(usuarios, null, 3),'utf8');
 }
 
 
 module.exports = {
 	loadProducts,
 	loadUsers,
-	storeProducts
+	storeProducts,
+	storeUsers
 }

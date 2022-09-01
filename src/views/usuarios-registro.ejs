@@ -4,22 +4,41 @@
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<h1>Registro</h1>
-			<form action="/" method="GET" class="formularios">
+			<form action="/" method="POST" class="formularios">
 				<img class="img" src="/stock-photos/mini-torta-red-velvet-2.jpg" alt="">
 				<div class="control-formularios">
-					<input type="text" name="nombre" placeholder="Nombre" minlength="3" class="controls" >
+					<input type="text" name="first_name" placeholder="Nombre" minlength="3" class="controls" value="<%= locals.old && old.first_name %>">. >
+					<small ></small><% if (locals.errors && errors.name) { %>
+						<p class="feedback"><%= errors.name %></p>
+						<% } %>
 				</div>
 				<div class="control-formularios">
-					<input type="text" name="apellido" placeholder="Apellido" minlength="3" class="controls" >
+					<input type="text" name="last_name" placeholder="Apellido" minlength="3" class="controls" value="<%= locals.old && old.last_name %>">.>
+					<small ></small><% if (locals.errors && errors.name) { %>
+						<p class="feedback"><%= errors.name %></p>
+						<% } %>
+
 				</div>
 				<div class="control-formularios">
-					<input type="text" name="phone" placeholder="Número de teléfono" class="controls" >
+					<input type="text" name="phone" placeholder="Número de teléfono" class="controls" value="<%= locals.old && old.phone %>">. >
+					<small ></small><% if (locals.errors && errors.name) { %>
+						<p class="feedback"><%= errors.name %></p>
+						<% } %>
+
 				</div>
 				<div class="control-formularios">
-					<input type="email" name="email" placeholder="E-mail" class="controls" >
+					<input type="email" name="email" placeholder="E-mail" class="controls" value="<%= locals.old && old.email %>"> >
+					<small ></small><% if (locals.errors && errors.name) { %>
+						<p class="feedback"><%= errors.name %></p>
+						<% } %>
+
 				</div>
 				<div class="control-formularios">
-					<input type="password" name="contrasena" placeholder="Contraseña" class="controls" >
+					<input type="password" name="password" placeholder="Contraseña" class="controls"  value="<%= locals.old && old.password %>">.>
+					<small ></small><% if (locals.errors && errors.name) { %>
+						<p class="feedback"><%= errors.name %></p>
+						<% } %>
+				
 				</div>
 				<button type="submit" class="boton-formularios">Registro</button>
 				<div class="registros">
