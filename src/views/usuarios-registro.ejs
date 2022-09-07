@@ -1,13 +1,14 @@
-<%- include('./partials/head') %>
+<%- include('partials/head', {title: 'Formulario de creación'}) %>
 <body>
 	<div id="contenedor">
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<h1>Registro</h1>
-			<form action="/" method="GET" class="formularios">
+			<form action="/usuarios/registro" method="POST" class="formularios">
 				<img class="img" src="/stock-photos/mini-torta-red-velvet-2.jpg" alt="">
 				<div class="control-formularios">
-					<input type="text" name="nombre" placeholder="Nombre" minlength="3" class="controls" >
+					<input type="text" class="controls <%= locals.errors && errors.name ? 'is-invalid' : null %>" value="<%= locals.old && old.name ? old.name : null %>" name="nombre" placeholder="Nombre" minlength="3"  >
+					<small id="errorNombre" class="text-danger"> <%= locals.errors && errors.name ? errors.name.msg : null %> </small>
 				</div>
 				<div class="control-formularios">
 					<input type="text" name="apellido" placeholder="Apellido" minlength="3" class="controls" >
