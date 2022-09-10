@@ -50,7 +50,7 @@ const controller = {
 		const productosNuevos = [...productos, nuevoProducto];
 
 		storeProducts(productosNuevos);
-
+console.log(productosNuevos)
 		res.redirect('/');
 	},
 
@@ -83,6 +83,7 @@ const controller = {
             })
 
             storeProducts(productosModificar);
+			
 			productos = loadProducts();
             return res.redirect('/productos/detalles/' + req.params.id);
 

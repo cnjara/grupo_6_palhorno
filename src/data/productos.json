@@ -106,5 +106,23 @@
       "descripcion": "Descripción de producto 1",
       "categoria": "panaderia",
       "imagen": "cañoncito.jpg"
+   },
+   {
+      "id": 13,
+      "nombre": "ttt",
+      "precio": 66,
+      "stock": 6,
+      "descripcion": "Añada una descripciónwerwewe",
+      "categoria": "panaderia",
+      "imagen": "producto-item.png"
+   },
+   {
+      "id": 14,
+      "nombre": "sdg",
+      "precio": 2453,
+      "stock": 5,
+      "descripcion": "Añada una descripcióndg",
+      "categoria": "confiteria",
+      "imagen": "producto-item.png"
    }
 ]

@@ -1,34 +1,69 @@
-<%- include('partials/head', {title: 'Formulario de creación'}) %>
-<body>
-	<div id="contenedor">
-		<%- include('./partials/header') %>
-		<main class="body__main">
-			<h1>Registro</h1>
-			<form action="/usuarios/registro" method="POST" class="formularios">
-				<img class="img" src="/stock-photos/mini-torta-red-velvet-2.jpg" alt="">
-				<div class="control-formularios">
-					<input type="text" class="controls <%= locals.errors && errors.name ? 'is-invalid' : null %>" value="<%= locals.old && old.name ? old.name : null %>" name="nombre" placeholder="Nombre" minlength="3"  >
-					<small id="errorNombre" class="text-danger"> <%= locals.errors && errors.name ? errors.name.msg : null %> </small>
-				</div>
-				<div class="control-formularios">
-					<input type="text" name="apellido" placeholder="Apellido" minlength="3" class="controls" >
-				</div>
-				<div class="control-formularios">
-					<input type="text" name="phone" placeholder="Número de teléfono" class="controls" >
-				</div>
-				<div class="control-formularios">
-					<input type="email" name="email" placeholder="E-mail" class="controls" >
-				</div>
-				<div class="control-formularios">
-					<input type="password" name="contrasena" placeholder="Contraseña" class="controls" >
-				</div>
-				<button type="submit" class="boton-formularios">Registro</button>
-				<div class="registros">
-					<p>Ya miembro?</p><a href="/usuarios/login" title="ingresa con tu usuario">Login</a>
-				</div>   
-			</form>
-		</main>
-		<%- include('./partials/footer') %>
-	</div>
-</body>
-</html>
+<%- include('partials/head', {title: 'Formulario de creación' }) %>
+
+	<body>
+		<div id="contenedor">
+			<%- include('./partials/header') %>
+				<main class="body__main">
+					<h1>Registro</h1>
+					<form action="/usuarios/registro" method="POST" class="formularios">
+						<img class="img" src="/stock-photos/mini-torta-red-velvet-2.jpg" alt="">
+						<div class="control-formularios">
+							<input type="text"
+								class="controls <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+								value="<%= locals.old && old.nombre ? old.nombre : null %>" name="nombre"
+								placeholder="Nombre" minlength="3">
+							<small id="errorNombre" class="text-danger">
+								<%= locals.errors && errors.nombre ? errors.nombre.msg : null %>
+							</small>
+						</div>
+						<div class="control-formularios">
+							<input type="text" name="apellido" placeholder="Apellido" minlength="3"
+								class="controls <%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
+								value="<%= locals.old && old.apellido ? old.apellido : null %>">
+							<small id="errorNombre" class="text-danger">
+								<%= locals.errors && errors.apellido? errors.apellido.msg : null %>
+							</small>
+						</div>
+						<div class="control-formularios">
+							<input type="text" name="phone" placeholder="Número de teléfono"
+								class="controls <%= locals.errors && errors.phone ? 'is-invalid' : null %>"
+								value="<%= locals.old && old.phone ? old.phone : null %>">
+							<small id="errorNombre" class="text-danger">
+								<%= locals.errors && errors.phone? errors.phone.msg : null %>
+							</small>
+						</div>
+						<div class="control-formularios">
+							<input type="email" name="email" placeholder="E-mail"
+								class="controls <%= locals.errors && errors.email? 'is-invalid' : null %>"
+								value="<%= locals.old && old.email? old.email : null %>">
+							<small id="errorNombre" class="text-danger">
+								<%= locals.errors && errors.email? errors.email.msg : null %>
+							</small>
+						</div>
+						<div class="control-formularios">
+							<input type="password" name="contraseña" placeholder="Contraseña"
+								class="controls <%= locals.errors && errors.contraseña ? 'is-invalid' : null %>"
+								value="<%= locals.old && old.contraseña ? old.contraseña : null %>">
+							<small id="errorNombre" class="text-danger">
+								<%= locals.errors && errors.contraseña? errors.contraseña.msg : null %>
+							</small>
+						</div>
+					<!--<div class="control-formularios">
+							<input type="password" name="contraseña2" placeholder="Contraseña"
+								class="controls <%= locals.errors && errors.contraseña2? 'is-invalid' : null %>"
+								>value="<%= locals.old && old.contraseña2 ? old.contraseña2: null %>">
+							<small id="errorNombre" class="text-danger">
+								<%= locals.errors && errors.contraseña2? errors.contraseña2.msg : null %>
+							</small>
+						</div>-->
+						<button type="submit" class="boton-formularios">Registro</a></button>
+						<div class="registros">
+							<p>Ya miembro?</p><a href="/usuarios/login" title="ingresa con tu usuario">Login</a>
+						</div>
+					</form>
+				</main>
+				<%- include('./partials/footer') %>
+		</div>
+	</body>
+
+	</html>
