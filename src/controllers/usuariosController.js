@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator');
 const { loadUsers, storeUser } = require('../data/dbModule');
-//const bcryptjs = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
+
 
 //let user = loadUsers()
 module.exports = {
@@ -31,8 +32,7 @@ module.exports = {
                 apellido: apellido.trim(),
                 phone: +phone,
                 email: email.trim(),
-                contraseña: contraseña.trim()
-
+                contraseña: bcryptjs.hashSync(contraseña.trim(),10),
             }
 
             const newUsers = [...users, newUser];
