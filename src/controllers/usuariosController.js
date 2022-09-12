@@ -17,10 +17,10 @@ module.exports = {
             const { nombre, apellido, phone, email, contraseña, contraseña2 } = req.body
 
 
-           
+
             const users = loadUsers();
 
-         
+
 
             const id = users[users.length - 1].id;
 
@@ -43,7 +43,7 @@ module.exports = {
 
 
 
-                      /////////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////
         } else {
             console.log(errors)
             return res.render('usuarios-registro', {
@@ -53,5 +53,15 @@ module.exports = {
         }
 
 
+    },
+
+
+    profile: (req, res) => {
+        let user = loadUsers().find(user => user.id === req.session.userLogin.id);
+        return res.render('profile', {
+            user,
+            cities: require('../data/cities'),
+            provinces: require('../data/provinces')
+        })
     }
 }

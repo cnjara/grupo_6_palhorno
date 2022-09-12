@@ -1,13 +1,14 @@
 var express = require('express');
 var router = express.Router();
-const {login, registro,procesoRistro} = require('../controllers/usuariosController');
+const {login, registro,procesoRistro,profile} = require('../controllers/usuariosController');
 const registerValidator =require('../validations/registerValidator');
-
+//const imageUsuario = require('/..multe/imageUsuarios')
 
 router
 .get('/login', login)
 .get('/registro', registro)
 .post('/registro',registerValidator,procesoRistro)
 
+//.get('/profile',imageUsuario,profile);
 
 module.exports = router;

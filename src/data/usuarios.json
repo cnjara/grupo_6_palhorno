@@ -63,5 +63,24 @@
       "phone": 11111111111,
       "email": "pedros@pedros.com",
       "contraseña": "pedros"
+   },
+   {
+      "id": "51111",
+      "nombre": "leonardo",
+      "apellido": "gomez",
+      "phone": 1569381562,
+      "email": "leonardomg888@gmail.com",
+      "contraseña": "123456",
+      "terms": "on"
+   },
+   {
+      "id": "511111",
+      "nombre": "azul",
+      "apellido": "dias",
+      "phone": 12453974158,
+      "email": "azul@gmail.com",
+      "contraseña": "123456",
+      "contraseña2": "123456",
+      "terms": "on"
    }
 ]
