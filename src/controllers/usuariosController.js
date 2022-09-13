@@ -1,6 +1,6 @@
 const { validationResult } = require('express-validator');
 const { loadUsers, storeUser } = require('../data/dbModule');
-const bcryptjs = require('bcryptjs');
+const bcryptjs = require('bcrypt');
 
 
 //let user = loadUsers()
