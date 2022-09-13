@@ -12,7 +12,19 @@
     position: relative;
 }
 
-
+.form__input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid silver;
+    outline: none;
+}
+.form__button {
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+}
 
 .controls{
     width: 88.5%;
