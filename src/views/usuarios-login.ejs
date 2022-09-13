@@ -4,12 +4,14 @@
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<h1>Login</h1>
-			<form action="/" method="GET" class="formulario">
+			<form action="" method="POST" class="formulario">
 				<div class="control-formulario">
-					<input type="text" name="nombreUsuario" placeholder="Nombre de usuario" class="control" >
+					<input type="text" name="email" placeholder="Email" class="control" >
+					<small class="text-danger"></small>
 				</div>
 				<div class="control-formulario">
-					<input type="password" name="contrasena" placeholder="Contraseña" class="control" >
+					<input type="password" name="contraseña" placeholder="Contraseña" class="control" >
+					<small class="text-danger"></small>
 					<div class="password">
 					<p>Olvidaste tu contraseña ?</p>
 					</div>
