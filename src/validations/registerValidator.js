@@ -17,24 +17,23 @@ module.exports = [
 
     body('email')
        .notEmpty()
-        .withMessage('email obligatorio').bail(),
-     // .custom((value, { req }) => {
-       ///     let user = loadUsers().find(user => user - email === value);
-        /// return user ? false : true
-       //}).withMessage('El email ya se encuentra registrado'),
+        .withMessage('email obligatorio').bail()
+      .custom((value, { req }) => {
+            let user = loadUsers().find(user => user - emal === value);
+         return user ? false : true
+       }).withMessage('El email ya se encuentra registrado'),
 
     check('contraseña')
         .notEmpty()
         .withMessage('contraseña obligatorio'),    
      
         body('contraseña2')
-        .notEmpty().withMessage('Debes confirmar la contraseña').bail()
-        .custom((value,{req}) => {
-            if(value !== req.body.contraseña){
-                return false
-            }
-            return true
-        }).withMessage('Las contraseñas no coinciden'),
+        .notEmpty()
+        .withMessage('contraseña erronea').bail()
+        .custom((value, { req }) => {
+            return req.body.pass !== value ? false : true
+
+        }).withMessage('la contraseña no coincide'),
 
    check('terms')
    .isString('on').withMessage('Debes aceptar los términos y condiciones')

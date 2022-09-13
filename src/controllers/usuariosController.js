@@ -23,20 +23,16 @@ module.exports = {
 
 
 
-            //const id = users[users.length - 1].id;
-            //users[users.length - 1] ?
+            const id = users[users.length - 1].id;
+
             const newUser = {
-              //  id: id + 1,
-              id : users[users.length - 1] ? users[users.length - 1].id +1 : 1,
-
-
+                id: id + 1,
                 ...req.body,
                 nombre: nombre.trim(),
                 apellido: apellido.trim(),
                 phone: +phone,
                 email: email.trim(),
                 contraseña: bcryptjs.hashSync(contraseña.trim(),10),
-                contraseña2:contraseña2.trim()
             }
 
             const newUsers = [...users, newUser];

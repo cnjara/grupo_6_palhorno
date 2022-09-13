@@ -82,25 +82,5 @@
       "contraseña": "123456",
       "contraseña2": "123456",
       "terms": "on"
-   },
-   {
-      "id": "5111111",
-      "nombre": "marce",
-      "apellido": "kaksl",
-      "phone": 11564449,
-      "email": "marce888@gmail.com",
-      "contraseña": "$2b$10$xmWxBAftL/YZMhr2jq4QV.ltHcRoemsfk.gTdB2/amxsXAHbF3UcK",
-      "contraseña2": "123456",
-      "terms": "on"
-   },
-   {
-      "id": "51111111",
-      "nombre": "mis",
-      "apellido": "miss",
-      "phone": 1234566,
-      "email": "mis@gmail.com",
-      "contraseña": "$2b$10$QigDnYFbGpU85KiPnRQGouXypj7U5zKRVCXH5U5oxoccdF0xjgpAq",
-      "contraseña2": "123456",
-      "terms": "on"
    }
 ]
