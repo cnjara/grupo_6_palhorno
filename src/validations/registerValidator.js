@@ -5,28 +5,42 @@ const { loadUsers } = require('../data/dbModule');
 
 module.exports = [
     check('nombre')
-        .notEmpty()
-        .withMessage('nombre obligatorio'),
+    .notEmpty().withMessage('El nombre es obligatorio').bail()
+    .isLength({
+        min : 2
+    }).withMessage('Mínimo 2 caracteres').bail()
+    .isAlpha('es-ES').withMessage('Solo caracteres alfabéticos'),
+
     check('apellido')
-        .notEmpty()
-        .withMessage('apellido obligatorio'),
+    .notEmpty().withMessage('El apellido es obligatorio').bail()
+    .isLength({
+        min : 2
+    }).withMessage('Mínimo 2 caracteres').bail()
+    .isAlpha('es-ES').withMessage('Solo caracteres alfabéticos'),
    
         check('phone')
        .notEmpty()
         .withMessage('telefono obligatorio').bail(),
 
     body('email')
-       .notEmpty()
-        .withMessage('email obligatorio').bail(),
-     // .custom((value, { req }) => {
-       ///     let user = loadUsers().find(user => user - email === value);
-        /// return user ? false : true
-       //}).withMessage('El email ya se encuentra registrado'),
+    .notEmpty().withMessage('El email es obligatorio').bail()
+    .isEmail().withMessage('Debe ser un email válido').bail()
+    .custom((value, {req}) => {
+        const user = loadUsers().find(user => user.email === value);
 
+        if(user){
+            return false
+        }else {
+            return true
+        }
+    }).withMessage('El email ya se encuentra registrado'),
     check('contraseña')
-        .notEmpty()
-        .withMessage('contraseña obligatorio'),    
-     
+    .notEmpty().withMessage('La contraseña es obligatoria').bail()
+    .isLength({
+        min : 6, 
+        max : 12
+    }).withMessage('La contraseña debe tener entre 6 y 12 caracteres'),
+
         body('contraseña2')
         .notEmpty().withMessage('Debes confirmar la contraseña').bail()
         .custom((value,{req}) => {
