@@ -15,7 +15,7 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { nombre, apellido, phone, email, contraseña, contraseña2 } = req.body
+            const { nombre, apellido, phone, email, contraseña, contraseña2, avatar } = req.body
 
 
 
@@ -36,7 +36,8 @@ module.exports = {
                 phone: +phone,
                 email: email.trim(),
                 contraseña: bcryptjs.hashSync(contraseña.trim(),10),
-                contraseña2:contraseña2.trim()
+                contraseña2:contraseña2.trim(),
+                avatar: null,
             }
 
             const newUsers = [...users, newUser];
