@@ -40,47 +40,36 @@
       "contraseña": "MariRo12"
    },
    {
-      "id": "51",
-      "nombre": "leonardo",
-      "apellido": "gomez",
-      "phone": "01569381562",
-      "email": "leonardomg888@gmail.com",
-      "contraseña": "lkolkol",
-      "telefono": null
-   },
-   {
-      "id": "511",
-      "nombre": "hola",
-      "apellido": "hola",
-      "phone": 1212112,
-      "email": "hola@hola.com",
-      "contraseña": "hola"
-   },
-   {
-      "id": "5111",
-      "nombre": "pedro",
-      "apellido": "garcia",
-      "phone": 11111111111,
-      "email": "pedros@pedros.com",
-      "contraseña": "pedros"
-   },
-   {
-      "id": "51111",
+      "id": 6,
       "nombre": "leonardo",
       "apellido": "gomez",
       "phone": 1569381562,
       "email": "leonardomg888@gmail.com",
-      "contraseña": "123456",
+      "contraseña": "$2b$10$uTBvB1DWkl0alFwPewKk1.jB/ZkwaPw1pNfe3PgKp7ltvnm.ZgjLu",
+      "contraseña2": "123456",
+      "avatar": null,
       "terms": "on"
    },
    {
-      "id": "511111",
-      "nombre": "azul",
-      "apellido": "dias",
-      "phone": 12453974158,
-      "email": "azul@gmail.com",
-      "contraseña": "123456",
-      "contraseña2": "123456",
+      "id": 7,
+      "nombre": "hola",
+      "apellido": "hola",
+      "phone": 1122,
+      "email": "ddasd@com.com",
+      "contraseña": "$2b$10$0L3vzi4faLAkuJmzyuSxOeAs1gxjWg.0NQXcgDQN3bx7e8O8UfWsm",
+      "contraseña2": null,
+      "avatar": null,
+      "terms": "on"
+   },
+   {
+      "id": 8,
+      "nombre": "leonardo",
+      "apellido": "gomez",
+      "phone": 1569381562,
+      "email": "leonardomg@gmail.com",
+      "contraseña": "$2b$10$3RA/w5gGGIwru7QTXGCPresFHsm/7w8A6SiZ0GaUa2CtGVX3WZUvS",
+      "contraseña2": null,
+      "avatar": null,
       "terms": "on"
    }
 ]
