@@ -71,5 +71,16 @@
       "contraseña2": null,
       "avatar": null,
       "terms": "on"
+   },
+   {
+      "id": 9,
+      "nombre": "hola",
+      "apellido": "hola",
+      "phone": 14545556,
+      "email": "hola@miguel.com",
+      "contraseña": "$2b$10$udhziSi/B2su8gTX16U8a.ylITsRq0GjnbCpccL7rm6Xck/2Tflpq",
+      "contraseña2": null,
+      "avatar": null,
+      "terms": "on"
    }
 ]
