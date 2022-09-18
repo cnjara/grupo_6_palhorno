@@ -8,6 +8,27 @@ module.exports = {
     login: (req, res, next) => {
         res.render('usuarios-login', { title: 'Login de usuario' });
     },
+    procesoLogin : (req,res) => {
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+
+            let {id, nombre, avatar} = loadUsers().find(user => user.email === req.body.email);
+            req.session.userLogin = {
+                id,
+                nombre,
+                avatar
+
+            }
+
+            return res.redirect('/')
+        }else{
+            return res.render('usuarios-login', { 
+                title: 'Login de usuario',
+                errors : errors.mapped()
+            })
+        }
+    },
     registro: (req, res, next) => {
         res.render('usuarios-registro', { title: 'Registro de usuario' });
     },
@@ -59,14 +80,18 @@ module.exports = {
 
 
     },
-
-
-    profile: (req, res) => {
+    perfil : (req, res) => {
         let user = loadUsers().find(user => user.id === req.session.userLogin.id);
-        return res.render('profile', {
-            user,
-            cities: require('../data/cities'),
-            provinces: require('../data/provinces')
+        return res.render('perfil', {
+            title : 'Perfil del usuario',
+            user
         })
+    },
+    editar : (req,res) => {
+        res.send(req.body);
+    },
+    logout : (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
 }

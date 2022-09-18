@@ -1,0 +1,97 @@
+.section__perfil {
+    width:  95%;
+}
+
+.form__perfil {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.form__box__perfil {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input__perfil {
+    padding: 6px 0;
+    border: solid var(--MarronCeniza) 1px;
+    border-radius: 5px;
+    font-family: 'Ibarra Real Nova';
+    font-size: var(--tamañoNormal);
+}
+.form__box__button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button__perfil {
+    width: 35%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Ibarra Real Nova';
+    font-size: 18px;
+}
+
+.button__perfil--cancelar {
+    background-color: var(--MarronCeniza);
+}
+
+.button__perfil--cancelar:hover {
+	background-color: var(--NegroPasa);
+	transition: 500ms;
+}
+
+.button__perfil--guardar {
+    background-color: var(--CaobaClaro);
+}
+
+.button__perfil--guardar:hover {
+	background-color: #7e2c00;
+	transition: 500ms;
+}
+
+/* MEDIA QUERY | TABLET | 768px */
+@media (min-width:768px) {
+
+    .form__perfil {
+        gap: 25px;
+    }
+    
+    .section__perfil {
+        width: 80%;
+        padding-left: 120px;
+    }
+
+    .label__perfil {
+        font-size: 20px;
+    }
+}
+
+/* MEDIA QUERY | DESKTOP | 1024px */
+@media (min-width:1024px) {
+
+    .form__box__button {
+        justify-content: end;
+    }
+
+    .button__perfil {
+        width: 20%;
+    }
+
+    .button__perfil--guardar {
+        margin: 0 40px;
+    }
+}

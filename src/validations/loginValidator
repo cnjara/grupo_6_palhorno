@@ -1,9 +1,0 @@
-const {check,body} = require('express-validator');
-const {loadUsers} = require('../data/dbModule');
-const bcrypt = require('bcrypt');
-
-module.exports = [
-    check('email')
-        .notEmpty()
-
-]

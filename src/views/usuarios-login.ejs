@@ -7,18 +7,18 @@
 			<form action="" method="POST" class="formulario">
 				<div class="control-formulario">
 					<input type="text" name="email" placeholder="Email" class="control" >
-					<small class="text-danger"></small>
+					<small class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
 				</div>
 				<div class="control-formulario">
 					<input type="password" name="contraseña" placeholder="Contraseña" class="control" >
-					<small class="text-danger"></small>
+					<small class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>
 					<div class="password">
 					<p>Olvidaste tu contraseña ?</p>
 					</div>
 				</div>
 				<button type="submit" class="boton-formulario">Login</button>
 				<div class="registro">
-				<p>Necesito una cuenta ?</p><a href="/usuarios/registro" title="crea tu usuario">Registro</a>
+				<p>Necesitas una cuenta?</p><a href="/usuarios/registro" title="crea tu usuario">Registrate</a>
 				</div>   
 			</form>
 		</main>
