@@ -42,13 +42,12 @@ module.exports = [
     }).withMessage('La contraseña debe tener entre 6 y 12 caracteres'),
 
         body('contraseña2')
-        .notEmpty().withMessage('Debes confirmar la contraseña').bail()
-        .custom((value,{req}) => {
-            if(value !== req.body.contraseña){
-                return false
-            }
-            return true
-        }).withMessage('Las contraseñas no coinciden'),
+        .notEmpty()
+        .withMessage('contraseña erronea').bail()
+        .custom((value, { req }) => {
+            return req.body.pass !== value ? false : true
+
+        }).withMessage('la contraseña no coincide'),
 
    check('terms')
    .isString('on').withMessage('Debes aceptar los términos y condiciones')

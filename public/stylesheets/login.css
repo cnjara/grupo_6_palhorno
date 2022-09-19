@@ -1,13 +1,13 @@
 .formulario {
-    padding: 20px 15px;
+    padding: 10px;
   /*  background-color: #ffff;*/
     text-align: center;
 }
 .control-formulario {
-    margin-bottom: 45px;
-    text-align: left; 
-    margin-left: 10%;
-    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
 }
 
 .control-formulario h3 {
@@ -35,62 +35,51 @@
     margin: 0 25px 40px 0;
 }
 .boton-formulario:hover{
-    background-color:var(--KakiOscuro);
+    background-color:var(--CaobaOscuro);
 }
 .boton-formulario{
-    width: 50%;
-    background-color:var(--KakiOscuro);
+    width: 30%;
+    background-color:var(--CaobaClaro);
     border: none;
-    font-size: 25px;
-    color:black;
-    padding: 3px 10px;
+    font-size: var(--tamañoMedio);
+    font-family: 'Ibarra Real Nova';
+    color: white;
+    padding: 5px;
     border-radius: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     transition: all 450ms;
 }
 .password{
-    color: #0022AA;
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    color: var(--NegroPasa);
+    margin: 5px;
+    font-size: var(--tamañoNormal);
 }
-
-
-@media (min-width: 320px){
-    .registro{
-        display: flex;
-        position: relative;
-        margin: -12px 0px 60px 48px;
-        font-size: 14px;
-        margin-top: -10px;
-    }
-    .boton-formulario{
-        width: 225px;
-    }
+.registro {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: center;
 }
 
 @media (min-width: 768px){
-.registro{
-    display: flex;
-    position: relative;
 
-    margin: -22px 0px 60px 109px;
-    margin-top: -10px;
-}
 }
 .boton-formulario{
-    width: 78%;
+    width: 45%;
 }
 
 
 @media (min-width:1024px){
-.registro{
-    display: flex;
-    position: relative;
-
-margin: -14px 0px 60px 261px;
-margin-top: -10px;
-
+.control-formulario {
+    width: 55%;
+    margin: 30px auto;
 }
+
 .boton-formulario{
-    width: 50%;
+    width: 20%;
 }
 }
