@@ -81,9 +81,7 @@ color: red;
 position: relative;
 display: block;
 }
-.form__box{
-    
-}
+
 @media (min-width:320px){
     .img{
     display: none;

@@ -4,7 +4,8 @@ const {login, registro,procesoRistro,perfil,procesoLogin,logout,editar} = requir
 const loginValidator = require('../validations/loginValidator');
 const registerValidator =require('../validations/registerValidator');
 const userSessionCheck = require('../middlewares/userSessionCheck');
-//const imageUsuario = require('/..multe/imageUsuarios')
+const {uploadUsers} = require('../multer/uploadFiles')
+
 
 router
 .get('/login', login)
@@ -12,7 +13,7 @@ router
 .get('/registro', registro)
 .post('/registro',registerValidator,procesoRistro)
 .get('/perfil',userSessionCheck,perfil)
-.put('/editar/:id',editar)
+.put('/editar/:id',uploadUsers.single('avatar'),editar)
 .get('/logout', logout)
 
 module.exports = router;

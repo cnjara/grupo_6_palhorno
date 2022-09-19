@@ -5,7 +5,10 @@
         <main class="body__main">
             <section class="section__perfil">
             <h1>Mi perfil</h1>
-            <form class="form__perfil" action="" enctype="multipart/form-data" method="POST">
+            <div class="box__imagen__perfil">
+            <img src="/images/usuarios/<%= user.avatar ? user.avatar : 'avatar-default.jpg' %>" alt="imagen de usuario" width="100px">
+            </div>
+            <form class="form__perfil" action="/usuarios/editar/<%= user.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
                 <div class="form__box__perfil">
                     <label class="label__perfil" for="nombre">Nombre</label>
                     <input class="input__perfil" type="text" id="nombre" name="nombre" style="padding-left: 5px;" value="<%= user.nombre %>">
@@ -20,11 +23,11 @@
                 </div>
                 <div class="form__box__perfil">
                     <label class="label__perfil" for="email">Email</label>
-                    <input class="input__perfil" type="text" id="email" name="email" style="padding-left: 5px;" value="<%= user.email %>">
+                    <input class="input__perfil" type="text" id="email" name="email" style="padding-left: 5px;" readonly value="<%= user.email %>">
                 </div>
                 <div class="form__box__perfil">
                     <label class="label__perfil" for="avatar">Imagen del usuario</label>
-                    <input class="input__perfil" type="text" id="avatar" name="avatar" style="padding-left: 5px;" value="<%= user.avatar %>">
+                    <input class="input__perfil" type="file" id="avatar" name="avatar" accept="image/*" value="<%= user.avatar %>">
                 </div>
                 <div class="form__box__button">
                 <button class="button__perfil button__perfil--cancelar" type="reset">Cancelar</button>

@@ -41,13 +41,13 @@
    },
    {
       "id": 6,
-      "nombre": "leonardo",
-      "apellido": "gomez",
+      "nombre": "Leonardo",
+      "apellido": "Gomez",
       "phone": 1569381562,
       "email": "leonardomg888@gmail.com",
       "contraseña": "$2b$10$uTBvB1DWkl0alFwPewKk1.jB/ZkwaPw1pNfe3PgKp7ltvnm.ZgjLu",
       "contraseña2": "123456",
-      "avatar": null,
+      "avatar": "avatar-1663539185084.jpg",
       "terms": "on"
    },
    {

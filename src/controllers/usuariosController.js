@@ -1,7 +1,8 @@
 const { validationResult } = require('express-validator');
 const { loadUsers, storeUser } = require('../data/dbModule');
 const bcrypt = require('bcrypt');
-
+const fs = require('fs');
+const path = require('path');
 
 //let user = loadUsers()
 module.exports = {
@@ -19,6 +20,12 @@ module.exports = {
                 nombre,
                 avatar
 
+            }
+
+            if(req.body.recordarme){
+                res.cookie('usuarioLogueado', req.session.userLogin,{
+                    maxAge : 60000
+                })
             }
 
             return res.redirect('/')
@@ -88,7 +95,31 @@ module.exports = {
         })
     },
     editar : (req,res) => {
-        res.send(req.body);
+
+        const {nombre, apellido, phone} = req.body;
+
+        let userModify = loadUsers().map(user => {
+            if(user.id === +req.params.id){
+                return {
+                    ...user,
+                    /* ...req.body */
+                    nombre : nombre.trim(),
+                    apellido : apellido.trim(),
+                    phone : +phone,
+                    avatar : req.file ? req.file.filename : req.session.userLogin.avatar
+                }    
+            }
+            return user
+        });
+
+        if(req.file && req.session.userLogin.avatar) {
+            if(fs.existsSync(path.resolve(__dirname, '..', '..', 'public', 'images', 'usuarios', req.session.userLogin.avatar))){
+                fs.unlinkSync(path.resolve(__dirname, '..', '..', 'public', 'images', 'usuarios', req.session.userLogin.avatar))
+            }
+        }
+
+    storeUser(userModify);
+        return res.redirect('/usuarios/perfil')
     },
     logout : (req, res) => {
         req.session.destroy();

@@ -11,12 +11,18 @@
 				</div>
 				<div class="control-formulario">
 					<input type="password" name="contraseña" placeholder="Contraseña" class="control" >
-					<small class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>
-					<div class="password">
-					<p>Olvidaste tu contraseña ?</p>
-					</div>
+					<small class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>	
 				</div>
-				<button type="submit" class="boton-formulario">Login</button>
+				<button type="submit" class="boton-formulario">Ingresar</button>
+				<div class="form__remember">
+					<form action="">
+						<input type="checkbox" id="recordarme" name="recordarme">
+						<label for="recordarme" id="recordarme">Recordarme</label>
+					</form>
+				</div>
+				<div class="password">
+					<p>Olvidaste tu contraseña?</p>
+				</div>
 				<div class="registro">
 				<p>Necesitas una cuenta?</p><a href="/usuarios/registro" title="crea tu usuario">Registrate</a>
 				</div>   
