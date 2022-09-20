@@ -1,15 +1,31 @@
-
+.form__box__imagen img {
+    display: none;
+}
 .formularios {
-    padding: 20px 15px;
-  /* background-color: #ffff;*/
+    padding: 10px;
     text-align: center;
 }
 .control-formularios {
-    margin-bottom: 45px;
-    text-align: left; 
-    margin-left: 10%;
-    margin-top: 70px;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 95%;
+    margin: 30px 15% 10px;
+    justify-content: center;
+}
+.form__box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+}
+.form__label--small {
+    font-size: var(--tamañoNormal);
+}
+.registros {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    justify-content: center;
 }
 
 /*.form__input {
@@ -33,7 +49,7 @@
 .controls{
     width: 88.5%;
     padding: 8px;
-    border-radius: 30px;
+    border-radius: 10px;
     border: solid 1px var(--NegroPasa);
 
 }
@@ -50,98 +66,74 @@
     margin: 0 25px 40px 0;
 }
 .boton-formularios:hover{
-    background-color: var(--KakiOscuro);
+    background-color: var(--CaobaOscuro);
 }
 .boton-formularios{
-    width: 81%;
-    background-color:var(--KakiOscuro);
+    width: 140px;
+    background-color:var(--CaobaClaro);
     border: none;
-    font-size: 33px;
-    color: black;
-    padding: 1px 10px;
+    font-size: var(--tamañoMedio);
+    font-family: 'Ibarra Real Nova';
+    color: white;
+    padding: 5px;
     border-radius: 30px;
-    margin-bottom: 20px;
-    transition: all 450ms;
-    left: -10px;
-    position: relative;}
-
-.img{
-
-position: absolute;
-left: 150px;
-
-}*/
-
-
-a{
-    color: red;
+    margin-top: 10px;
+    transition: all 500ms;
 }
+
 .text-danger {
 color: red;
-position: relative;
-display: block;
-}
+width: 65%;
 
-@media (min-width:320px){
-    .img{
-    display: none;
-    }
-   .registros{
-    font-size: 10px;
-   }
 }
-
 
 @media (min-width:768px){
-.img{
-    display: none;
+.controls {
+    width: 70%;
+}
+.form__box {
+   justify-content: start;
+   padding-left: 120px;
+}
+.boton-formularios {
+    margin-top: 18px;
+    width: 200px;
 }
 }
 
 @media (min-width:1024px){
+    .formularios {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
     .control-formularios {
-       
-        margin-left: 55%;
-       
+        justify-content: end;
     }
-    .boton-formularios{
-        width: 41%;
-        margin-left: 485px;
+    .form__box__imagen {
+        width: 45%;
+        text-align: end;
     }
-    .img{
+    .form__box__imagen img {
         display: block;
-        box-sizing: border-box;
-        position: absolute;
-        width: 398px;
-        height: 514px;
-        left: 93px;
-        top:346px;
-        background: #F5F5F5;
+        width: 390px;
+        height: 490px;
         border: 1px solid #000000;
         border-radius: 100px 0px 0px 100px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-     /*   border-radius: 100px;*/
+        box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+        padding: 0;
+        margin: 3% 0 0 21%;
     }
-    .registros{
-        display: flex;
-        position: relative;
-    
-        margin: -13px 0px 60px 560px;
-    margin-top: -10px;
-    
+    .form__box__formulario {
+        width: 55%;
     }
-    .form__button {
-       
-        left: 220px;
-        top: -51px;
+    .controls {
+        width: 70%;
+        margin-right: 3%;
     }
-    .form__box{
-        position: relative;
-        left: 230px;
-        top: -28px;
-    
+    .form__box {
+        padding-left: 85px;
     }
-
 
 }
 

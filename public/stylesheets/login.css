@@ -1,6 +1,5 @@
 .formulario {
     padding: 10px;
-  /*  background-color: #ffff;*/
     text-align: center;
 }
 .control-formulario {
@@ -18,7 +17,7 @@
 .control{
     width: 88.5%;
     padding: 8px;
-    border-radius: 30px;
+    border-radius: 10px;
     border: solid 1px var(--NegroPasa);
 
 }
@@ -47,7 +46,7 @@
     padding: 5px;
     border-radius: 30px;
     margin-bottom: 15px;
-    transition: all 450ms;
+    transition: all 500ms;
 }
 .password{
     display: flex;
