@@ -19,8 +19,7 @@ module.exports = [
     .isAlpha('es-ES').withMessage('Solo caracteres alfabéticos'),
    
         check('phone')
-       .notEmpty()
-        .withMessage('telefono obligatorio').bail(),
+       .notEmpty().withMessage('El teléfono obligatorio').bail(),
 
     body('email')
     .notEmpty().withMessage('El email es obligatorio').bail()
@@ -43,19 +42,13 @@ module.exports = [
     }).withMessage('La contraseña debe tener entre 6 y 12 caracteres'),
 
         body('contraseña2')
-        .notEmpty().withMessage('Debes confirmar la contraseña').bail()
-        .custom((value,{req}) => {
-            if(value !== req.body.contraseña){
-                return false
-            }
-            return true
-        }).withMessage('Las contraseñas no coinciden'),
+        .notEmpty().withMessage('Debes repetir tu contraseña').bail()
+        .custom((value, { req }) => {
+            return req.body.pass !== value ? false : true
+
+        }).withMessage('la contraseña no coincide'),
 
    check('terms')
    .isString('on').withMessage('Debes aceptar los términos y condiciones')
-
-
-
-
 
 ];

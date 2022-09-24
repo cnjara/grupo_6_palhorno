@@ -1,12 +1,14 @@
 <%- include('partials/head', {title: 'Formulario de creación' }) %>
-
 	<body>
 		<div id="contenedor">
 			<%- include('./partials/header') %>
 				<main class="body__main">
 					<h1>Registro</h1>
 					<form action="/usuarios/registro" method="POST" class="formularios">
+						<div class="form__box__imagen">
 						<img class="img" src="/stock-photos/mini-torta-red-velvet-2.jpg" alt="">
+						</div>
+						<div class="form__box__formulario">
 						<div class="control-formularios">
 							<input type="text"
 								class="controls <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
@@ -56,26 +58,16 @@
 								<%= locals.errors && errors.contraseña2? errors.contraseña2.msg : null %>
 							</small>
 						</div>
-						
-								
-						
-						<button type="submit" class="boton-formularios">Registro</a></button>
-						<div class="registros">
-							<p>Ya miembro?</p><a href="/usuarios/login" title="ingresa con tu usuario">Login</a>
-						</div>
-						<div>
-							<button class="form__button " for="avatar">Seleccione un imagen</button>
-							<input hidden class="form__input" type="file" id="avatar" name="avatar">
-						</div>
 						<div class="form__box">
 							<input class="form__checkbox" type="checkbox" id="terminos" name="terms">
 							<label class="form__label--small" for="terminos">Acepto los términos y condiciones</label>
+							<small class="text-danger"><%= locals.errors && errors.terms ? errors.terms.msg :null %></small>
 						</div>
-						<!--<a href="/terms" target="_blank"></a>-->
-						<div class="form__box">
-							<small class="form__text--error"><%= locals.errors && errors.terms ? errors.terms.msg :null %></small>
+						<button type="submit" class="boton-formularios">Registrarse</a></button>
+						<div class="registros">
+							<p>Ya estás registrado?</p>&nbsp;<a href="/usuarios/login" title="ingresa con tu usuario" style="font-weight: bold;">Inicia sesión</a>
 						</div>
-				
+					</div>
 					</form>
 				</main>
 				<%- include('./partials/footer') %>

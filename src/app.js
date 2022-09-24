@@ -5,6 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var methodOverride = require('method-override');
+const session = require('express-session');
+
+const cookieCheck = require('./middlewares/cookieCheck');
+const localsUSerCheck = require('./middlewares/localsUserCheck');
 
 var generalRouter = require('./routes/general');
 var productosRouter = require('./routes/productos');
@@ -21,7 +25,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
+
 app.use(methodOverride('_method'));
+app.use(session({
+  secret : 'pal horno',
+  resave : false,
+  saveUninitialized : true
+}));
+
+app.use(cookieCheck);
+app.use(localsUSerCheck);
 
 app.use('/', generalRouter);
 app.use('/productos', productosRouter);

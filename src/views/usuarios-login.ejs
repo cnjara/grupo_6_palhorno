@@ -4,19 +4,27 @@
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<h1>Login</h1>
-			<form action="/" method="GET" class="formulario">
+			<form action="" method="POST" class="formulario">
 				<div class="control-formulario">
-					<input type="text" name="nombreUsuario" placeholder="Nombre de usuario" class="control" >
+					<input type="text" name="email" placeholder="Email" class="control" >
+					<small class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
 				</div>
 				<div class="control-formulario">
-					<input type="password" name="contrasena" placeholder="Contraseña" class="control" >
-					<div class="password">
-					<p>Olvidaste tu contraseña ?</p>
-					</div>
+					<input type="password" name="contraseña" placeholder="Contraseña" class="control" >
+					<small class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>	
 				</div>
-				<button type="submit" class="boton-formulario">Login</button>
+				<button type="submit" class="boton-formulario">Ingresar</button>
+				<div class="form__remember">
+					<form action="">
+						<input type="checkbox" id="recordarme" name="recordarme">
+						<label for="recordarme" id="recordarme">Recordarme</label>
+					</form>
+				</div>
+				<div class="password">
+					<p>Olvidaste tu contraseña?</p>
+				</div>
 				<div class="registro">
-				<p>Necesito una cuenta ?</p><a href="/usuarios/registro" title="crea tu usuario">Registro</a>
+				<p>Necesitas una cuenta?</p>&nbsp;<a href="/usuarios/registro" title="crea tu usuario" style="font-weight: bold;">Registrate</a>
 				</div>   
 			</form>
 		</main>
