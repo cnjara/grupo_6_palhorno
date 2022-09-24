@@ -82,5 +82,16 @@
       "contraseña2": null,
       "avatar": null,
       "terms": "on"
+   },
+   {
+      "id": 10,
+      "nombre": "luis",
+      "apellido": "luis",
+      "phone": 1425364,
+      "email": "gga@nono.com",
+      "contraseña": "$2b$10$75aMLr3eSm5upKAzODjfU.YvxNaQ1klx9vDCE79tDwsCarUc1IaPK",
+      "contraseña2": null,
+      "avatar": null,
+      "terms": "on"
    }
 ]
