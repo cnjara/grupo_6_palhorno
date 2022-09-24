@@ -44,7 +44,7 @@ module.exports = [
         body('contraseña2')
         .notEmpty().withMessage('Debes repetir tu contraseña').bail()
         .custom((value, { req }) => {
-            return req.body.pass !== value ? false : true
+            return req.body.contraseña !== value ? false : true
 
         }).withMessage('la contraseña no coincide'),
 

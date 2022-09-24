@@ -93,5 +93,17 @@
       "contraseña2": null,
       "avatar": null,
       "terms": "on"
+   },
+   {
+      "id": 11,
+      "nombre": "leonardo",
+      "apellido": "gomez",
+      "phone": 1569381562,
+      "email": "leon888@gmail.com",
+      "contraseña": "$2b$10$N7j0DJSmMJNIUSscv.CXEu7185rcvBLAcygiW8tY3dM/R.ABbRVsK",
+      "contraseña2": "$2b$10$JXliIp1q3/2bqm5O1ShI.e9PZ/iz06WygddyWiSUzzVO.UCNtYHsC",
+      "terms": "on",
+      "avatar": null,
+      "rol": null
    }
 ]
