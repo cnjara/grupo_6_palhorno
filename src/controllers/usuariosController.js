@@ -6,6 +6,9 @@ const path = require('path');
 
 //let user = loadUsers()
 module.exports = {
+   
+////// login ///////   
+   
     login: (req, res, next) => {
         res.render('usuarios-login', { title: 'Login de usuario' });
     },
@@ -36,6 +39,10 @@ module.exports = {
             })
         }
     },
+
+
+////////registro///////////////////
+
     registro: (req, res, next) => {
         res.render('usuarios-registro', { title: 'Registro de usuario' });
     },
@@ -75,9 +82,6 @@ module.exports = {
             console.log(newUsers)
             res.redirect('/usuarios/login');
 
-
-
-            /////////////////////////////////////////////////////////////////////////////////////
         } else {
             console.log(errors)
             return res.render('usuarios-registro', {
@@ -88,6 +92,10 @@ module.exports = {
 
 
     },
+
+
+/// perfil ///////////////////////////////////
+
     perfil : (req, res) => {
         let user = loadUsers().find(user => user.id === req.session.userLogin.id);
         return res.render('perfil', {
@@ -95,6 +103,9 @@ module.exports = {
             user
         })
     },
+
+
+//// editar ////////    
     editar : (req,res) => {
 
         const {nombre, apellido, phone} = req.body;
@@ -122,6 +133,9 @@ module.exports = {
     storeUser(userModify);
         return res.redirect('/usuarios/perfil')
     },
+
+//////////// destruir usuarios  ////////
+
     logout : (req, res) => {
         req.session.destroy();
         return res.redirect('/')

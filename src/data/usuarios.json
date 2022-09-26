@@ -117,5 +117,17 @@
       "terms": "on",
       "avatar": null,
       "rol": null
+   },
+   {
+      "id": 13,
+      "nombre": "miguel",
+      "apellido": "antonio",
+      "phone": 14425558596,
+      "email": "antoni@antonio.com",
+      "contraseña": "$2b$10$WwUJ5OidpPq.VM4DB1uE/.jilO1WdOV4tS/bnHk7FL4h4LGbrZsSO",
+      "contraseña2": "$2b$10$8zmVMs5H9s9J07Vl1CowV.IIu8kPJhn4ZK/y0VoRz9rU4rG50rByK",
+      "terms": "on",
+      "avatar": null,
+      "rol": null
    }
 ]
