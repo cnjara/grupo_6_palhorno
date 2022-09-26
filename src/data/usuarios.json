@@ -105,5 +105,17 @@
       "terms": "on",
       "avatar": null,
       "rol": null
+   },
+   {
+      "id": 12,
+      "nombre": "bettina",
+      "apellido": "oña",
+      "phone": 2942519092,
+      "email": "beona67@gmail.com",
+      "contraseña": "$2b$10$kkcYsacRfnz6q07pDkuUPeFfcd7VouGDXV/UZpgGgyUxjlwAqueSm",
+      "contraseña2": "$2b$10$oUgsRw0dkw0IR5y8noJ2DePlnATw6A52.dAQZayraFOB3/InxtLAe",
+      "terms": "on",
+      "avatar": null,
+      "rol": null
    }
 ]
