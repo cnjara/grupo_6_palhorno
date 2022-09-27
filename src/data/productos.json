@@ -117,12 +117,12 @@
       "imagen": "producto-item.png"
    },
    {
-      "id": 14,
-      "nombre": "sdg",
-      "precio": 2453,
+      "id": 15,
+      "nombre": "lemon pie",
+      "precio": 1200,
       "stock": 5,
-      "descripcion": "Añada una descripcióndg",
-      "categoria": "confiteria",
+      "descripcion": "Añada una descripción",
+      "categoria": "",
       "imagen": "producto-item.png"
    }
 ]
