@@ -120,14 +120,14 @@
    },
    {
       "id": 13,
-      "nombre": "betina",
-      "apellido": "ventura",
-      "phone": 2942519092,
-      "email": "piguiabel14a@gmail.com",
-      "contraseña": "$2b$10$p3bNG9wRgwvnUkzRGMtS7.1yl/xaiTDg9DfdlFH4ADp27vTUjilju",
-      "contraseña2": "$2b$10$9eDOfF8dobZOMuhElsiCDuPAioCSL.zPf65YVoIoNF1Vse/m4Iz/.",
+      "nombre": "miguel",
+      "apellido": "antonio",
+      "phone": 14425558596,
+      "email": "antoni@antonio.com",
+      "contraseña": "$2b$10$WwUJ5OidpPq.VM4DB1uE/.jilO1WdOV4tS/bnHk7FL4h4LGbrZsSO",
+      "contraseña2": "$2b$10$8zmVMs5H9s9J07Vl1CowV.IIu8kPJhn4ZK/y0VoRz9rU4rG50rByK",
       "terms": "on",
-      "avatar": "avatar-1664230474016.jpg",
+      "avatar": null,
       "rol": null
    }
 ]

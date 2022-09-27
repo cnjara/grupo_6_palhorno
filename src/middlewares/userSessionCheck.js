@@ -1,1 +1,3 @@
-module.exports = (req,res,next) => req.session.userLogin ? next() : res.redirect('/usuarios/login');
+module.exports = 
+(req,res,next) => req.session.userLogin ? next() : 
+res.redirect('/usuarios/login');
