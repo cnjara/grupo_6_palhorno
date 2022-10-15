@@ -1,4 +1,7 @@
+const { validationResult } = require('express-validator');
 const {loadProducts, loadUsers, storeProducts} = require("../data/dbModule");
+const fs = require('fs');
+const path = require('path');
 
 let productos = loadProducts();
 const controller = {
@@ -34,14 +37,17 @@ const controller = {
 	},
 
 	tienda : (req,res) => {
-		const {nombre,precio,stock,imagen} = req.body;
+		let errors = validationResult(req);
+		
+		if (errors.isEmpty()) {
+		const {articulo,precio,stock,imagen} = req.body;
 
 		const id = productos[productos.length - 1].id;
 
 		const nuevoProducto = {
 			id : id + 1,
 			...req.body,
-			nombre : nombre.trim(),
+			articulo : articulo.trim(),
 			precio : +precio,
 			stock : +stock,
 			imagen : "producto-item.png"
@@ -50,9 +56,19 @@ const controller = {
 		const productosNuevos = [...productos, nuevoProducto];
 
 		storeProducts(productosNuevos);
-console.log(productosNuevos)
-		res.redirect('/');
-	},
+		console.log(productosNuevos)
+		res.redirect('/productos')
+	
+	}else{
+		
+		console.log(errors)
+            return res.render('productos-crear', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+
+	}
+},
 
 	modificar: (req, res) => {
 		let  producto = productos.find(producto => producto.id === +req.params.id );
@@ -66,13 +82,13 @@ console.log(productosNuevos)
 		//const productos = loadProducts();
         const {id} = req.params;
 
-            const {nombre, precio, stock, descripcion, categoria} = req.body;
+            const {articulo, precio, stock, descripcion, categoria} = req.body;
 
             const productosModificar = productos.map(producto => {
                 if (producto.id === +id ){
                     return {
                         ...producto,
-                        nombre : nombre.trim(),
+                       articulo :articulo.trim(),
                         precio : +precio,
                         stock : +stock,
 						descripcion,

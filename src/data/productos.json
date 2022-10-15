@@ -59,8 +59,9 @@
       "precio": 1000,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "confiteria",
-      "imagen": "confi-pascuas.jpg"
+      "categoria": "Panaderia",
+      "imagen": "confi-pascuas.jpg",
+      "articulo": "torta de queso"
    },
    {
       "id": 8,
@@ -113,16 +114,62 @@
       "precio": 66,
       "stock": 6,
       "descripcion": "Añada una descripciónwerwewe",
+      "categoria": "Panaderia",
+      "imagen": "producto-item.png",
+      "articulo": "rrro86re8"
+   },
+   {
+      "id": 14,
+      "nombre": "gfg",
+      "precio": 2453,
+      "stock": 5,
+      "descripcion": "Añada una descripcióndg",
+      "categoria": "Panaderia",
+      "imagen": "producto-item.png"
+   },
+   {
+      "id": 15,
+      "nombre": "",
+      "precio": 1200,
+      "stock": 11,
+      "descripcion": "Añada una descripciónddqadasdasd",
+      "categoria": "Panaderia",
+      "imagen": "producto-item.png"
+   },
+   {
+      "id": 16,
+      "articulo": "fritaa",
+      "precio": 150,
+      "stock": 10,
+      "descripcion": "dasdasdad",
+      "categoria": "pasteleria",
+      "imagen": "producto-item.png"
+   },
+   {
+      "id": 17,
+      "articulo": "torta de quesoffff",
+      "precio": 4144,
+      "stock": 14,
+      "descripcion": "lgg´bgfñv",
       "categoria": "panaderia",
       "imagen": "producto-item.png"
    },
    {
-      "id": 14,
-      "nombre": "sdg",
-      "precio": 2453,
-      "stock": 5,
-      "descripcion": "Añada una descripcióndg",
-      "categoria": "confiteria",
+      "id": 18,
+      "articulo": "dsdgs",
+      "precio": 5144,
+      "stock": 10,
+      "descripcion": "dgsdgsgs",
+      "categoria": "panaderia",
+      "imagen": "producto-item.png"
+   },
+   {
+      "id": 19,
+      "articulo": "torta",
+      "precio": 14552,
+      "stock": 11,
+      "descripcion": "faofjjfa",
+      "categoria": "panaderia",
       "imagen": "producto-item.png"
    }
 ]

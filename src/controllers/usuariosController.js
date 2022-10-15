@@ -51,14 +51,10 @@ module.exports = {
 
         if (errors.isEmpty()) {
             const { nombre, apellido, phone, email, contraseña, contraseña2, avatar,rol } = req.body
-
-
-
+            
             const users = loadUsers();
 
-
-
-            const id = users[users.length - 1].id;
+             const id = users[users.length - 1].id;
 
             const newUser = {
               
