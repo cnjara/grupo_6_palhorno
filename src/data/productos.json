@@ -59,9 +59,8 @@
       "precio": 1000,
       "stock": 10,
       "descripcion": "Descripción de producto 1",
-      "categoria": "Panaderia",
-      "imagen": "confi-pascuas.jpg",
-      "articulo": "torta de queso"
+      "categoria": "confiteria",
+      "imagen": "confi-pascuas.jpg"
    },
    {
       "id": 8,
@@ -114,13 +113,12 @@
       "precio": 66,
       "stock": 6,
       "descripcion": "Añada una descripciónwerwewe",
-      "categoria": "Panaderia",
-      "imagen": "producto-item.png",
-      "articulo": "rrro86re8"
+      "categoria": "panaderia",
+      "imagen": "producto-item.png"
    },
    {
       "id": 14,
-      "nombre": "gfg",
+      "nombre": "sdg",
       "precio": 2453,
       "stock": 5,
       "descripcion": "Añada una descripcióndg",
