@@ -14,25 +14,24 @@ module.exports = {
       },
       productId: {
         type: Sequelize.INTEGER,
-        references :{
+        references : {
           model : {
-            tableName: 'Product',
+            tableName : 'Products'
           },
-          key : 'id',
-
+          key : 'id'
         },
-        onDelete: 'cascade',
+        onDelete : 'cascade'
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
       updatedAt: {
-    
+       
         type: Sequelize.DATE
       },
-      deletedAt:{
-        type:sequelize.DATE
+      deletedAt: {
+        type: Sequelize.DATE
       }
     });
   },

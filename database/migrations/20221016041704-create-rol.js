@@ -17,12 +17,10 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-     
+      
         type: Sequelize.DATE
-      },
-      deletedAt:{
-        type:sequelize.DATE
       }
+     
     });
   },
   async down(queryInterface, Sequelize) {

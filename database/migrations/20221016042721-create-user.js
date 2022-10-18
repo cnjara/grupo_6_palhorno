@@ -48,7 +48,7 @@ module.exports = {
         type: Sequelize.DATE
       },
       deletedAt:{
-        type:sequelize.DATE
+        type:Sequelize.DATE
       }
 
     });
