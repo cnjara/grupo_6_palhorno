@@ -2,20 +2,19 @@
 
 /** @type {import('sequelize-cli').Migration} */
 
-const productsJson = require('../../src/data/productos.old.json');
-../../../data/productos.json'
+const productsJson = require('../../src/data/productos.json');
 
 
 
-const products = productsJson.map(({nombre, precio,stock,descripcion,categoria}) => {
+const products = productsJson.map(({name, price,stock,description,categoryId}) => {
  
     return {
-      nombre,
-      precio,
+      name,
+      price,
       stock,
-      descripcion,
+      description,
        
-        categoria, 
+        categoryId, 
         
         createdAt : new Date()
     }
