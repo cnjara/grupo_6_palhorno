@@ -4,7 +4,8 @@
 	"private": true,
 	"description": "C15 Grupo 6 - Pal Horno",
 	"scripts": {
-		"start": "nodemon --config ./src/config/nodemon.json ./src/bin/www"
+		"start": "nodemon --config ./src/config/nodemon.json ./src/bin/www",
+		"dev": " npx nodemon src/app.js"
 	},
 	"author": "Bettina Oña Ventura, Cristian Jara, Leonardo Gómez",
 	"license": "ISC",

@@ -11,10 +11,10 @@
    {
       "id": 2,
       "nombre": "Torta",
-      "precio": 1000,
+      "precio": 10006,
       "stock": 30,
       "descripcion": "Descripción de producto 1",
-      "categoria": "pasteleria",
+      "categoria": "Panaderia",
       "imagen": "DSC1197-1-1.jpg"
    },
    {
@@ -119,10 +119,10 @@
    {
       "id": 14,
       "nombre": "sdg",
-      "precio": 2453,
+      "precio": 24533,
       "stock": 5,
       "descripcion": "Añada una descripcióndg",
-      "categoria": "confiteria",
+      "categoria": "Panaderia",
       "imagen": "producto-item.png"
    }
 ]
