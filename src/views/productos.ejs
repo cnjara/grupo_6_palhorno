@@ -11,12 +11,12 @@
 			</form>
 			<h2 id="Pasteleria">Pasteleria</h2>
 			<div class="body__main__productos--contenedor">
-				<% productosPasteleria.forEach(({id,nombre,precio,imagen}) => { %>
+				<% productosPasteleria.forEach(({id,nombre,precio,imagenes}) => { %>
 					<div class="productos__contenedor--item">
 					
 						<a href="/productos/detalles/<%= id %>">
 							<div style="height: 250px; overflow: hidden;">
-							<img src="/stock-photos/<%=imagen %>" >
+							<img src="/stock-photos/<%=imagenes[0].archivo %>" >
 						</div>
 							<p class="productos__contenedor--item--nombre " ><%= nombre %></p>
 							<p class="productos__contenedor--item--precio">$<%= precio %></p>
@@ -30,12 +30,12 @@
 			
 			<h2 id="Confiteria">Confitería</h2>
 			<div class="body__main__productos--contenedor">
-				<% productosConfiteria.forEach(({id,nombre,precio,imagen}) => { %>
+				<% productosConfiteria.forEach(({id,nombre,precio,imagenes}) => { %>
 					<div class="productos__contenedor--item">
 						<a href="/productos/detalles/<%= id %>">
 							<div style="height: 250px; overflow: hidden;">
-							<img src="/stock-photos/<%=imagen %>" >
-						</div>
+								<img src="/stock-photos/<%=imagenes[0].archivo %>" >
+							</div>
 							<p class="productos__contenedor--item--nombre " ><%= nombre %></p>
 							<p class="productos__contenedor--item--precio">$<%= precio %></p>
 						</a>
@@ -47,13 +47,13 @@
 			
 			<h2 id="Panaderia">Panaderia</h2>
 			<div class="body__main__productos--contenedor">
-				<% productosPanaderia.forEach(({id,nombre,precio,imagen}) => { %>
+				<% productosPanaderia.forEach(({id,nombre,precio,imagenes}) => { %>
 					<div class="productos__contenedor--item">
 					
 						<a href="/productos/detalles/<%= id %>">
 							<div style="height: 250px; overflow: hidden;">
-							<img src="/stock-photos/<%=imagen %>" >
-						</div>
+								<img src="/stock-photos/<%=imagenes[0].archivo %>" >
+							</div>
 							<p class="productos__contenedor--item--nombre " ><%= nombre %></p>
 							<p class="productos__contenedor--item--precio">$<%= precio %></p>
 						</a>

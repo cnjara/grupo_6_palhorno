@@ -4,7 +4,7 @@ const roles = ['Admin','User'];
 
 const rols = roles.map(rol => {
   return {
-    name : rol,
+    nombre : rol,
     createdAt : new Date()
   }
 })

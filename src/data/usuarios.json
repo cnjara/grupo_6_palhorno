@@ -1,133 +1,20 @@
 [
    {
       "id": "1",
-      "nombre": "Tomás",
-      "apellido": "Hernández",
+      "nombre": "Admin",
+      "apellido": "PalHorno",
       "telefono": "1189631478",
-      "email": "aodoogan6@blogtalkradio.com",
-      "contraseña": "Tomas2580"
+      "email": "admin@palhorno.com",
+      "password": "123123",
+      "rolId" : 1
    },
    {
       "id": "2",
-      "nombre": "Romina",
-      "apellido": "Pérez",
+      "nombre": "User",
+      "apellido": "PalHorno",
       "telefono": "1112547632",
-      "email": "tmoresby7@scribd.com",
-      "contraseña": "3990RominA"
-   },
-   {
-      "id": "3",
-      "nombre": "Sofia",
-      "apellido": "López",
-      "telefono": "2995631478",
-      "email": "svokesa@yahoo.com",
-      "contraseña": "sofi896521"
-   },
-   {
-      "id": "4",
-      "nombre": "Esteban",
-      "apellido": "Márquez",
-      "telefono": "2942986321",
-      "email": "snewhamg@shareasale.com",
-      "contraseña": "Esteban98521a"
-   },
-   {
-      "id": "5",
-      "nombre": "Marina",
-      "apellido": "Rodriguez",
-      "telefono": "1189652147",
-      "email": "mdealeyl@tinyurl.com",
-      "contraseña": "MariRo12"
-   },
-   {
-      "id": 6,
-      "nombre": "Leonardo",
-      "apellido": "Gomez",
-      "phone": 1569381562,
-      "email": "leonardomg888@gmail.com",
-      "contraseña": "$2b$10$uTBvB1DWkl0alFwPewKk1.jB/ZkwaPw1pNfe3PgKp7ltvnm.ZgjLu",
-      "contraseña2": "123456",
-      "avatar": "avatar-1663539185084.jpg",
-      "terms": "on"
-   },
-   {
-      "id": 7,
-      "nombre": "hola",
-      "apellido": "hola",
-      "phone": 1122,
-      "email": "ddasd@com.com",
-      "contraseña": "$2b$10$0L3vzi4faLAkuJmzyuSxOeAs1gxjWg.0NQXcgDQN3bx7e8O8UfWsm",
-      "contraseña2": null,
-      "avatar": null,
-      "terms": "on"
-   },
-   {
-      "id": 8,
-      "nombre": "leonardo",
-      "apellido": "gomez",
-      "phone": 1569381562,
-      "email": "leonardomg@gmail.com",
-      "contraseña": "$2b$10$3RA/w5gGGIwru7QTXGCPresFHsm/7w8A6SiZ0GaUa2CtGVX3WZUvS",
-      "contraseña2": null,
-      "avatar": null,
-      "terms": "on"
-   },
-   {
-      "id": 9,
-      "nombre": "hola",
-      "apellido": "hola",
-      "phone": 14545556,
-      "email": "hola@miguel.com",
-      "contraseña": "$2b$10$udhziSi/B2su8gTX16U8a.ylITsRq0GjnbCpccL7rm6Xck/2Tflpq",
-      "contraseña2": null,
-      "avatar": null,
-      "terms": "on"
-   },
-   {
-      "id": 10,
-      "nombre": "luis",
-      "apellido": "luis",
-      "phone": 1425364,
-      "email": "gga@nono.com",
-      "contraseña": "$2b$10$75aMLr3eSm5upKAzODjfU.YvxNaQ1klx9vDCE79tDwsCarUc1IaPK",
-      "contraseña2": null,
-      "avatar": null,
-      "terms": "on"
-   },
-   {
-      "id": 11,
-      "nombre": "leonardo",
-      "apellido": "gomez",
-      "phone": 1569381562,
-      "email": "leon888@gmail.com",
-      "contraseña": "$2b$10$N7j0DJSmMJNIUSscv.CXEu7185rcvBLAcygiW8tY3dM/R.ABbRVsK",
-      "contraseña2": "$2b$10$JXliIp1q3/2bqm5O1ShI.e9PZ/iz06WygddyWiSUzzVO.UCNtYHsC",
-      "terms": "on",
-      "avatar": null,
-      "rol": null
-   },
-   {
-      "id": 12,
-      "nombre": "bettina",
-      "apellido": "oña",
-      "phone": 2942519092,
-      "email": "beona67@gmail.com",
-      "contraseña": "$2b$10$kkcYsacRfnz6q07pDkuUPeFfcd7VouGDXV/UZpgGgyUxjlwAqueSm",
-      "contraseña2": "$2b$10$oUgsRw0dkw0IR5y8noJ2DePlnATw6A52.dAQZayraFOB3/InxtLAe",
-      "terms": "on",
-      "avatar": null,
-      "rol": null
-   },
-   {
-      "id": 13,
-      "nombre": "miguel",
-      "apellido": "antonio",
-      "phone": 14425558596,
-      "email": "antoni@antonio.com",
-      "contraseña": "$2b$10$WwUJ5OidpPq.VM4DB1uE/.jilO1WdOV4tS/bnHk7FL4h4LGbrZsSO",
-      "contraseña2": "$2b$10$8zmVMs5H9s9J07Vl1CowV.IIu8kPJhn4ZK/y0VoRz9rU4rG50rByK",
-      "terms": "on",
-      "avatar": null,
-      "rol": null
+      "email": "user@palhorno.com",
+      "password": "123123",
+      "rolId" : 2
    }
 ]
