@@ -1,10 +1,10 @@
 'use strict';
 
-const categorias = ['Panaderia','pasteleria','Confiteria'];
+const categorias = ['Panaderia','Pasteleria','Confiteria'];
 
 const categories = categorias.map(category => {
   return {
-    name : category,
+    nombre : category,
     createdAt : new Date()
   }
 })

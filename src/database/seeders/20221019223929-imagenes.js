@@ -1,9 +1,9 @@
 'use strict';
 
-const productos = require('../../src/data/productos.json')
-const images = productos.map(({image,id}) => {
+const productos = require('../../data/productos.json')
+const images = productos.map(({imagen,id}) => {
   return {
-    file : image,
+    archivo : imagen,
     productId : id,
     createdAt : new Date()
   }

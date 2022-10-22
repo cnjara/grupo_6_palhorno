@@ -5,12 +5,14 @@
 	"description": "C15 Grupo 6 - Pal Horno",
 	"scripts": {
 		"start": "nodemon --config ./src/config/nodemon.json ./src/bin/www",
-		"dev": " npx nodemon src/app.js"
+		"dev": " npx nodemon src/app.js",
+		"reset-db": "sequelize db:migrate:undo:all & sequelize db:migrate & sequelize db:seed:all & nodemon src/bin/www"
 	},
 	"author": "Bettina Oña Ventura, Cristian Jara, Leonardo Gómez",
 	"license": "ISC",
 	"dependencies": {
 		"bcrypt": "^5.0.1",
+		"bcryptjs": "^2.4.3",
 		"cookie-parser": "^1.4.6",
 		"debug": "~2.6.9",
 		"dotenv": "^16.0.3",

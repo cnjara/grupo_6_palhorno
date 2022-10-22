@@ -1,4 +1,4 @@
-const db = require("../../database/models");
+const db = require("../database/models");
 const { validationResult } = require("express-validator");
 const { loadProducts, loadUsers, storeProducts } = require("../data/dbModule");
 const fs = require("fs");
@@ -7,22 +7,40 @@ const path = require("path");
 let productos = loadProducts();
 const controller = {
   productos: (req, res) => {
-    let productosPasteleria = productos.filter(
-      (producto) => producto.categoria === "pasteleria"
-    );
-    let productosConfiteria = productos.filter(
-      (producto) => producto.categoria === "confiteria"
-    );
-    let productosPanaderia = productos.filter(
-      (producto) => producto.categoria === "panaderia"
-    );
 
-    return res.render("productos", {
-      title: "Productos",
-      productosPasteleria,
-      productosConfiteria,
-      productosPanaderia,
+    let productosPanaderia = db.Product.findAll({
+      where : {
+        categoryId : 1
+      },
+      include : ['categoria','imagenes']
     });
+
+    let productosPasteleria = db.Product.findAll({
+      where : {
+        categoryId : 2
+      },
+      include : ['categoria','imagenes']
+    });
+
+    let productosConfiteria = db.Product.findAll({
+      where : {
+        categoryId : 3
+      },
+      include : ['categoria','imagenes']
+    });
+
+    Promise.all([productosPanaderia, productosPasteleria, productosConfiteria])
+      .then(([productosPanaderia, productosPasteleria, productosConfiteria]) => {
+        return res.render("productos", {
+          title: "Productos",
+          productosPasteleria,
+          productosConfiteria,
+          productosPanaderia,
+        }); 
+      })
+      .catch(error => console.log(error))
+
+   
     //res.render('productos', { title: 'Productos',productos });//
   },
   detalles: (req, res) => {
