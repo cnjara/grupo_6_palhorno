@@ -44,33 +44,79 @@ const controller = {
     //res.render('productos', { title: 'Productos',productos });//
   },
   detalles: (req, res) => {
+		// Do the magic
+		db.Product.findByPk(req.params.id,{
+			include : [{all : true}]
+		})
+			.then(product => {
+        return res.render("productos-detalles", {
+          title: "Detalles de productos",
+          product,
+			//toThousand
+			})
+			})
+			.catch(error => console.log(error))
+		
+	},
+
     //const id= req.params.id//
 
-    let producto = productos.find((producto) => producto.id === +req.params.id);
+
+
+
+
+  /*  
+   (req, res) => {
+  let producto = productos.find((producto) => producto.id === +req.params.id);
 
     return res.render("productos-detalles", {
       title: "Detalles de productos",
       producto,
-    });
-  },
+    });*/
+ 
 
   crear: (req, res) => {
-    res.render("productos-crear", { title: "Crear productos" });
-  },
-
-  create: function (req, res) {
-    db.product
-      .create({
-        ...req.body,
-        name: req.body.name.trim(),
+    db.Category.findAll({
+			order : ['nombre']
+		})
+			.then(categories => {
+        res.render("productos-crear", { title: "Crear productos" });
       })
-      .then((newProduct) => {
-        console.loq(newProduct);
-        return res.redirect("/productos" + newProduct.id);
+       // return res.render('product-create-form', {
+				//	categories
+				//})
+		},
+			//.catch(error => console.log(error))
+	
+ 
+ 
+ 
+ 
+ 
+    
+///////////
+ tienda: (req, res) => {
+   const {nombre, precio, stock, descripcion, category}= req.body;
+  db.Product.create({    
+   
+    nombre: nombre.trim(),   
+        precio ,
+       stock ,
+        descripcion,
+        categoryId: category,
+       // imagen : "producto-item.png"
+      
+      })
+      .then(product => {
+        console.loq(product);
+        
+        return res.redirect('/products/detalles' + product.id)
+        ////return res.redirect("/productos" + product.id);
+       
       })
       .catch((error) => console.log(error));
   },
-
+/////////
   //(req,res) => {
   //let errors = validationResult(req);
 
@@ -108,48 +154,47 @@ const controller = {
 	}
 },*/
 
-  modificar: function (req, res) {
-    db.product
-      .modificar(
-        {
-          ...req.body,
-        },
-        {
-          where: {
-            id: req.params.id,
-          },
-        }
-      )
-      .then((result) => {
-        console.log(">>>>>>>>>>>>", result);
-        return res.redirect("/productos/borrar/" + req.params.id);
-      })
-
-      .catch((error) => console.log(error));
-
-    //(req, res) => {
-    //let  producto = productos.find(producto => producto.id === +req.params.id );
-    return res.render("productos-modificar", {
-      title: "Modificar productos",
-      producto,
-    });
-  },
-
-  actualizar: function (req, res) {
-    let producto = db.product.findByPk(req.params.id);
-    let categoria = db.category.findAll({
-      order: ["name"],
+  modificar:  (req, res )=> {
+    let producto = db.Product.findByPk(req.params.id);
+    let categoria = db.Category.findAll({
+      order: ["nombre"],
     });
     Promise.all([producto, categoria])
       .then(([producto, categoria]) => {
         return res.render("productos-modificar", {
-			product: producto,
+          title: "Modificar productos",
+          product: producto,
           categoria,
         });
       })
       .catch((error) => console.log(error));
   },
 
+    //(req, res) => {
+    //let  producto = productos.find(producto => producto.id === +req.params.id );
+    //return res.render("productos-modificar", {
+      
+  
+
+  actualizar: (req, res) => {
+   
+  db.Product.actualizar(
+    {
+      ...req.body,
+    },
+    {
+      where: {
+    id: req.params.id,
+      },
+    }
+  )
+  .then((result) => {
+    console.log(">>>>>>>>>>>>", result);
+    return res.redirect("/productos/borrar/" + req.params.id);
+  })
+
+  .catch((error) => console.log(error));
+},
   //(req, res) => {
 
   //const productos = loadProducts(); JSON
@@ -179,12 +224,12 @@ const controller = {
   /* let  producto = productos.find(producto => producto.id === +req.params.id );
 		return res.render('productos-modificar', { title: 'Modificar productos', producto }); */
 
-  borrar: function (req, res) {
-    db.palHorno
+  borrar:  (req, res) => {
+    db.Product
       .findByPk(req.params.id)
-      .then((palHorno) => {
+      .then((product) => {
         return res.render("productos-borrar", {
-          palHorno: palHorno,
+          product: product,
         });
       })
       .catch((error) => console.log(error));
@@ -198,6 +243,7 @@ const controller = {
 		return res.redirect('/productos');*/
 
   //res.render('productos-borrar', { title: 'Borrar productos' });
-};
+}
+;
 
 module.exports = controller;
