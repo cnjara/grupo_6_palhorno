@@ -95,22 +95,22 @@ const controller = {
  
     
 ///////////
- tienda: (req, res) => {
-   const {nombre, precio, stock, descripcion, category}= req.body;
+tienda: (req, res) => {
+  const {articulo, precio, stock, descripcion, category}= req.body;
+  console.log(req.body);
   db.Product.create({    
-   
-    nombre: nombre.trim(),   
-        precio ,
-       stock ,
+        nombre: articulo.trim(),   
+        precio,
+        stock,
         descripcion,
         categoryId: category,
        // imagen : "producto-item.png"
       
       })
       .then(product => {
-        console.loq(product);
+        console.log(product);
         
-        return res.redirect('/products/detalles' + product.id)
+        return res.redirect('/productos/detalles/' + product.id)
         ////return res.redirect("/productos" + product.id);
        
       })
@@ -191,6 +191,7 @@ const controller = {
   .then((result) => {
     console.log(">>>>>>>>>>>>", result);
     return res.redirect("/productos/borrar/" + req.params.id);
+    return res.redirect('/productos/detalles/' + req.params.id)
   })
 
   .catch((error) => console.log(error));
