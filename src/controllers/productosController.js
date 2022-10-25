@@ -1,10 +1,10 @@
 const db = require("../database/models");
 const { validationResult } = require("express-validator");
-const { loadProducts, loadUsers, storeProducts } = require("../data/dbModule");
+//const { loadProducts, loadUsers, storeProducts } = require("../data/dbModule");
 const fs = require("fs");
 const path = require("path");
 
-let productos = loadProducts();
+//let productos = loadProducts();
 const controller = {
   productos: (req, res) => {
 
@@ -31,6 +31,9 @@ const controller = {
 
     Promise.all([productosPanaderia, productosPasteleria, productosConfiteria])
       .then(([productosPanaderia, productosPasteleria, productosConfiteria]) => {
+        console.log('productosPasteleria',productosPasteleria[0].imagenes)
+        console.log('productosConfiteria',productosConfiteria[0].imagenes)
+        console.log('productosPanaderia',productosPanaderia[0].imagenes)
         return res.render("productos", {
           title: "Productos",
           productosPasteleria,
@@ -49,6 +52,7 @@ const controller = {
 			include : [{all : true}]
 		})
 			.then(product => {
+        console.log(product.imagenes)
         return res.render("productos-detalles", {
           title: "Detalles de productos",
           product,
@@ -79,8 +83,9 @@ const controller = {
     db.Category.findAll({
 			order : ['nombre']
 		})
-			.then(categories => {
-        res.render("productos-crear", { title: "Crear productos" });
+			.then(category => {
+        console.log(category);
+        res.render("productos-crear", { title: "Crear productos",category });
       })
        // return res.render('product-create-form', {
 				//	categories
@@ -95,22 +100,27 @@ const controller = {
  
     
 ///////////
-tienda: (req, res) => {
-  const {articulo, precio, stock, descripcion, category}= req.body;
-  console.log(req.body);
+tienda: async (req, res) => {
+  const {articulo, precio, stock, descripcion, categoria,imagen}= req.body;
+  console.log(req.body)
   db.Product.create({    
         nombre: articulo.trim(),   
         precio,
         stock,
         descripcion,
-        categoryId: category,
+        categoryId: categoria,
        // imagen : "producto-item.png"
       
       })
       .then(product => {
         console.log(product);
+        db.Image.create({
+          archivo:imagen,
+          productId:product.id
+        }).then(()=>{
+          return res.redirect('/productos/detalles/' + product.id)
+        })
         
-        return res.redirect('/productos/detalles/' + product.id)
         ////return res.redirect("/productos" + product.id);
        
       })
