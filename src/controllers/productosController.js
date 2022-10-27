@@ -162,18 +162,19 @@ tienda: async (req, res) => {
             })
 
 	}
-},*/
+      },*/
+
 
   modificar:  (req, res )=> {
     let producto = db.Product.findByPk(req.params.id);
     let categoria = db.Category.findAll({
-      order: ["nombre"],
+  order: ["nombre"],
     });
     Promise.all([producto, categoria])
       .then(([producto, categoria]) => {
         return res.render("productos-modificar", {
           title: "Modificar productos",
-          product: producto,
+        product:  producto,
           categoria,
         });
       })
@@ -183,29 +184,76 @@ tienda: async (req, res) => {
     //(req, res) => {
     //let  producto = productos.find(producto => producto.id === +req.params.id );
     //return res.render("productos-modificar", {
-      
+     
+    /*   db.Product.update(
+                {
+                    ...req.body,
+                    name: name.trim(),
+                    price: +price,
+                    discount: +discount,
+                    categoryId: category,
+                    sectionId: section,
+                    brandId: company
+                },
+                {
+                    where: { id: req.params.id }
+                })
+                .then(() => {
+                    return res.redirect("/products/productDetail/" + req.params.id)
+                })
+                .catch(error => res.send(error))
+      */
   
 
   actualizar: (req, res) => {
    
+    const errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+        const {  articulo,  precio,  stock,categoria, descripcion } = req.body;
   db.Product.actualizar(
     {
       ...req.body,
+      nombre: articulo.trim(),   
+      precio:+precio,
+      stock: +stock,
+      descripcion,
+      categoryId: categoria,
     },
     {
       where: {
     id: req.params.id,
-      },
-    }
-  )
-  .then((result) => {
+      }
+    })
+    .then(() => {
+      return res.redirect('/productos/detalles/' + req.params.id)
+  /*.then((result) => {
     console.log(">>>>>>>>>>>>", result);
     return res.redirect("/productos/borrar/" + req.params.id);
-    return res.redirect('/productos/detalles/' + req.params.id)
+    return res.redirect('/productos/detalles/' + req.params.id)*/
   })
 
   .catch((error) => console.log(error));
-},
+
+} else {
+  let productosModificar = db.Product.findByPk(req.params.id);
+  const categoria = db.Category.findAll({ attributes: ['id', 'name'] });
+ 
+
+  Promise.all([categoria, productosModificar])
+      .then(([categoria,  productosModificar]) => {
+        return res.render('productos-modificar', { title: 'Modificar productos',
+            productosModificar,
+            precio,
+            stock,
+            descripcion,
+           categoria,
+              errors: errors.mapped(),
+              old: req.body
+          })
+      })
+      .catch(error => res.send(error))
+}},
   //(req, res) => {
 
   //const productos = loadProducts(); JSON
@@ -234,16 +282,39 @@ tienda: async (req, res) => {
 
   /* let  producto = productos.find(producto => producto.id === +req.params.id );
 		return res.render('productos-modificar', { title: 'Modificar productos', producto }); */
-
-  borrar:  (req, res) => {
-    db.Product
-      .findByPk(req.params.id)
+    
+  
+  
+    destroy: function (req,res) {
+      db.Product.destroy({
+          where: {
+              id : req.params.id
+          }
+      })
+      
+      .then(() =>{
+    
+          return res.redirect('/')
+      })
+      .catch(error => console.log(error))
+  
+    /*borrar:  (req, res) => {
+    db.Product.borrar({
+   
+      where: { id: req.params.id }
+  })
+  .then(() => {
+      return res.redirect('/')
+  })
+  .catch(error => res.send(error))
+    
+    /*  .findByPk(req.params.id)
       .then((product) => {
         return res.render("productos-borrar", {
           product: product,
         });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error));*/
   },
   /*(req, res) => {
 
