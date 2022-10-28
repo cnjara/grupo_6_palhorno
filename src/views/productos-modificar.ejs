@@ -7,7 +7,7 @@
 
 			<h1>Modificar</h1>
 			<section class="section__crear">
-				<form class="form__crear" action="/productos/actualizar/<%= product.id %>?_method=PUT" method="POST">
+				<form class="form__crear" action="/productos/actualizar/<%= product.id %>?_method=PUT" method="PosT">
 					<div class="form__box__crear">
 						<label class="crear__label" for="nombre">Producto</label>
 						<input class="crear__input" type="text" name="nombre" id="nombre" value="<%= product.nombre %>">

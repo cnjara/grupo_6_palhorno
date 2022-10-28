@@ -1,10 +1,9 @@
 const multer = require('multer');
 const path = require('path');
 
-/////usuarios///
-const storageUsers = multer.diskStorage({
+const storageProduct = multer.diskStorage({
     destination : (req, file, callback) => {
-        callback(null, './public/images/usuarios')
+        callback(null, './public/stock-photos')
     },
     filename : (req,file,callback) => {
         callback(null, `avatar-${Date.now()}${path.extname(file.originalname)}`)
@@ -19,8 +18,8 @@ const fileFilter = (req,file,callback) => {
     return callback(null, true)
  }
 
-const uploadUsers = multer({
-    storage : storageUsers,
+const uploadProduct = multer({
+    storage : storageProduct,
     fileFilter
 });
 
@@ -29,5 +28,5 @@ const uploadUsers = multer({
 
 
 module.exports = {
-    uploadUsers
+    uploadProduct
 }

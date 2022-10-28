@@ -162,7 +162,7 @@ tienda: async (req, res) => {
             })
 
 	}
-      },*/
+},*/
 
 
   modificar:  (req, res )=> {
@@ -205,16 +205,17 @@ tienda: async (req, res) => {
       */
   
 
-  actualizar: (req, res) => {
+      actualizar: (req, res) => {
    
-    const errors = validationResult(req);
+   const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-        const {  articulo,  precio,  stock,categoria, descripcion } = req.body;
+    const {name, precio, stock, descripcion, categoria,imagen}= req.body;
+    console.log(req.body)
   db.Product.actualizar(
     {
       ...req.body,
-      nombre: articulo.trim(),   
+      nombre: name,   
       precio:+precio,
       stock: +stock,
       descripcion,
@@ -235,15 +236,16 @@ tienda: async (req, res) => {
 
   .catch((error) => console.log(error));
 
+
 } else {
-  let productosModificar = db.Product.findByPk(req.params.id);
-  const categoria = db.Category.findAll({ attributes: ['id', 'name'] });
+  let producto = db.Product.findByPk(req.params.id);
+  let categoria = db.Category.findAll({ order: ["nombre"] });
  
 
-  Promise.all([categoria, productosModificar])
-      .then(([categoria,  productosModificar]) => {
+  Promise.all([categoria, producto])
+      .then(([categoria,  producto]) => {
         return res.render('productos-modificar', { title: 'Modificar productos',
-            productosModificar,
+            producto,
             precio,
             stock,
             descripcion,
@@ -254,6 +256,7 @@ tienda: async (req, res) => {
       })
       .catch(error => res.send(error))
 }},
+    
   //(req, res) => {
 
   //const productos = loadProducts(); JSON
