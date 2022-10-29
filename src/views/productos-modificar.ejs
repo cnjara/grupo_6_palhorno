@@ -19,9 +19,10 @@
 					<div class="form__box__crear">
 						<label class="crear__label" for="categoria">Categoría</label>
 						<select class="crear__select" name="categoria" id="categoria">
-							<option value="Panaderia" <%= product.categoria === 'Panaderia' ? 'selected' : null %>>Panadería</option>
-							<option value="Confiteria" <%= product.categoria === 'Confiteria' ? 'selected' : null %>>Confitería</option>
-							<option value="Pasteleria" <%= product.categoria === 'Pasteleria' ? 'selected' : null %>>Pastelería</option>
+							<% categoria.forEach(({id,nombre}) => { %>
+								<option value="<%= id %>"<% product.categoryId === id ? "selected" : null  %>"><%= nombre %></option>
+								<% }) %>
+							
 						</select>
 					</div>
 					<div class="form__box__crear">

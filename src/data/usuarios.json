@@ -16,17 +16,6 @@
       "email": "user@palhorno.com",
       "password": "123123",
       "rolId": 2
-   },
-   {
-      "id": 3,
-      "nombre": "miguel",
-      "apellido": "miguel",
-      "phone": 45644466,
-      "email": "miguel@miguelcom.ae",
-      "contraseña": "$2b$10$ZpM5HhFiA3unXE2KMr19w.IFmwhkloHDsS/ribeAY9clpj7WpfX.m",
-      "contraseña2": "$2b$10$k9DhV2WqdcLHrfpMpRwW.etIbr4APSfMoOkQN9QvMC2tHs.hQlmvm",
-      "terms": "on",
-      "avatar": "avatar-1666834225974.jpg",
-      "rol": null
    }
+ 
 ]

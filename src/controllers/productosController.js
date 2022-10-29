@@ -115,10 +115,11 @@ tienda: async (req, res) => {
       .then(product => {
         console.log(product);
         db.Image.create({
-          archivo:imagen,
+          archivo: req.file ? req.file.filename:'producto-iten.png',
           productId:product.id
         }).then(()=>{
           return res.redirect('/productos/detalles/' + product.id)
+        ///productos/detalles/
         })
         
         ////return res.redirect("/productos" + product.id);
@@ -212,7 +213,7 @@ tienda: async (req, res) => {
     if (errors.isEmpty()) {
     const {name, precio, stock, descripcion, categoria,imagen}= req.body;
     console.log(req.body)
-  db.Product.actualizar(
+  db.Product.update(
     {
       ...req.body,
       nombre: name,   
