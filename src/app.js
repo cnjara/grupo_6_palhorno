@@ -48,6 +48,10 @@ app.use('/', generalRouter);
 app.use('/productos', productosRouter);
 app.use('/usuarios', usuariosRouter);
 
+app.use('/api/productos', require('./routes/api/apiProductos'));
+app.use('/api/usuarios', require('./routes/api/apiUsuarios'));
+
+
 app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false }));
 // catch 404 and forward to error handler
