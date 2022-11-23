@@ -101,6 +101,12 @@ const controller = {
     
 ///////////
 tienda: async (req, res) => {
+  
+  //let errors = validationResult(req);
+
+   //     if(errors.isEmpty()){
+
+
   const {articulo, precio, stock, descripcion, categoria,imagen}= req.body;
   console.log(req.body)
   db.Product.create({    

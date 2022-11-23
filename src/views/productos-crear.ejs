@@ -36,7 +36,8 @@
 							<div class="form__box__crear">
 								<label class="crear__label" for="descripcion">Descripción del producto</label>
 								<textarea class="crear__textarea" name="descripcion" id="descripcion" cols="30"
-									rows="8" placeholder="Añada una descripción" ></textarea><small class="text-danger">
+									rows="8" placeholder="Añada una descripción" ></textarea>
+									<small class="text-danger">
 										<%= locals.errors && errors.descripcion? errors.descripcion.msg : null %>
 									</small>prueba
 			
@@ -45,10 +46,13 @@
 								<label class="crear__label" for="categoria">Categoría</label>
 								<select class="crear__select" name="categoria" id="categoria">
 									<option value="" hidden selected>Seleccione una categoría</option>
+									
 									<% category.forEach(({id,nombre}) => { %>
 									<option value="<%= id %>"><%= nombre %></option>
 									<% }) %>
+									
 								</select>
+								
 								<small class="text-danger">
 									<%= locals.errors && errors.categoria? errors.categoria.msg : null %>
 								</small>prueba
