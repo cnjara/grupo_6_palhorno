@@ -1,11 +1,11 @@
-const {list, getOne, getAvatar} = require('../../controllers/api/apiProductosController');
+const {list, getOne, getImagen} = require('../../controllers/api/apiProductosController');
 
 const router = require('express').Router();
 
 router
     .get('/',list)
     .get('/:id', getOne)
-    .get('/imagen/:img', getAvatar)
+    .get('/imagen/:img', getImagen)
 
 
     
