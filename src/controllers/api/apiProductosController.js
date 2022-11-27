@@ -2,7 +2,7 @@ const db = require('../../database/models');
 const { literal,} = require('sequelize');
 const fs = require ('fs');
 const path = require ('path');
-const createHttpError = require('http-errors');
+const createError = require('../../helpers/createError');
 
 
 
@@ -13,7 +13,7 @@ module.exports= {
 
   list :async(req,res) => {
   //  return res.json("estamos llegando")  
-    /*dev todos los produtos */
+    
 try {
     const  productos =  await db.Product.findAll({
 
@@ -48,58 +48,66 @@ try {
        
     return res.json({productos})
 } catch (error) {
-    
+    console.log(error)
+    return res.status(error.status || 500).json({
+        status:error.status || 500,
+        msg:error.message
+    })
 }
    
-  //  return res.json({productos})    
-  /*  .then(products => {
-            let respuesta = {
-                meta: {
-                    status : 200,
-                    total: products.length,
-                    url: 'api/products'
-                },
-                data: products
-                        }
-                res.json(respuesta);
-            })*/
+  
 
 
     },
     getOne : async(req,res) => {
-    //  const {id} = req.params;
-      //  return res.json("estamos llegando")
+ const {id} = req.params;
+ //return res.json("estamos llegando")
         
     try {
 
-       /* if(isNaN(id)){
-            throw createHttpError(400,"mensaje")
-        }*/
+       if(isNaN(id)){
+            throw createError(400,"mensaje")
+        }
                 const productos = await db.Product.findByPk(req.params.id,{
     
                 include:[{
                       association: "categoria",
-                   }]
-   })
-     return res.json(productos)
-            
-                   
-       } catch (error) {
-            
-   }
-        /*dev un produto */
-     /* db.Product.findByPk(req.params.id)
-        .then(products => {
-            let respuesta = {
-                meta: {
-                    status: 200,
-                    total: products.length,
-                    url: '/api/productos/:id'
+                      attributes:{
+                        exclude:["id","createdAt","updatedAt","deletedAt"]            
+                                
+                    }
+        
                 },
-                data: genre
-            }
-            res.json(respuesta);
-        });*/
+                {
+                    association: "imagenes",
+                    attributes:{
+                        exclude:["id","createdAt","updatedAt","productId"],
+                        include:[[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']]
+        
+                    }
+        
+                    
+                
+                   }
+                
+                ],
+                attributes:{
+                    exclude:["categoryId","createdAt", "updatedAt", "id"]
+                    
+                }
+
+   })
+    
+   return res.json(productos)
+    
+       } catch (error) {
+        console.log(error)
+        return res.status(error.status || 500).json({
+            status:error.status || 500,
+            msg:error.message
+        })
+   }
+      
 
 
     },
