@@ -12,7 +12,7 @@ module.exports= {
     try {
         const  usuarios =  await db.User.findAll({
     
-           include:[{
+          /* include:[{
                 association: "rolId",
                 attributes:{
                     exclude:["","createdAt","updatedAt","deletedAt"]            
@@ -20,7 +20,7 @@ module.exports= {
                 }
     
             },
-            {
+        /*    {
                 association: "avatar",
                 attributes:{
                     exclude:["id","createdAt","updatedAt","productId"],
@@ -29,14 +29,14 @@ module.exports= {
                 }
     
                 
-            }
-        ],
+            }*/
+      //  ],
     
-        attributes:{
-            exclude:["categoryId","createdAt", "updatedAt", "id"
+       // attributes:{
+          //  exclude:["categoryId","createdAt", "updatedAt", "id"
     
-            ]
-        }
+           // ]
+      //  }
     
     
         })
