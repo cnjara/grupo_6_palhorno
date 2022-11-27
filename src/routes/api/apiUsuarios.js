@@ -4,8 +4,8 @@ const router = require('express').Router();
 
 router
     .get('/',list)
-    .get('/:id', getOne)
-   .get('/imagen/:img', getAvatar )
+  //  .get('/:id', getOne)
+  // .get('/imagen/:img', getAvatar )
 
 
     

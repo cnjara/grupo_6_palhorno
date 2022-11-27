@@ -8,6 +8,27 @@ const path = require ('path');
 module.exports= {
 
     list :async(req,res) => {
+
+        try {
+            const  usuarios =  await db.User.findAll({
+
+                include : [{
+                    association: "rolId"
+
+                }]
+                    
+
+            })
+            return res.json(usuarios)
+        } catch (error) {
+            console.log(error)
+            return res.status(error.status || 500).json({
+                status:error.status || 500,
+                msg:error.message
+            })
+        
+        }
+
    
    /*
     try {
