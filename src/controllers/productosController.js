@@ -44,7 +44,7 @@ const controller = {
       .catch(error => console.log(error))
 
    
-    //res.render('productos', { title: 'Productos',productos });//
+    
   },
   detalles: (req, res) => {
 		// Do the magic
@@ -63,20 +63,7 @@ const controller = {
 		
 	},
 
-    //const id= req.params.id//
-
-
-
-
-
-  /*  
-   (req, res) => {
-  let producto = productos.find((producto) => producto.id === +req.params.id);
-
-    return res.render("productos-detalles", {
-      title: "Detalles de productos",
-      producto,
-    });*/
+   
  
 
   crear: (req, res) => {
@@ -87,12 +74,9 @@ const controller = {
         console.log(category);
         res.render("productos-crear", { title: "Crear productos",category });
       })
-       // return res.render('product-create-form', {
-				//	categories
-				//})
+     
 		},
-			//.catch(error => console.log(error))
-	
+			
  
  
  
