@@ -8,7 +8,9 @@
 						<h1>crear producto</h1>
 						<form class="form__crear" action="/productos/crear" enctype="multipart/form-data" method="POST">
 							<div class="form__box__crear">
+								
 								<label class="crear__label" for="articulo">Producto</label>
+								
 								<input type="text" name="articulo" id="articulo" placeholder="Nombre del producto "
 									class="crear__input <%= locals.errors && errors.articulo? 'is-invalid' : null %>"
 									value="<%= locals.old && old.articulo? old.articulo: null %>">
@@ -72,8 +74,11 @@
 						</form>
 					</section>
 				</main>
-				<%- include('./partials/footer') %>
-		</div>
+				<%- include('./partials/footer') %>s
+			<script src="/js/productCrear.js"></script>	
+				
+			
+			</div>
 	</body>
 
 	</html>
