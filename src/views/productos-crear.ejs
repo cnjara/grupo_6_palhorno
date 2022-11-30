@@ -48,13 +48,14 @@
 									<option value="" hidden selected>Seleccione una categoría</option>
 									
 									<% category.forEach(({id,nombre}) => { %>
-									<option value="<%= id %>"><%= nombre %></option>
-									<% }) %>
+									<option value="<%= id %>"><%= locals.old && categoria.id === +old.categoryId ? 'selected' :null %> ><%= categoria.name %></option>
+									<option value="<%= id %>"<% locals.old && product.categoryId === +old.product.categoryId ? "selected" : null  %>"><%= nombre %></option>
+									<% }) %>													<!-- id-->
 									
 								</select>
 								
 								<small class="text-danger">
-									<%= locals.errors && errors.categoria? errors.categoria.msg : null %>
+									<%= locals.errors && errors.product.categoryId? errors.product.categoryId.msg : null %>
 								</small>prueba
 
 							</div>

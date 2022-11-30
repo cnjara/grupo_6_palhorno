@@ -7,4 +7,6 @@ window.onload = () => {
         showConfirmButton: false,
         timer: 1500
       })
-    }
+    };
+
+   

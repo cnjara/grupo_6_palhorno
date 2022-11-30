@@ -1,0 +1,8 @@
+<!--
+							<input type="text"
+								class="controls <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+								value="<%= locals.old && old.nombre ? old.nombre : null %>" id="name" name="nombre"
+								placeholder="Nombre" minlength="3">*/
+							<small class="text-danger"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %></small>
+							<small id="errorNombre" class="text-danger"></small>	
+						-->

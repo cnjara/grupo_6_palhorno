@@ -6,7 +6,8 @@
             <section class="section__perfil">
             <h1>Mi perfil</h1>
             <div class="box__imagen__perfil">
-            <img src="/images/usuarios/<%= user.avatar ? user.avatar : 'avatar-default.jpg' %>" alt="imagen de usuario" width="100px">
+                <!--implementacion de id en img-->
+            <img src="/images/usuarios/<%= user.avatar ? user.avatar : 'avatar-default.jpg' %>" alt="imagen de usuario" width="100px" id="imagePreview">
             </div>
             <form class="form__perfil" action="/usuarios/editar/<%= user.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
                 <div class="form__box__perfil">
@@ -37,6 +38,7 @@
             </section>
         </main>
         <%- include('./partials/footer') %>
+    <script src="/js/userProfile.js"></script>
     </div>
 </body>
 </html>
