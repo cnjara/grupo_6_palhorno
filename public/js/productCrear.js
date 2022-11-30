@@ -11,7 +11,7 @@ const msgError = (element, msg, target) => {
     target.classList.add("is-valid");
   };
 
-$("name").addEventListener("blur", function ({ target }) {
+$("articulo").addEventListener("blur", function ({ target }) {
    
    
    
