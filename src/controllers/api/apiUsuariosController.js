@@ -119,8 +119,8 @@ module.exports= {
         },
         getAvatar: async(req,res ) => {
             /*dev todas las imagenes*/
-            console.log(req.params.img)
-            return res.sendFile(path.join(__dirname,'..', '..','..','public','stock-photos', req.params.img ))
+       //     console.log(req.params.img)
+         //   return res.sendFile(path.join(__dirname,'..', '..','..','public','stock-photos', req.params.img ))
     
      
         

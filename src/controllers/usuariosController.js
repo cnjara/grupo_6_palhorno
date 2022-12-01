@@ -57,12 +57,12 @@ module.exports = {
     procesoRistro: (req, res) => {
         let errors = validationResult(req);
       /**/  
-const {cliente,apellido,email,contraseña}= req.body;
+const {nombre,apellido,email,contraseña}= req.body;
 
         if (errors.isEmpty()) {
           
     db.User.create({
-        nombre: cliente.trim(),
+        nombre: nombre.trim(),
         apellido:apellido.trim(),
       
         email: email.trim(),
