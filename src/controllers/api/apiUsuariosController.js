@@ -28,7 +28,8 @@ module.exports= {
             })
         
         }
-
+    }
+}
    
    /*
     try {
@@ -63,15 +64,10 @@ module.exports= {
       //  }
     
     
->>>>>>> registro
-        })
-        return res.json({usuarios})
-     } catch (error) {
-   console.log (error)
-}
+
       /*  getOne : async(req,res) => {
      const {id} = req.params;
-     //return res.json("estamos llegando")
+     //return res.json("estamos llegando"
             
         try {
     
@@ -126,5 +122,5 @@ module.exports= {
             console.log(req.params.img)
             return res.sendFile(path.join(__dirname,'..', '..','..','public','stock-photos', req.params.img ))
     
-        }
-    }
+    //}
+    //}
