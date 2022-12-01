@@ -33,6 +33,37 @@ module.exports= {
    /*
     try {
         const  usuarios =  await db.User.findAll({
+<<<<<<< HEAD
+=======
+    
+          /* include:[{
+                association: "rolId",
+                attributes:{
+                    exclude:["","createdAt","updatedAt","deletedAt"]            
+                            
+                }
+    
+            },
+        /*    {
+                association: "avatar",
+                attributes:{
+                    exclude:["id","createdAt","updatedAt","productId"],
+                    include:[[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']]
+    
+                }
+    
+                
+            }*/
+      //  ],
+    
+       // attributes:{
+          //  exclude:["categoryId","createdAt", "updatedAt", "id"
+    
+           // ]
+      //  }
+    
+    
+>>>>>>> registro
         })
         return res.json({usuarios})
      } catch (error) {
