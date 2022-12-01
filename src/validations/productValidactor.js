@@ -37,8 +37,8 @@ module.exports = [
         .notEmpty().withMessage('El stock es obligatoria').bail(),
         
    
-   // check('categoria')
-     //   .notEmpty().withMessage('La categoría es obligatoria'),
+   check('categoria')
+       .notEmpty().withMessage('La categoría es obligatoria'),
     
    
 ]

@@ -1,7 +1,6 @@
 const { check, body } = require('express-validator');
-const { loadUsers } = require('../data/dbModule');
-
-
+//const { loadUsers } = require('../data/dbModule');
+const db =require('../database/models')
 
 module.exports = [
     check('nombre')

@@ -86,9 +86,9 @@ const controller = {
 ///////////
 tienda: async (req, res) => {
   
-  //let errors = validationResult(req);
+  let errors = validationResult(req);
 
-      // if(errors.isEmpty()){
+       if(errors.isEmpty()){
 
 
   const {articulo, precio, stock, descripcion, categoria,imagen}= req.body;
@@ -144,7 +144,7 @@ tienda: async (req, res) => {
 		console.log(productosNuevos)
 		res.redirect('/productos')*/
 	
-/*	}else{
+	}else{
 		
 		console.log(errors)
             return res.render('productos-crear', {
@@ -152,7 +152,7 @@ tienda: async (req, res) => {
                 old: req.body
             })
 
-	}*/
+	}
 },
 
 
