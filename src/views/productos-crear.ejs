@@ -8,13 +8,17 @@
 						<h1>crear producto</h1>
 						<form class="form__crear" action="/productos/crear" enctype="multipart/form-data" method="POST">
 							<div class="form__box__crear">
+								
 								<label class="crear__label" for="articulo">Producto</label>
+								
 								<input type="text" name="articulo" id="articulo" placeholder="Nombre del producto "
 									class="crear__input <%= locals.errors && errors.articulo? 'is-invalid' : null %>"
 									value="<%= locals.old && old.articulo? old.articulo: null %>">
 								<small class="text-danger">
 									<%= locals.errors && errors.articulo? errors.articulo.msg : null %>
 								</small>prueba
+								<small id="errorNombre" class="text-danger" ></small>
+
 							</div>
 							<div class="form__box__crear">
 								<label class="crear__label" for="precio">Precio</label>
@@ -23,6 +27,7 @@
 							<small class="text-danger">
 								<%= locals.errors && errors.precio? errors.precio.msg : null %>
 							</small>prueba 
+							
 									
 							</div>
 							<div class="form__box__crear">
@@ -48,13 +53,14 @@
 									<option value="" hidden selected>Seleccione una categoría</option>
 									
 									<% category.forEach(({id,nombre}) => { %>
-									<option value="<%= id %>"><%= nombre %></option>
-									<% }) %>
+									
+									<option value="<%= id %>"<% locals.old && product.categoryId === +old.product.categoryId ? "selected" : null  %>"><%= nombre %></option>
+									<% }) %>													<!-- id-->
 									
 								</select>
 								
 								<small class="text-danger">
-									<%= locals.errors && errors.categoria? errors.categoria.msg : null %>
+									<%= locals.errors && errors.product.categoryId? errors.product.categoryId.msg : null %>
 								</small>prueba
 
 							</div>
@@ -71,8 +77,11 @@
 						</form>
 					</section>
 				</main>
-				<%- include('./partials/footer') %>
-		</div>
+				<%- include('./partials/footer') %>s
+			<script src="/js/productCrear.js"></script>	
+				
+			
+			</div>
 	</body>
 
 	</html>

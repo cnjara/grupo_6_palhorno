@@ -4,6 +4,9 @@ const db =require('../database/models')
 
 
 
+
+// nueva-validacion
+
 module.exports = [
     check('nombre')
     .notEmpty().withMessage('El nombre es obligatorio').bail()

@@ -122,5 +122,8 @@ module.exports= {
             console.log(req.params.img)
             return res.sendFile(path.join(__dirname,'..', '..','..','public','stock-photos', req.params.img ))
     
-    //}
-    //}
+     
+        
+
+//    }//-/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){6,8}$/
+

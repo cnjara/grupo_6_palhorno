@@ -4,15 +4,18 @@
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<h1>Login</h1>
-			<form action="" method="POST" class="formulario">
+			<form action="" method="POST" class="formulario" novalidate><!--class="formulario"-->
 				<div class="control-formulario">
 					<input type="text" name="email" placeholder="Email" class="control" >
 					<small class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
 				</div>
 				<div class="control-formulario">
-					<input type="password" name="contraseña" placeholder="Contraseña" class="control" >
-					<small class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>	
+					<input id="passw" type="password" name="contraseña" placeholder="Contraseña" class="control" >
+					<!--implementacion de validacion-->
+					<small   class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>	
+				<small  id="errorLogin" class="text-danger" ></small>
 				</div>
+
 				<button type="submit" class="boton-formulario">Ingresar</button>
 				<div class="form__remember">
 					<form action="">
@@ -29,6 +32,7 @@
 			</form>
 		</main>
 		<%- include('./partials/footer') %>
+		<script src="/js/userLogin.js"></script>
 	</div>
 </body>
 </html>

@@ -8,7 +8,7 @@ const {uploadProduct} = require('../multer/uploadProduct')
 router.get('/', productos);
 router.get('/detalles/:id', detalles);
 router.get('/crear', crear);
-router.post('/crear',uploadProduct.single('imagen'),tienda);/**/
+router.post('/crear',productValidactor,uploadProduct.single('imagen'),tienda);/**/
 router.get('/modificar/:id', modificar);
 router.put('/actualizar/:id', actualizar);/*put ,uploadProduct.single('imagenes')*/
 router.delete('/borrar/:id', destroy);/*borrar*/

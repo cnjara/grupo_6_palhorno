@@ -1,6 +1,6 @@
 const {check} = require('express-validator');
-const { loadProducts } = require('../data/dbModule');
-
+//const { loadProducts } = require('../data/dbModule');
+const db = require('../database/models')
 module.exports = [
 
     check('articulo')
@@ -37,8 +37,8 @@ module.exports = [
         .notEmpty().withMessage('El stock es obligatoria').bail(),
         
    
-    check('categoria')
-        .notEmpty().withMessage('La categoría es obligatoria'),
+   check('categoria')
+       .notEmpty().withMessage('La categoría es obligatoria'),
     
    
 ]

@@ -46,6 +46,12 @@
     position: relative;
 }
 
+/*.validacion{
+    width: 88px;
+  
+    margin-top: 15px;
+    justify-content: end;
+} */
 .controls{
     width: 88.5%;
     padding: 8px;
