@@ -6,14 +6,15 @@
 			<h1>Login</h1>
 			<form action="" method="POST" class="formulario" novalidate><!--class="formulario"-->
 				<div class="control-formulario">
-					<input type="text" name="email" placeholder="Email" class="control" >
+					<input type="text" name="email" placeholder="Email" class="control"  id="email">
 					<small class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
+					<small id="errorEmail" class="text-danger"></small>
 				</div>
 				<div class="control-formulario">
-					<input id="passw" type="password" name="contraseña" placeholder="Contraseña" class="control" >
+					<input id="passwo" type="password" name="contraseña" placeholder="Contraseña" class="control" >
 					<!--implementacion de validacion-->
 					<small   class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>	
-				<small  id="errorLogin" class="text-danger" ></small>
+				<small  id="errorPasswo" class="text-danger" ></small>
 				</div>
 
 				<button type="submit" class="boton-formulario">Ingresar</button>

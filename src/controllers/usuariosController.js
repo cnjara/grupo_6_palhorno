@@ -23,14 +23,14 @@ module.exports = {
                 where: {
                     email : req.body.email
                 }
-            }).then(({
-                id, nombre, avatar,rolId
+            }).then(({                  //rolId
+                id, nombre, avatar,rol
             }) =>{
                 req.session.userLogin = {
                     id,
                     nombre,
                     avatar,
-                    rol: rolId
+                    rol: rol,
     
                 };
                 req.body.recordarme && res.cookie('usuarioLogueado', req.session.userLogin,{

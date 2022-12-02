@@ -27,6 +27,8 @@
 							<small class="text-danger">
 								<%= locals.errors && errors.precio? errors.precio.msg : null %>
 							</small>prueba 
+							<small id="errorPrecio" class="text-danger" ></small>
+
 							
 									
 							</div>
@@ -37,6 +39,8 @@
 							<small class="text-danger">
 								<%= locals.errors && errors.stock? errors.stock.msg : null %>
 							</small>prueba
+							<small id="errorStock" class="text-danger" ></small>
+
 							</div>
 							<div class="form__box__crear">
 								<label class="crear__label" for="descripcion">Descripción del producto</label>
@@ -45,6 +49,8 @@
 									<small class="text-danger">
 										<%= locals.errors && errors.descripcion? errors.descripcion.msg : null %>
 									</small>prueba
+									<small id="errorDescripcion" class="text-danger" ></small>
+
 			
 							</div>
 							<div class="form__box__crear">
@@ -62,12 +68,14 @@
 								<small class="text-danger">
 									<%= locals.errors && errors.product.categoryId? errors.product.categoryId.msg : null %>
 								</small>prueba
+								<small id="errorCategoria" class="text-danger" ></small>
+
 
 							</div>
 
 							<div class="form__box__crear">
 								<label class="crear__label" for="imagen">Imagen del producto</label>
-								<input class="crear__input--imagen" type="file" name="imagen" accept=".jpg">
+								<input id="imagen" class="crear__input--imagen" type="file" name="imagen" accept=".jpg">
 							</div>
 							<div class="form__box__crear--row">
 								<button class="button__cancelar button__crear--margin" type="reset">Cancelar</button>

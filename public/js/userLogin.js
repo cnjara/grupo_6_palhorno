@@ -11,27 +11,21 @@ const msgError = (element, msg, target) => {
     target.classList.add("is-valid");
   };
   
-  const validPass = (element, exReg, value) => {
-    if (!exReg.test(value)) {
-      $(element).classList.add("text-danger");
-    } else {
-      $(element).classList.add("text-success");
-      $(element).classList.remove("text-danger");
-    }
-  };
-
-  $("passw").addEventListener("focus", () => {
-    $("msgPass").hidden = false;
-  });
   
-  $("passw").addEventListener("blur", function ({ target }) {
-    $("msgPass").hidden = true;
+
+  $("email").addEventListener("blur", function ({ target }) {
     switch (true) {
       case !this.value.trim():
-        msgError("errorPass", "La contraseña es obligatoria", target);
-                break;
-      default:
-        validField("errorPass", target);
+        msgError("errorEmail", "Debes ingresar un email", target);
         break;
+     
+    }
+  });
+  $("passwo").addEventListener("blur", function ({ target }) {
+    switch (true) {
+      case !this.value.trim():
+        msgError("errorPasswo", "La contraseña  es obligatorio", target);
+        break;
+     
     }
   });
