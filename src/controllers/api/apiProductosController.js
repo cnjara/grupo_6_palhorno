@@ -29,7 +29,7 @@ try {
             association: "imagenes",
             attributes:{
                 exclude:["id","createdAt","updatedAt","productId"],
-                include:[[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']]
+                include:[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']
 
             }
 
@@ -82,7 +82,7 @@ try {
                     association: "imagenes",
                     attributes:{
                         exclude:["id","createdAt","updatedAt","productId"],
-                        include:[[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']]
+                        include:[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']
         
                     }
         

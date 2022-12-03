@@ -113,12 +113,7 @@ console.log('userRegister.js connected');
           target
         );
         break;
-      case !exRegs.exRegAlfa.test(this.value):
-        msgError("errorPhone", "msg", target);
-        break;
-      default:
-        validField("errorPhone", target);
-        break;
+      
     }
   });
 /*  $("email").addEventListener("blur", async function ({ target }) {

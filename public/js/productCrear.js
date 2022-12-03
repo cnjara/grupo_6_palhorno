@@ -97,19 +97,7 @@ $("articulo").addEventListener("blur", function ({ target }) {
        case !this.value.trim():
          msgError("errorCategoria", "la categoria es obligatoria", target);
          break;
-      /* case this.value.trim().length < 2:
-         msgError(
-           "errorCategoria",
-           "El Categoria como mínimino debe tener dos caracteres",
-           target
-         );
-         break;
-       case !exRegs.exRegAlfa.test(this.value):
-         msgError("errorCategoria", "El Categoria debe tener solo letras", target);
-         break;
-       default:
-         validField("errorCategoria", target);
-         break;*/
+   
      }
    });
    

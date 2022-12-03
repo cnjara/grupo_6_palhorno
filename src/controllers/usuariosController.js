@@ -57,20 +57,20 @@ module.exports = {
     procesoRistro: (req, res) => {
         let errors = validationResult(req);
       /**/  
-const {nombre,apellido,email,contraseña}= req.body;
+const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
 
         if (errors.isEmpty()) {
           
     db.User.create({
         nombre: nombre.trim(),
         apellido:apellido.trim(),
-      
+        telefono:+telefono,//agregado
         email: email.trim(),
         password : hashSync(contraseña, 10),
-        rol: false,
+        rolId: 2,//false rol
 
     }).then( () =>{
-        return res.redirect('/usuario/login/')
+        return res.redirect('usuario-login')
 
     }).catch(error => console.log(error))
         

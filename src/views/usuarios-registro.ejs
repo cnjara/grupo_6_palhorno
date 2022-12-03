@@ -59,7 +59,7 @@
 								class="controls  <%= locals.errors && errors.contraseña ? 'is-invalid' : null %>"
 								value="<%= locals.old && old.contraseña ? old.contraseña : null %>">
 								<!--agregando linea de codigo de ojiito (span)-->
-								<span class="input-group-text" style="cursor: pointer;" id="btn-show-pass"><i class="fa-solid fa-eye-slash" ></i></span>
+								<!--<span class="input-group-text" style="cursor: pointer;" id="btn-show-pass"><i class="fa-solid fa-eye-slash" ></i></span>-->
 								<small  class="text-danger">
 								<%= locals.errors && errors.contraseña? errors.contraseña.msg : null %>
 							</small>
