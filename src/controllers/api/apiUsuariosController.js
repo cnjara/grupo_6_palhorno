@@ -53,9 +53,12 @@ module.exports= {
             throw createError(400,"mensaje")
         }
                 const usuarios = await db.User.findByPk(req.params.id,{
+                 //   include:[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/usuarios/imagen/',archivo)`),'url'],
                     attributes:{
                         exclude:["id","createdAt","updatedAt","deletedAt","password","rolId"]   
                     }
+                  //  include:[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']
+        
                 })
                 return res.json(usuarios)
        } catch (error) {
@@ -66,10 +69,14 @@ module.exports= {
         })
     
     }
-       }
+       },
    
-    } 
-       
+    
+    imagen: async(req,res ) => {
+        /*dev todas las imagenes*/
+        console.log(req.params.img)
+        return res.sendFile(path.join(__dirname,'..', '..','..','public','images','usuarios', req.params.img ))
 
-   
+    }
+}
    

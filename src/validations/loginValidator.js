@@ -1,6 +1,6 @@
 const {check,body} = require('express-validator');
 //const {loadUsers} = require('../data/dbModule');
-const bcrypt = require('bcrypt');
+const {bcrypt,compareSync} = require('bcrypt');
 
 //const db = require('../database/models')
 
@@ -9,7 +9,7 @@ const db =  require('../database/models')
 
 module.exports = [
 
-    check('contraseña')
+    check('email')
         .notEmpty().withMessage('Debes ingresar un email').bail()
         .isEmail().withMessage('Debes ingresar un email válido'),
 
@@ -20,7 +20,7 @@ module.exports = [
                     email : req.body.email
                 }
             }).then( user => {
-                console.log('-----------------------------'+ user)
+              
                 if(!user || !compareSync(value, user.password)) {
                     return Promise.reject()
                 }

@@ -1,7 +1,7 @@
 module.exports = (req,res,next) => {
-    
-    if(req.cookies.usuarioLogueado){
-        req.session.userLogin = req.cookies.usuarioLogueado;
+   // req.cookies.usuarioLogueado
+    if(req.cookies.palHorno){
+        req.session.userLogin = req.cookies.palHorno;//req.cookies.usuarioLogueado
     }
     next()
 }

@@ -4,14 +4,14 @@
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<h1>Login</h1>
-			<form action="" method="POST" class="formulario" novalidate><!--class="formulario"-->
+			<form action="/usuarios/login" method="POST" class="formulario" > <!--class="formulario"novalidate-->
 				<div class="control-formulario">
 					<input type="text" name="email" placeholder="Email" class="control"  id="email">
 					<small class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
 					<small id="errorEmail" class="text-danger"></small>
 				</div>
 				<div class="control-formulario">
-					<input id="passwo" type="password" name="contraseña" placeholder="Contraseña" class="control" >
+					<input id="passwo" type="password" name="password" placeholder="Contraseña" class="control" >
 					<!--implementacion de validacion-->
 					<small   class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>	
 				<small  id="errorPasswo" class="text-danger" ></small>
@@ -19,10 +19,10 @@
 
 				<button type="submit" class="boton-formulario">Ingresar</button>
 				<div class="form__remember">
-					<form action="">
+					
 						<input type="checkbox" id="recordarme" name="recordarme">
 						<label for="recordarme" id="recordarme">Recordarme</label>
-					</form>
+					
 				</div>
 				<div class="password">
 					<p>Olvidaste tu contraseña?</p>

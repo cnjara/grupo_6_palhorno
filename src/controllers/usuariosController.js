@@ -64,13 +64,14 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
     db.User.create({
         nombre: nombre.trim(),
         apellido:apellido.trim(),
-        telefono:+telefono,//agregado
+        telefono: telefono,//agregado
         email: email.trim(),
         password : hashSync(contraseña, 10),
         rolId: 2,//false rol
+        avatar: '1663539185084.jpg',
 
     }).then( () =>{
-        return res.redirect('usuario-login')
+        return res.redirect('/usuarios/login/')
 
     }).catch(error => console.log(error))
         
@@ -94,13 +95,12 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
 /// perfil ///////////////////////////////////
 
     perfil : (req, res) => {
-      
-      db.User.findBypk(req.session.userLogin.id)
-        .then(user => {
-
-            return res.render('perfil', {
+        db.User.findByPk(req.session.userLogin.id)
+    //  db.User.findBypk(req.session.userLogin.id)
+        .then((user) => {
+                return res.render('perfil', {
                 title : 'Perfil del usuario',
-                user
+                user,
         })
     })
     .catch(error => console.log(error))
@@ -117,58 +117,40 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
 
         const {nombre, apellido, telefono, avatar, cotraseña} = req.body;
 
-      db.user.update(
+      db.User.update(
         {
-            nombre,
-            apellido,
-            telefono,
-            password : cotraseña ? hashSync(cotraseña,10) : user.cotraseña,
+            nombre: nombre.trim(),
+            apellido:apellido.trim(),
+            telefono,//agregado
+           
+          ///  password : cotraseña ? hashSync(cotraseña,10) : user.cotraseña,
             avatar : req.file ? req.file.filename : user.avatar,
         },
         {
             where : {
-                id : req.session.userLogin.id
-            }
+                userId : req.session.userLogin.id
+              }
         }
-    ).then(() => {
-       // storeUser(userModify);
-        return res.redirect('/perfil')
-      })
-    .catch(error => console.log(error))
-
-      
-      
-      
-      
-        /*
-      
-        let userModify = loadUsers().map(user => {
-            if(user.id === +req.params.id){
-                return {
-                    ...user,
-                    /* ...req.body */
-              /*      nombre : nombre.trim(),
-                    apellido : apellido.trim(),
-                    phone : +phone,
-                    avatar : req.file ? req.file.filename : req.session.userLogin.avatar
-                }    
-            }
-            return user
-        });
-
-        if(req.file && req.session.userLogin.avatar) {
-            if(fs.existsSync(path.resolve(__dirname, '..', '..', 'public', 'images', 'usuarios', req.session.userLogin.avatar))){
-                fs.unlinkSync(path.resolve(__dirname, '..', '..', 'public', 'images', 'usuarios', req.session.userLogin.avatar))
-            }
-        }*/
-
+    ).then( () => {
+        req.session.userLogin = {
+            ...req.session.userLogin,
+             nombre :nombre.trim(),
+             avatar : req.file ? req.file.filename : req.session.userLogin.avatar,
+           };
+           return res.redirect('/productos/detalles/');
+         })
    
+    
     },
 
 //////////// destruir usuarios  ////////
 
     logout : (req, res) => {
         req.session.destroy();
+        res.cookie("palHorno","", null, {
+          maxAge: -1,
+        });
         return res.redirect('/')
+      },
+      remove: (req, res) => {},
     }
-}
