@@ -10,6 +10,7 @@ const msgError = (element, msg, target) => {
     target.classList.remove("is-invalid");
     target.classList.add("is-valid");
   };
+ 
 
 $("nombre").addEventListener("blur", function ({ target }) {
    switch (true) {

@@ -10,7 +10,7 @@ const msgError = (element, msg, target) => {
     target.classList.remove("is-invalid");
     target.classList.add("is-valid");
   };
-  
+
   
 
   $("email").addEventListener("blur", function ({ target }) {
