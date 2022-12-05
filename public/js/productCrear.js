@@ -57,10 +57,10 @@ $("articulo").addEventListener("blur", function ({ target }) {
        case !this.value.trim():
          msgError("errorStock", "El stock es obligatorio", target);
          break;
-       case this.value.trim().length < 2:
+       case this.value.trim().length < 1:
          msgError(
            "errorStock",
-           "El stock como mínimino debe tener dos caracteres",
+           "El stock como mínimino debe tener un caracteres",
            target
          );
          break;

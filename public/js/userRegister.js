@@ -34,7 +34,7 @@ console.log('userRegister.js connected');
       $(element).classList.remove("text-danger");
     }
   };
-  /*const verifyEmail = async (email) => {
+  const verifyEmail = async (email) => {
     try {
       let response = await fetch("/api/usuarios/verify-email", {
         method: "POST",
@@ -54,7 +54,7 @@ console.log('userRegister.js connected');
     } catch (error) {
       console.error;
     }
-  };*/
+  };
 
 
 
@@ -109,14 +109,14 @@ console.log('userRegister.js connected');
       case this.value.trim().length < 2:
         msgError(
           "errorPhone",
-          "msg",
+          "solo deber caracteres numericos",
           target
         );
         break;
       
     }
   });
-/*  $("email").addEventListener("blur", async function ({ target }) {
+ $("email").addEventListener("blur", async function ({ target }) {
     switch (true) {
       case !this.value.trim():
         msgError("errorEmail", "El email es obligatorio", target);
@@ -124,14 +124,15 @@ console.log('userRegister.js connected');
       case !exRegs.exRegEmail.test(this.value):
         msgError("errorEmail", "El email tiene un formato incorrecto", target);
         break;
-    /*  case await verifyEmail(this.value):
+     case await verifyEmail(this.value):
         msgError("errorEmail", "El email ya está registrado", target);
         break;
-      default:      con apis
+      default:      //con apis
         validField("errorEmail", target);
-        break;*/
+        break;
    
- 
+    }
+  })
   $("pass").addEventListener("focus", () => {
     $("msgPass").hidden = false;
   });
@@ -182,31 +183,9 @@ console.log('userRegister.js connected');
     }
   });
 
-/*$('name').addEventListener('blur',function(){
-   // console.log('lasbjfaja')
-switch (true) {
-    case !this.value.trim():
-        $('errorNombre').innerText=' El nombre 1225 obligatorio';
-        this.classList.add('is-invalid')
-        break;
-        case this.value.trim().length < 2:
-        console.log('minimo de 2 caracteres para el nombre');
-        break
-        case !exRegs.exRegAlfa.test(this.value):
-        console.log('solo letras')
-        break
-
-    default:
-            $('errorNombre').innerText = null;
-            this.classList.remove('is-invalid');
-            this.classList.add('is-valid');
-        break;
-}
 
 
 
-
-})*/
 
 
 
