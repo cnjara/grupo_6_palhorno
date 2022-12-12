@@ -23,7 +23,7 @@
 						</div>	
 							
 						
->>>>>>> nueva-validacion
+
 						<div class="control-formularios">
 							<input  id="apellido" type="text" name="apellido" placeholder="Apellido" minlength="3"
 								class="controls <%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
@@ -46,12 +46,13 @@
 						</div>
 						
 						<div class="control-formularios">
-							<input type="email" name="email" placeholder="E-mail"
+							<input id="email" type="email" name="email" placeholder="E-mail"
 								class="controls <%= locals.errors && errors.email? 'is-invalid' : null %>"
 								value="<%= locals.old && old.email? old.email : null %>">
 							<small  class="text-danger">
 								<%= locals.errors && errors.email? errors.email.msg : null %>
 							</small>
+							<small id="errorEmail" class="text-danger"></small>
 						</div>
 						
 						<div class="control-formularios">

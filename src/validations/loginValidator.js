@@ -27,10 +27,10 @@ module.exports = [
             
    
               }).catch( () => Promise.reject('Alguno de los datos no es valido'))
-        })
+        }),
 
 
-  /*  body('contraseña')
+  /* body('contraseña')
         .notEmpty().withMessage('La contraseña es obligatoria').bail()
         .custom((value, {req}) => {
             let usuario = loadUsers().find(usuario => usuario.email === req.body.email && bcrypt.compareSync(value, usuario.contraseña))

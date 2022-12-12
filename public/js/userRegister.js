@@ -113,10 +113,12 @@ console.log('userRegister.js connected');
           target
         );
         break;
-      
+        default:
+          validField("errorPhone", target);
+          break;
     }
   });
- /*$("email").addEventListener("blur", async function ({ target }) {
+ $("email").addEventListener("blur", function ({ target }) {
     switch (true) {
       case !this.value.trim():
         msgError("errorEmail", "El email es obligatorio", target);
@@ -126,13 +128,14 @@ console.log('userRegister.js connected');
         break;
    /*  case await verifyEmail(this.value):
         msgError("errorEmail", "El email ya está registrado", target);
-        break;
+        break;/*/
       default:      //con apis
         validField("errorEmail", target);
-        break;*/
+        break;
    
-   // }
-//  })
+    }
+ });
+
   $("pass").addEventListener("focus", () => {
     $("msgPass").hidden = false;
   });

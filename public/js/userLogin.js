@@ -18,6 +18,10 @@ const msgError = (element, msg, target) => {
       case !this.value.trim():
         msgError("errorEmail", "Debes ingresar un email", target);
         break;
+        default:      //con apis
+        validField("errorEmail", target);
+        break;
+   
      
     }
   });
@@ -26,6 +30,9 @@ const msgError = (element, msg, target) => {
       case !this.value.trim():
         msgError("errorPasswo", "La contraseña  es obligatorio", target);
         break;
+        default:
+          validField("errorPass", target);
+          break;
      
     }
   });
