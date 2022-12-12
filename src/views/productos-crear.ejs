@@ -9,51 +9,62 @@
 						<form class="form__crear" action="/productos/crear" enctype="multipart/form-data" method="POST">
 							<div class="form__box__crear">
 								
+
 								<label class="crear__label" for="articulo">Producto</label>
 								
-								<input type="text" name="articulo" id="articulo" placeholder="Nombre del producto "
+								<input type="text" name="articulo" id="articulo" placeholder="Nombre del producto " minlength="3"
 									class="crear__input <%= locals.errors && errors.articulo? 'is-invalid' : null %>"
 									value="<%= locals.old && old.articulo? old.articulo: null %>">
 								<small class="text-danger">
 									<%= locals.errors && errors.articulo? errors.articulo.msg : null %>
-								</small>prueba
+								</small>
 								<small id="errorNombre" class="text-danger" ></small>
 
+									
+							
+							
+							
+							
 							</div>
 							<div class="form__box__crear">
+
 								<label class="crear__label" for="precio">Precio</label>
 								<input  type="number" name="precio" id="precio" placeholder="Precio" class="crear__input <%= locals.errors && errors.precio? 'is-invalid' : null %>"
 								value="<%= locals.old && old.precio? old.precio: null %>">
 							<small class="text-danger">
 								<%= locals.errors && errors.precio? errors.precio.msg : null %>
-							</small>prueba 
+							</small>
 							<small id="errorPrecio" class="text-danger" ></small>
 
 							
 									
 							</div>
 							<div class="form__box__crear">
+
+						<!--	<div class="form__box__crear">-->
 								<label class="crear__label" for="stock">Stock</label>
 								<input  type="number" name="stock" id="stock" placeholder="1 - 100" class="crear__input <%= locals.errors && errors.stock? 'is-invalid' : null %>"
 								value="<%= locals.old && old.stock? old.stock: null %>">
-							<small class="text-danger">
+							<smal class="text-danger">
 								<%= locals.errors && errors.stock? errors.stock.msg : null %>
-							</small>prueba
+							</smal>
 							<small id="errorStock" class="text-danger" ></small>
 
 							</div>
 							<div class="form__box__crear">
+
 								<label class="crear__label" for="descripcion">Descripción del producto</label>
 								<textarea class="crear__textarea" name="descripcion" id="descripcion" cols="30"
 									rows="8" placeholder="Añada una descripción" ></textarea>
 									<small class="text-danger">
 										<%= locals.errors && errors.descripcion? errors.descripcion.msg : null %>
-									</small>prueba
+									</small>
 									<small id="errorDescripcion" class="text-danger" ></small>
 
 			
 							</div>
 							<div class="form__box__crear">
+
 								<label class="crear__label" for="categoria">Categoría</label>
 								<select class="crear__select" name="categoria" id="categoria">
 									<option value="" hidden selected>Seleccione una categoría</option>
@@ -67,13 +78,14 @@
 								
 								<small class="text-danger">
 									<%= locals.errors && errors.product.categoryId? errors.product.categoryId.msg : null %>
-								</small>prueba
+								</small>
 								<small id="errorCategoria" class="text-danger" ></small>
 
 
 							</div>
 
 							<div class="form__box__crear">
+
 								<label class="crear__label" for="imagen">Imagen del producto</label>
 								<input id="imagen" class="crear__input--imagen" type="file" name="imagen" accept=".jpg">
 							</div>

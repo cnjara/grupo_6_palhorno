@@ -14,8 +14,8 @@
 						value="<%= locals.old && old.nombre? old.nombre: null %>">
 					<small class="text-danger">
 						<%= locals.errors && errors.nombre? errors.nombre.msg : null %>
-					</small>prueba
-					<small id="errorNombre" class="text-danger" ></small>>
+					</small>
+					<small id="errorNombre" class="text-danger" ></small>
 					</div>
 
 					<div class="form__box__crear">
@@ -30,6 +30,11 @@
 								<% }) %>
 							
 						</select>
+						<small class="text-danger">
+							<%= locals.errors && errors.product.categoryId? errors.product.categoryId.msg : null %>
+						</small>prueba
+						<small id="errorCategoria" class="text-danger" ></small>
+
 					</div>
 					<div class="form__box__crear">
 						<label class="crear__label" for="precio">Precio</label>
@@ -37,8 +42,8 @@
 						value="<%= locals.old && old.nombre? old.nombre: null %>">
 					<small class="text-danger">
 						<%= locals.errors && errors.nombre? errors.nombre.msg : null %>
-					</small>prueba
-					<small id="errorNombre" class="text-danger" ></small>> >
+					</small>
+					<small id="errorPrecio" class="text-danger" ></small>
 					</div>
 
 					<div class="form__box__crear">
@@ -47,19 +52,19 @@
 						value="<%= locals.old && old.nombre? old.nombre: null %>">
 					<small class="text-danger">
 						<%= locals.errors && errors.nombre? errors.nombre.msg : null %>
-					</small>prueba
-					<small id="errorNombre" class="text-danger" ></small>>
+					</small>
+					<small id="errorStock" class="text-danger" ></small>
 					</div>
 
 					<div class="form__box__crear">
 						<label class="crear__label" for="descripcion">Descripción del producto</label>
 						<textarea class="crear__textarea" name="descripcion" id="descripcion" cols="30" rows="8"><%= product.descripcion %> </textarea>
-						<%= locals.errors && errors.articulo? 'is-invalid' : null %>"
+						<%= locals.errors && errors.articulo? 'is-invalid' : null %>
 						
 					<small class="text-danger">
 						<%= locals.errors && errors.nombre? errors.nombre.msg : null %>
-					</small>prueba
-					<small id="errorNombre" class="text-danger" ></small>>
+					</small>
+					<small id="errorDescripcion" class="text-danger" ></small>
 					</div>
 					<div>
 						<button class="boton-universal" type="reset">Cancelar</button>
