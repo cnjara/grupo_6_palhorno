@@ -34,7 +34,7 @@ console.log('userRegister.js connected');
       $(element).classList.remove("text-danger");
     }
   };
-  const verifyEmail = async (email) => {
+ /* const verifyEmail = async (email) => {
     try {
       let response = await fetch("/api/usuarios/verify-email", {
         method: "POST",
@@ -54,7 +54,7 @@ console.log('userRegister.js connected');
     } catch (error) {
       console.error;
     }
-  };
+  };*/
 
 
 
@@ -116,23 +116,23 @@ console.log('userRegister.js connected');
       
     }
   });
- $("email").addEventListener("blur", async function ({ target }) {
+ /*$("email").addEventListener("blur", async function ({ target }) {
     switch (true) {
       case !this.value.trim():
         msgError("errorEmail", "El email es obligatorio", target);
         break;
-      case !exRegs.exRegEmail.test(this.value):
+   /*   case !exRegs.exRegEmail.test(this.value):
         msgError("errorEmail", "El email tiene un formato incorrecto", target);
         break;
-     case await verifyEmail(this.value):
+   /*  case await verifyEmail(this.value):
         msgError("errorEmail", "El email ya está registrado", target);
         break;
       default:      //con apis
         validField("errorEmail", target);
-        break;
+        break;*/
    
-    }
-  })
+   // }
+//  })
   $("pass").addEventListener("focus", () => {
     $("msgPass").hidden = false;
   });

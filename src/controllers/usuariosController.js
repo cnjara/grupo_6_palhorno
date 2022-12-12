@@ -121,10 +121,10 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
         {
             nombre: nombre.trim(),
             apellido:apellido.trim(),
-            telefono,//agregado
+            telefono: +telefono,//agregado
            
           ///  password : cotraseña ? hashSync(cotraseña,10) : user.cotraseña,
-            avatar : req.file ? req.file.filename : user.avatar,
+            avatar : req.file ? req.file.filename : users.avatar,
         },
         {
             where : {
@@ -132,12 +132,13 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
               }
         }
     ).then( () => {
-        req.session.userLogin = {
+      /*  req.session.userLogin = {
             ...req.session.userLogin,
              nombre :nombre.trim(),
              avatar : req.file ? req.file.filename : req.session.userLogin.avatar,
-           };
-           return res.redirect('/productos/detalles/');
+           };*/
+           console.log(User)
+           return res.redirect('/');
          })
    
     

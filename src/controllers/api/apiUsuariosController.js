@@ -3,7 +3,8 @@ const { literal,} = require('sequelize');
 const fs = require ('fs');
 const path = require ('path');
 //const { getOne } = require('./apiProductosController');
-const createError = require('../../helpers/createError')
+const createError = require('../../helpers/createError');
+const { count } = require('console');
 
 
 module.exports= {
@@ -17,18 +18,18 @@ module.exports= {
                     exclude:[
                        
                         
-                        "apellido",
-                        "telefono",
-                        "email",
-                        "avatar",
-                        "password",
+                      
                         
                         "createdAt",
                         "updatedAt",
                         "deletedAt",
                     ]
                 }
-                    
+               /**  "apellido",
+                        "telefono",
+                        "email",
+                        "avatar",
+                        "password", */
 
             })
             return res.json(usuarios)
@@ -41,7 +42,30 @@ module.exports= {
         
         }
     },
-
+/*--------------------------------------------------*/
+  /* try {
+    
+        const {count,rows : users}= await db.User.findAndCountAll()
+        return res.json("usuarios")    
+        //attributes: [
+                //'id','nombre','apellido','telefono', 'email'
+           // ]
+    /*   })
+        return res.status(200).json({
+            ok:true,
+            total: count,
+            users
+        })
+        
+    } catch (error) {
+        return res.status(error.status || 500 ).json({
+            ok: false,
+            msg: error.message || 'comunicate con el administrador'
+        })
+    }
+    
+},
+/*--------------------------------------------------*/
     getOne :async(req,res) => {
    
         const {id} = req.params;
