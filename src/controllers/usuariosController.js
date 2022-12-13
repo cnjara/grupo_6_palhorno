@@ -64,11 +64,11 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
     db.User.create({
         nombre: nombre.trim(),
         apellido:apellido.trim(),
-        telefono: telefono,//agregado
+        telefono: +telefono,//agregado
         email: email.trim(),
         password : hashSync(contraseña, 10),
         rolId: 2,//false rol
-        avatar: '1663539185084.jpg',
+        avatar: 'avatar-default.jpg',
 
     }).then( () =>{
         return res.redirect('/usuarios/login/')
@@ -117,41 +117,49 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
 
         const {nombre, apellido, telefono, avatar, cotraseña} = req.body;
 
+
       db.User.update(
         {
             nombre: nombre.trim(),
             apellido:apellido.trim(),
-            telefono: +telefono,//agregado
+            telefono ,//agregado
            
           ///  password : cotraseña ? hashSync(cotraseña,10) : user.cotraseña,
-            avatar : req.file ? req.file.filename : users.avatar,
+            avatar : req.file ? req.file.filename : 'avatar-default.jpg',//users.avatar
         },
-        {
+       {
             where : {
-                userId : req.session.userLogin.id
+             userId : req.session.userLogin.id
               }
         }
+    ///////
+   
     ).then( () => {
-      /*  req.session.userLogin = {
+     req.session.userLogin = {
             ...req.session.userLogin,
              nombre :nombre.trim(),
-             avatar : req.file ? req.file.filename : req.session.userLogin.avatar,
-           };*/
+     //       avatar : req.file ? req.file.filename : req.session.userLogin.avatar,
+         
+           };
            console.log(User)
-           return res.redirect('/');
-         })
+       return res.redirect('perfil');
+          
+        })
    
     
     },
+
 
 //////////// destruir usuarios  ////////
 
     logout : (req, res) => {
         req.session.destroy();
-        res.cookie("palHorno","", null, {
-          maxAge: -1,
+        res.cookie( 'pal horno', "",null, {
+          maxAge: -1
         });
-        return res.redirect('/')
-      },
+      return res.redirect("/")
+           
+       
+    },
       remove: (req, res) => {},
     }
