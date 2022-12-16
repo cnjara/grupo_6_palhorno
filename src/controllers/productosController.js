@@ -3,6 +3,10 @@ const { validationResult } = require("express-validator");
 //const { loadProducts, loadUsers, storeProducts } = require("../data/dbModule");
 const fs = require("fs");
 const path = require("path");
+const e = require("method-override");
+const { Op } = require('sequelize')
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 //let productos = loadProducts();
 const controller = {
@@ -71,7 +75,7 @@ const controller = {
 			order : ['nombre']
 		})
 			.then(category => {
-        console.log(category);
+    //    console.log(category);
         res.render("productos-crear", { title: "Crear productos",category });
       })
      
@@ -87,7 +91,7 @@ const controller = {
 tienda: async (req, res) => {
   
   let errors = validationResult(req);
-
+console.log(req.body)
        if(errors.isEmpty()){
 
 
@@ -116,40 +120,20 @@ tienda: async (req, res) => {
        
       })
       .catch((error) => console.log(error));
-  //}
-/////////
-  //(req,res) => {
-  //let errors = validationResult(req);
-
-  //if (errors.isEmpty()) {
-
-  //}
-
-  /*const {articulo,precio,stock,imagen} = req.body;
-
-		const id = productos[productos.length - 1].id;
-
-		const nuevoProducto = {
-			id : id + 1,
-			...req.body,
-			articulo : articulo.trim(),
-			precio : +precio,
-			stock : +stock,
-			imagen : "producto-item.png"
-		}
-
-		const productosNuevos = [...productos, nuevoProducto];
-
-		storeProducts(productosNuevos);
-		console.log(productosNuevos)
-		res.redirect('/productos')*/
+ 
 	
 	}else{
-		
-		console.log(errors)
-            return res.render('productos-crear', {
+    const category = await
+    db.Category.findAll({
+			order : ['nombre']
+		})
+	//	console.log(errors)
+   
+  // console.log(errors.mapped())
+    return res.render('productos-crear', {
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                category
             })
 
 	}
@@ -172,28 +156,7 @@ tienda: async (req, res) => {
       .catch((error) => console.log(error));
   },
 
-    //(req, res) => {
-    //let  producto = productos.find(producto => producto.id === +req.params.id );
-    //return res.render("productos-modificar", {
-     
-    /*   db.Product.update(
-                {
-                    ...req.body,
-                    name: name.trim(),
-                    price: +price,
-                    discount: +discount,
-                    categoryId: category,
-                    sectionId: section,
-                    brandId: company
-                },
-                {
-                    where: { id: req.params.id }
-                })
-                .then(() => {
-                    return res.redirect("/products/productDetail/" + req.params.id)
-                })
-                .catch(error => res.send(error))
-      */
+    
   
 
       actualizar: (req, res) => {
@@ -279,8 +242,22 @@ tienda: async (req, res) => {
     
   
   
-    destroy: function (req,res) {
-      db.Product.destroy({
+   //
+      destroy : (req, res) => {
+        // Do the magic
+      
+        db.Product.destroy({
+          where : {
+            id : req.params.id
+          }
+        })
+          .then( () => res.redirect('/productos'))
+          .catch( error => console.log(error));
+      },
+      
+      
+      
+     /* db.Product.destroy({
           where: {
               id : req.params.id
           }
@@ -290,7 +267,7 @@ tienda: async (req, res) => {
     
           return res.redirect('/')
       })
-      .catch(error => console.log(error))
+      .catch(error => console.log(error))*/
   
     /*borrar:  (req, res) => {
     db.Product.borrar({
@@ -309,7 +286,7 @@ tienda: async (req, res) => {
         });
       })
       .catch((error) => console.log(error));*/
-  },
+ 
   /*(req, res) => {
 
 		const productosModificar = productos.filter(producto => producto.id !== +req.params.id);
@@ -319,7 +296,34 @@ tienda: async (req, res) => {
 		return res.redirect('/productos');*/
 
   //res.render('productos-borrar', { title: 'Borrar productos' });
-}
-;
 
+
+search: (req, res) => {
+  // Do the magic
+  const {keywords} = req.query;
+
+  db.Product.findAll({
+    where : {
+      [Op.or] : [
+        {
+          nombre: {
+            [Op.substring]: keywords
+          }
+        },
+        
+      ]
+    },
+    include : ['imagenes']
+  })
+    .then(products => {
+      return res.render('search', {
+        products,
+        keywords,
+        toThousand
+      })
+    })
+    .catch(error => console.log(error))
+
+}
+};
 module.exports = controller;

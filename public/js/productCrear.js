@@ -10,20 +10,25 @@ const validField = (element, target) => {
   target.classList.remove("is-invalid");
   target.classList.add("is-valid");
 };
-const validPass = (element, exReg, value) => {
+const cleanError = (elemet) => {
+  $(elemet).innerText = null;
+};
+/*const validPass = (element, exReg, value) => {
   if (!exReg.test(value)) {
     $(element).classList.add("text-danger");
   } else {
     $(element).classList.add("text-success");
     $(element).classList.remove("text-danger");
   }
-};
+};*/
 
 $("articulo").addEventListener("blur", function ({ target }) {
   switch (true) {
     case !this.value.trim():
       msgError("errorNombre", "El nombre es obligatorio", target);
+     
       break;
+
     case this.value.trim().length < 2:
       msgError(
         "errorNombre",
@@ -35,7 +40,8 @@ $("articulo").addEventListener("blur", function ({ target }) {
       msgError("errorNombre", "El nombre debe tener solo letras", target);
       break;
     default:
-      validField("errorNombre", target);
+      //validField("errorNombre", target);
+      cleanError("errorNombre")
       break;
   }
 });
@@ -56,6 +62,7 @@ $("articulo").addEventListener("blur", function ({ target }) {
          break;
        default:
          validField("errorPrecio", target);
+
          break;
      }
    });

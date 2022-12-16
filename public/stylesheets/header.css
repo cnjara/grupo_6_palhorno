@@ -90,7 +90,11 @@
 .body__header--user i:not(:hover) {
 	transition: 500ms;
 }
-
+.busqueda{
+	display: flex;
+	position: absolute;
+	left: 80%;
+}
 
 
 

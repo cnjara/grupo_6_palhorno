@@ -70,14 +70,14 @@
 									<option value="" hidden selected>Seleccione una categoría</option>
 									
 									<% category.forEach(({id,nombre}) => { %>
-									
-									<option value="<%= id %>"<% locals.old && product.categoryId === +old.product.categoryId ? "selected" : null  %>"><%= nombre %></option>
-									<% }) %>													<!-- id-->
+																								
+										<option value="<%= id %>"<% locals.old && old.categoria == id ?  "selected" : null  %>><%= nombre %></option>>
+									<% }) %>													
 									
 								</select>
 								
 								<small class="text-danger">
-									<%= locals.errors && errors.product.categoryId? errors.product.categoryId.msg : null %>
+									<%= locals.errors && errors.categoria? errors.categoria.msg : null %>
 								</small>
 								<small id="errorCategoria" class="text-danger" ></small>
 

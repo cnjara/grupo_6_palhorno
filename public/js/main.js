@@ -27,3 +27,27 @@ btnLogout.addEventListener('click', (e) => {
     }
   });
 })
+$('btn-destroy') && $('btn-destroy').addEventListener('click', (e) => {
+  e.preventDefault();
+Swal.fire({
+title: '¡Alto! Lo estas por eliminar',
+icon: 'question',
+showCancelButton: true,
+confirmButtonColor: '#3085d6',
+cancelButtonColor: '#d33',
+confirmButtonText: 'Confirmar'
+}).then((result) => {
+if (result.isConfirmed) {
+    window.location.href = e.target.pathname
+    
+}else {
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Te arrepentiste ',
+        showConfirmButton: false,
+        timer: 1500
+      }) 
+}
+});
+})

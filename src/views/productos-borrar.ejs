@@ -4,7 +4,21 @@
 		<%- include('./partials/header')  %>
 		<main class="body__main">
 			<!-- CONTENIDO - INICIO -->
-
+			<section class="del_seccion">
+				<div class="del_caja-titulo">
+					<h1>Estas seguro de querer borrar la película</h1>
+				</div>
+				<div class="del_caja-titulo">
+					<h2><%= product.nombre %></h2>
+				</div>
+	
+				<form action="/admin/delete/<%= product.id %>" method="POST">
+					<div class="del_caja-botones">
+						<button class="boton_borrar" type="submit">Borrar</button>
+						<a  class="boton_Return" href="/">regresar</a></p>
+					</div>
+				</form>
+			</section>
 			
 
 			<!-- CONTENIDO - FINAL -->

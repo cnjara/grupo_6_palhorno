@@ -34,10 +34,10 @@ module.exports = {
     
                 };
                 req.body.recordarme && res.cookie('usuarioLogueado', req.session.userLogin,{
-                    maxAge : 1000 * 60 });
+                    maxAge : 1000 * 60 * 2 });
                     
-                    return res.redirect('/');
-                
+                   return res.redirect('/');
+                  // return rolId === 1  ? res.redirect('http://localhost:3030') : res.redirect('/');//nuevo
             }).catch(error => console.log(errors))
 
         }else{
@@ -64,7 +64,7 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
     db.User.create({
         nombre: nombre.trim(),
         apellido:apellido.trim(),
-        telefono: +telefono,//agregado
+        telefono ,//agregado
         email: email.trim(),
         password : hashSync(contraseña, 10),
         rolId: 2,//false rol
@@ -129,7 +129,7 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
         },
        {
             where : {
-             userId : req.session.userLogin.id
+             id : req.session.userLogin.id
               }
         }
     ///////
@@ -141,10 +141,10 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
      //       avatar : req.file ? req.file.filename : req.session.userLogin.avatar,
          
            };
-           console.log(User)
-       return res.redirect('perfil');
+          // console.log(User)
+       return res.redirect('/usuarios/perfil');
           
-        })
+        }).catch(error => console.log(error))
    
     
     },
@@ -157,7 +157,7 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
         res.cookie( 'pal horno', "",null, {
           maxAge: -1
         });
-      return res.redirect("/")
+      return res.redirect("/usuarios/login")
            
        
     },
