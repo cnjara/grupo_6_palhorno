@@ -18,6 +18,9 @@ module.exports = {
           key : 'id'
         }
       },
+      date: {
+        type: Sequelize.DATE
+      },
       stateId: {
         type: Sequelize.INTEGER,
         references : {

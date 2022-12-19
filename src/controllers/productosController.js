@@ -180,29 +180,31 @@ console.log(req.body)
     id: req.params.id,
       }
     })
-    .then(() => {
-      return res.redirect('/productos/detalles/' + req.params.id)
+    .then( () => res.redirect('/productos/detail/' + req.params.id) )
+    .catch(error => console.log(error))
+
+
+  /*  .then(() => {
+      return res.redirect('/productos/detalles/' )//+ req.params.id
   /*.then((result) => {
     console.log(">>>>>>>>>>>>", result);
     return res.redirect("/productos/borrar/" + req.params.id);
     return res.redirect('/productos/detalles/' + req.params.id)*/
-  })
+  
 
   .catch((error) => console.log(error));
 
 
 } else {
   let producto = db.Product.findByPk(req.params.id);
-  let categoria = db.Category.findAll({ order: ["nombre"] });
- 
+  let categoria = db.Category.findAll({ attributes:["id","nombre"] });
+ // order:
 
   Promise.all([categoria, producto])
       .then(([categoria,  producto]) => {
-        return res.render('productos-modificar', { title: 'Modificar productos',
+        return res.render('productos/modificar', {
             producto,
-            precio,
-            stock,
-            descripcion,
+          
            categoria,
               errors: errors.mapped(),
               old: req.body
@@ -257,46 +259,7 @@ console.log(req.body)
       
       
       
-     /* db.Product.destroy({
-          where: {
-              id : req.params.id
-          }
-      })
-      
-      .then(() =>{
-    
-          return res.redirect('/')
-      })
-      .catch(error => console.log(error))*/
-  
-    /*borrar:  (req, res) => {
-    db.Product.borrar({
    
-      where: { id: req.params.id }
-  })
-  .then(() => {
-      return res.redirect('/')
-  })
-  .catch(error => res.send(error))
-    
-    /*  .findByPk(req.params.id)
-      .then((product) => {
-        return res.render("productos-borrar", {
-          product: product,
-        });
-      })
-      .catch((error) => console.log(error));*/
- 
-  /*(req, res) => {
-
-		const productosModificar = productos.filter(producto => producto.id !== +req.params.id);
-		storeProducts(productosModificar);
-
-		productos = loadProducts();
-		return res.redirect('/productos');*/
-
-  //res.render('productos-borrar', { title: 'Borrar productos' });
-
 
 search: (req, res) => {
   // Do the magic
@@ -316,6 +279,7 @@ search: (req, res) => {
     include : ['imagenes']
   })
     .then(products => {
+      console.log(products[0].imagenes)
       return res.render('search', {
         products,
         keywords,

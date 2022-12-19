@@ -1,4 +1,6 @@
 <header class="body__header">
+	<!--carrito  include('modalCart') -->
+	<%- include('modalCart') %> 
 	<div class="body__header--section-1">
 		<a href="" class="body__header--hamburguesa"><i class="fa-solid fa-bars"></i></a>
 	</div>
@@ -6,8 +8,8 @@
 		<h1 class="body__header--logo"><a href="/" title="Pal Horno"><img src="/images/logo-mini.webp" title="Pal Horno" alt="Pal Horno"></a></h1>
 	</div>
 	<!--buscar-->
-	<div class="busqueda" style="pos">
-		<form action="/search" method="GET" class="search-form" title="Busqueda">
+	<div class="busqueda" >
+		<form action="/productos/search" method="GET" class="search-form" title="Busqueda">
 			<input type="text" name="keywords" placeholder="" class="search-form_input">
 			<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
 		</form>
@@ -31,15 +33,24 @@
 				<% if(locals.userLogin.rolId == 2){ %> 
 					<% } %>
 					<a href="/usuarios/perfil" title="Ingresá a tu perfil"<%= userLogin.nombre %> >Mi perfil<i class="fa-regular fa-user"></i></a><!--cambiosuserlogin.nombre y id-->
-				<a href="/carrito" title="Tu carrito de compras"><i class="fa-solid fa-cart-shopping"></i></a>
+				<ul class="right-navbar">
+					<li id="btn-cart"><button type="button" class="btn fs-4" data-bs-toggle="modal" data-bs-target="#cartModal">
+						Mis compras <i class="fas fa-shopping-basket"></i>
+					  </button></li>
+					  
+					</ul>
+					  <!--	<a href="/carrito" title="Tu carrito de compras"><i class="fa-solid fa-cart-shopping"></i></a>-->
 				
 				<a href="/usuarios/logout"  title="Cerrar sesión"<%= userLogin.id %>  ><i class="fa-solid fa-right-from-bracket"></i></a>
 											<!--id="btn-logout"-->
 				<% } else {%>
 		<!--	<a href="/usuarios/login" title="Inicia sesión con tu usuario"><i class="fa-solid fa-user"></i></a>-->
-		<a href="/usuarios/registro"  id="link-register">Creá tu cuenta <i class="fas fa-address-card"></i></a>
-		<a href="usuarios/login" >Ingresá <i class="fas fa-sign-in-alt"></i></a>
-			<% } %> 	
+		<div class="reg-ing" >
+		<a href="/usuarios/registro"   id="link-register">Creá tu cuenta <i class="fas fa-address-card"></i></a>
+		<a href="usuarios/login"  >Ingresá <i class="fas fa-sign-in-alt"></i></a>
+		</div>	
+		<% } %> 	
 		</div>
 	</div>
 </header>
+<script src="/js/cart.js"></script>

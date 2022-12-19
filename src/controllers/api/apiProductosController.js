@@ -12,7 +12,7 @@ const { count } = require('console');
 
 module.exports= {
 
-  list :async(req,res) => {
+ /* list :async(req,res) => {           //codigo iejo
   //  return res.json("estamos llegando")  
     
 try {
@@ -59,9 +59,9 @@ try {
   
 
 
-    },
+    },*/
         ////// nuevos cambios  //////
-    /*    list: async (req, res) => {
+       list: async (req, res) => {
 
             try {
     
@@ -74,9 +74,9 @@ try {
     
                 /// ordenamiento 
                 order = ['ASC','DESC'].includes(order.toUpperCase()) ? order : 'ASC';
-                sortBy =  ['id','name', 'price', 'discount', 'category', 'newest'].includes(sortBy.toLowerCase()) ? sortBy : 'id';
+                sortBy =  ['id','nombre', 'precio',  'categoria',].includes(sortBy.toLowerCase()) ? sortBy : 'id';
     
-                let orderQuery = sortBy === "category" ? ['category','name',order] : sortBy === "newest" ? ['createdAt', 'DESC'] : [sortBy, order]
+                let orderQuery = sortBy === "categoria" ? ['categoria','nombre',order] : sortBy === "newest" ? ['createdAt', 'DESC'] : [sortBy, order]
     
                 let options = {
                     // subQuery:false, 
@@ -86,21 +86,21 @@ try {
                     order : [orderQuery],
                     include : [
                         {
-                            association : 'images',
+                            association : 'imagenes',
                             attributes : {
                                 exclude : ['createdAt','updatedAt', 'deletedAt', 'id', 'file', 'productId'],
-                                include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/products/image/',file)`),'url']]
+                                include:[[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',Product.id)`),'url']]
                             },
                         },
                         {
-                            association : 'category',
-                            attributes : ['name','id'],
+                            association : 'categoria',
+                            attributes : ['nombre','id'],
                             
                         }
                     ],
                     attributes : {
                         exclude : ['updatedAt','deletedAt'],
-                        include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/products/',Product.id)`),'url']]
+                        include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/',Product.id)`),'url']]
                     },
                     where : {
                         [Op.or] : [
@@ -176,7 +176,7 @@ try {
                 });
             }
     
-        },*/
+        },
     getOne : async(req,res) => {
  const {id} = req.params;
  //return res.json("estamos llegando")
@@ -234,6 +234,7 @@ try {
         console.log(req.params.img)
         return res.sendFile(path.join(__dirname,'..', '..','..','public','stock-photos', req.params.img ))
 
-    }
+    },
+    
     
 }

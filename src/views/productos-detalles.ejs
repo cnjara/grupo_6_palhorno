@@ -11,11 +11,14 @@
 				<div>
 					<h2 class="productos__contenedor--item--nombre"><%= product.nombre %></h2><!--nombre-->
 					<p class="body__main__detalles--precio">$<%= product.precio %></p>
-					<form class="body__main__detalles--formulario" action="/carrito">
-						<label for="cantidad">Cantidad:</label>
+				
+					<button class="btn btn-primary"  onclick="addCartItem('<%=product.id%>')">Añadir al carrito</button>
+					<!--
+						<form class="body__main__detalles--formulario" action="/carrito">
+						<label for="cantidad">Cantidad:</label>  type="submit"
 						<input type="number" value="1" name="cantidad" id="cantidad">
-						<button class="boton-universal" type="submit">Añadir al carrito</button>
-					</form>
+						
+					</form>-->
 					<p class="body__main__detalles--descripcion"><%= product.descripcion %></p>
 					<form class="body__main__detalles--formulario__mini" action="/productos/borrar/<%= product.id %>?_method=DELETE" method="POST">
 						<button  class="boton-universal peligro" type="submit" >Borrar</button><!--id="btn-destroy"-->

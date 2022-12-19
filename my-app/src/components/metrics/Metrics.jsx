@@ -20,7 +20,7 @@ export const Metrics = () => {
       data: 0,
     },
     categories: {
-      title: "Categorias activas",
+      title: "Categorias ",
       color: "warning",
       icon: "fa-folder",
       data: 0,

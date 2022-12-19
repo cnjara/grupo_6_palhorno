@@ -35,10 +35,58 @@ module.exports = {
                 };
                 req.body.recordarme && res.cookie('usuarioLogueado', req.session.userLogin,{
                     maxAge : 1000 * 60 * 2 });
+
+                    ///carrito
+                    db.Order.findOne({
+                        where:{
+                            userId: req.session.userLogin.id,
+                            statesId:1
+                        },
+                        include:[{
+
+                       
+                            association: 'carts',
+                            attributes: ['id','quantity'],
+                            include:[
+                                {
+                                association:'product',
+                                attributes:['id','articulo','precio'],
+                               // include:['image']
+                            }
+                        ]
+
+                        }
+                    ]
+                    }).then(order => {
+                        if (order){
+                            req.session.orderCart = {
+                                id:order.id,
+                                total:order.total,
+                                items: order.carts
+                            }
+                        }else{
+                            db.Order.create({
+                                date: new Date(),
+                                total: 0,
+                                userId:req.session.userLogin.id,
+                                statesId: 1
+                            }).then(order => {
+                                req.session.orderCart = {
+                                    id:order.id,
+                                    total:order.total,
+                                    items: []
+                                }
+                            })
+                        }
+                      //  return rolId === 1  ? res.redirect('http://localhost:3030') : res.redirect('/');no funciona 
+                        
+                    })//.catch(error => console.log(error))no funciona
                     
-                   return res.redirect('/');
-                  // return rolId === 1  ? res.redirect('http://localhost:3030') : res.redirect('/');//nuevo
-            }).catch(error => console.log(errors))
+
+
+                    return res.redirect('/');
+              
+            }).catch(error => console.log(error))
 
         }else{
             return res.render('usuarios-login', { 
@@ -157,8 +205,8 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
         res.cookie( 'pal horno', "",null, {
           maxAge: -1
         });
-      return res.redirect("/usuarios/login")
-           
+      return res.redirect("/")
+           //usuarios/login
        
     },
       remove: (req, res) => {},

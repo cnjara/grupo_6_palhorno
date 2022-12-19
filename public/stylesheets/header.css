@@ -91,11 +91,21 @@
 	transition: 500ms;
 }
 .busqueda{
-	display: flex;
-	position: absolute;
-	left: 80%;
+	
+    position: absolute;
+    display: flex;
+    /* position: absolute; */
+    left: 72%;
+    size-adjust: 10%;
+    /* width: 0%; */
+    font-size: small;
 }
 
+.reg-ing{
+	display: flex;
+	position: absolute;
+	left: 60%;
+}
 
 
 
