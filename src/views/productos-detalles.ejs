@@ -20,12 +20,14 @@
 						
 					</form>-->
 					<p class="body__main__detalles--descripcion"><%= product.descripcion %></p>
+					<% if(locals.userLogin.rol == 1){ %>
 					<form class="body__main__detalles--formulario__mini" action="/productos/borrar/<%= product.id %>?_method=DELETE" method="POST">
 						<button  class="boton-universal peligro" type="submit" >Borrar</button><!--id="btn-destroy"-->
 					</form>
 					<a class="boton-universal" href="/productos/modificar/<%= product.id %>" title="Modificar producto"><span class="boton-fix">Modificar </span></a>
 				<!--	<button class="boton-universal" type="submit"><a href="/productos" title="Productos">Atras</a></button><a href="/productos" title="Productos"></a>-->
-				</div>
+				<% } %> 	
+			</div>
 			</section>
 		</main>
 		<%- include('./partials/footer') %>

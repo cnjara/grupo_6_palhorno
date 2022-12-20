@@ -23,16 +23,17 @@ module.exports = {
                 where: {
                     email : req.body.email
                 }
-            }).then(({                  //rolId
-                id, nombre, avatar,rol
+            }).then(({                 
+                id, nombre, avatar,rolId
             }) =>{
                 req.session.userLogin = {
                     id,
                     nombre,
                     avatar,
-                    rol: rol,
+                    rol: rolId,
     
                 };
+                console.log(req.session.userLogin);
                 req.body.recordarme && res.cookie('usuarioLogueado', req.session.userLogin,{
                     maxAge : 1000 * 60 * 2 });
 
@@ -40,7 +41,7 @@ module.exports = {
                     db.Order.findOne({
                         where:{
                             userId: req.session.userLogin.id,
-                            statesId:1
+                            stateId:1
                         },
                         include:[{
 
@@ -50,7 +51,7 @@ module.exports = {
                             include:[
                                 {
                                 association:'product',
-                                attributes:['id','articulo','precio'],
+                                attributes:['id','nombre','precio'],
                                // include:['image']
                             }
                         ]
@@ -163,16 +164,15 @@ const {nombre,apellido,email,telefono,contraseña,rolId}= req.body;
 //// editar ////////    
     editar : (req,res) => {
 
-        const {nombre, apellido, telefono, avatar, cotraseña} = req.body;
-
+        const {nombre, apellido, phone} = req.body;
+        console.log(req.body);
+        console.log(req.file    );
 
       db.User.update(
         {
             nombre: nombre.trim(),
             apellido:apellido.trim(),
-            telefono ,//agregado
-           
-          ///  password : cotraseña ? hashSync(cotraseña,10) : user.cotraseña,
+            telefono:phone,//agregado
             avatar : req.file ? req.file.filename : 'avatar-default.jpg',//users.avatar
         },
        {

@@ -12,10 +12,10 @@
 						<label class="crear__label" for="nombre">Producto</label>
 						<input class="crear__input" type="text" name="nombre" id="nombre" value="<%= product.nombre %>" <%= locals.errors && errors.articulo? 'is-invalid' : null %>"
 						value="<%= locals.old && old.nombre? old.nombre: null %>">
-					<small class="text-danger">
-						<%= locals.errors && errors.nombre? errors.nombre.msg : null %>
-					</small>
-					<small id="errorNombre" class="text-danger" ></small>
+						<small class="text-danger">
+							<%= locals.errors && errors.nombre? errors.nombre.msg : null %>
+						</small>
+						<small id="errorNombre" class="text-danger" ></small>
 					</div>
 
 					<div class="form__box__crear">
@@ -26,7 +26,6 @@
 						<label class="crear__label" for="categoria">Categoría</label>
 						<select class="crear__select" name="categoria" id="categoria">
 							<% categoria.forEach(({id,nombre}) => { %>
-																								
 								<option value="<%= id %>"<% locals.old && old.categoria == id ?  "selected" : null  %>><%= nombre %></option>>
 							<% }) %>													
 							
@@ -68,7 +67,7 @@
 					</small>
 					<small id="errorDescripcion" class="text-danger" ></small>
 					</div>
-					<div>
+					<div class="div-buttons">
 						<button class="boton-universal" type="reset">Limpiar</button>
 						<button class="boton-universal" type="submit">Enviar</button>
 						<!--<button class="boton-universal" type="submit"><a href="/productos" title="Productos">Atras</a></button>-->

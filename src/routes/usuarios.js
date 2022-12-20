@@ -13,7 +13,7 @@ router
 .get('/registro', registro)
 .post('/registro',registerValidator,procesoRistro)
 .get('/perfil',userSessionCheck,perfil)
-.put('/editar/:id',uploadUsers.single('avatar'),editar)
-.get('/logout', logout)
+.put('/editar/:id',userSessionCheck, uploadUsers.single('avatar'),editar)
+.get('/logout', userSessionCheck, logout)
 
 module.exports = router;

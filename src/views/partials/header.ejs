@@ -1,22 +1,44 @@
 <header class="body__header">
 	<!--carrito  include('modalCart') -->
 	<%- include('modalCart') %> 
-	<div class="body__header--section-1">
-		<a href="" class="body__header--hamburguesa"><i class="fa-solid fa-bars"></i></a>
-	</div>
-	<div class="body__header--section-2">
+	<section class="body__header--section-1">
+		<a class="body__header--hamburguesa"><i class="fa-solid fa-bars"></i></a>
+	</section>
+	<section class="body__header--section-2">
 		<h1 class="body__header--logo"><a href="/" title="Pal Horno"><img src="/images/logo-mini.webp" title="Pal Horno" alt="Pal Horno"></a></h1>
-	</div>
-	<!--buscar-->
-	<div class="busqueda" >
-		<form action="/productos/search" method="GET" class="search-form" title="Busqueda">
-			<input type="text" name="keywords" placeholder="" class="search-form_input">
-			<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-		</form>
-	</div>
-
-
-	<div class="body__header--section-3">
+	</section>
+	<section class="body__header--section-3">
+		<div class="busqueda">
+			<form action="/productos/search" method="GET" class="search-form" title="Busqueda">
+				<input type="text" name="keywords" placeholder="" class="search-form_input">
+				<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+			</form>
+		</div>
+	</section>
+	<section class="body__header--section-5">
+		<div class="body__header--user">
+			<% if (locals.userLogin) { %>
+				<% if(locals.userLogin.rolId == 2){ %> 
+					<% } %>
+						<a href="/usuarios/perfil" title="Ingresá a tu perfil" class="link-perfil"> <%= userLogin.nombre %> <i class="fa-regular fa-user"></i></a><!--cambiosuserlogin.nombre y id-->
+						<button type="button"  class="btn-Cart" data-bs-toggle="modal" data-bs-target="#cartModal"> Carrito 
+							<i class="fas fa-shopping-basket"></i>
+						</button>
+						
+					<!--	<a href="/carrito" title="Tu carrito de compras"><i class="fa-solid fa-cart-shopping"></i></a>-->
+				
+				<a href="/usuarios/logout"  title="Cerrar sesión"<%= userLogin.id %> ><i class="fa-solid fa-right-from-bracket"></i></a>
+											<!--id="btn-logout"-->
+			<% } else {%>
+				<a href="/usuarios/login" title="Inicia sesión con tu usuario" class="usel"><i class="fa-solid fa-user"></i></a>
+				<div class="reg-ing" >
+					<a href="/usuarios/registro"   id="link-register" >Creá tu cuenta <i class="fas fa-address-card"></i></a>
+					<a href="/usuarios/login"  >Ingresá <i class="fas fa-sign-in-alt"></i></a>
+				</div>	
+			<% } %> 	
+		</div>
+	</section>
+	<section class="body__header--section-4">
 		<nav class="body__header--menu">
 			<ul>
 				<li><a href="/" title="Inicio">Inicio</a></li>
@@ -26,31 +48,6 @@
 				<li><a href="/contacto" title="Contacto">Contacto</a></li>
 			</ul>
 		</nav>
-	</div>
-	<div class="body__header--section-4">
-		<div class="body__header--user">
-			<% if (locals.userLogin) { %>
-				<% if(locals.userLogin.rolId == 2){ %> 
-					<% } %>
-					<a href="/usuarios/perfil" title="Ingresá a tu perfil"<%= userLogin.nombre %>   >Mi perfil<i class="fa-regular fa-user"></i></a><!--cambiosuserlogin.nombre y id-->
-				<ul class="compras"><!--right-navbar-->				<!--class="btn fs-4-->
-					<li id="btn-cart"><button type="button"  class="btn" data-bs-toggle="modal" data-bs-target="#cartModal">
-						Carrito<i class="fas fa-shopping-basket"></i>
-					  </button></li>
-					  
-					</ul>
-					  <!--	<a href="/carrito" title="Tu carrito de compras"><i class="fa-solid fa-cart-shopping"></i></a>-->
-				
-				<a href="/usuarios/logout"  title="Cerrar sesión"<%= userLogin.id %> ><i class="fa-solid fa-right-from-bracket"></i></a>
-											<!--id="btn-logout"-->
-				<% } else {%>
-			<a href="/usuarios/login" title="Inicia sesión con tu usuario" class="usel"><i class="fa-solid fa-user"></i></a>
-		<div class="reg-ing" >
-		<a href="/usuarios/registro"   id="link-register" >Creá tu cuenta <i class="fas fa-address-card"></i></a>
-		<a href="usuarios/login"  >Ingresá <i class="fas fa-sign-in-alt"></i></a>
-		</div>	
-		<% } %> 	
-		</div>
-	</div>
+	</section>
 </header>
 <script src="/js/cart.js"></script>
