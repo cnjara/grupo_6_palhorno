@@ -1,5 +1,5 @@
 console.log('index.js connected!')
-window.onload = () => {
+/*window.onload = () => {
     Swal.fire({
         position: 'center',
         icon: 'success',
@@ -7,14 +7,14 @@ window.onload = () => {
         showConfirmButton: false,
         timer: 1500
       })
-    };
+    };*/
 
     window.addEventListener('load', () => {
-      /*   Swal.fire({
+        Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Bienvenidos a Mercado Liebre ',
+            title: 'Bienvenidos a panaderia y confiteria Pal Horno!!! ',
             showConfirmButton: false,
             timer: 1500
-          }) */
-    });
+          }) 
+            });

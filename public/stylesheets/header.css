@@ -106,7 +106,13 @@
 	position: absolute;
 	left: 60%;
 }
-
+.compras{
+	display: flex;
+	position: absolute;
+	left: 68%;
+	padding: 3%;
+	
+}
 
 
 @media (min-width: 768px) {

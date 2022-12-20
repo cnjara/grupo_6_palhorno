@@ -32,10 +32,10 @@
 			<% if (locals.userLogin) { %>
 				<% if(locals.userLogin.rolId == 2){ %> 
 					<% } %>
-					<a href="/usuarios/perfil" title="Ingresá a tu perfil"<%= userLogin.nombre %> >Mi perfil<i class="fa-regular fa-user"></i></a><!--cambiosuserlogin.nombre y id-->
-				<ul class="right-navbar">
-					<li id="btn-cart"><button type="button" class="btn fs-4" data-bs-toggle="modal" data-bs-target="#cartModal">
-						Mis compras <i class="fas fa-shopping-basket"></i>
+					<a href="/usuarios/perfil" title="Ingresá a tu perfil"<%= userLogin.nombre %>   >Mi perfil<i class="fa-regular fa-user"></i></a><!--cambiosuserlogin.nombre y id-->
+				<ul class="compras"><!--right-navbar-->				<!--class="btn fs-4-->
+					<li id="btn-cart"><button type="button"  class="btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+						Carrito<i class="fas fa-shopping-basket"></i>
 					  </button></li>
 					  
 					</ul>
@@ -46,7 +46,7 @@
 				<% } else {%>
 		<!--	<a href="/usuarios/login" title="Inicia sesión con tu usuario"><i class="fa-solid fa-user"></i></a>-->
 		<div class="reg-ing" >
-		<a href="/usuarios/registro"   id="link-register">Creá tu cuenta <i class="fas fa-address-card"></i></a>
+		<a href="/usuarios/registro"   id="link-register" >Creá tu cuenta <i class="fas fa-address-card"></i></a>
 		<a href="usuarios/login"  >Ingresá <i class="fas fa-sign-in-alt"></i></a>
 		</div>	
 		<% } %> 	

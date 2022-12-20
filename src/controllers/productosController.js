@@ -103,7 +103,7 @@ console.log(req.body)
         stock,
         descripcion,
         categoryId: categoria,
-       // imagen : "producto-item.png"
+        imagen : "producto-item.png",
       
       })
       .then(product => {
@@ -164,12 +164,12 @@ console.log(req.body)
    const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-    const {name, precio, stock, descripcion, categoria,imagen}= req.body;
+    const {nombre, precio, stock, descripcion, categoria,imagen}= req.body;
     console.log(req.body)
   db.Product.update(
     {
       ...req.body,
-      nombre: name,   
+      nombre: nombre,   
       precio:+precio,
       stock: +stock,
       descripcion,
@@ -180,7 +180,14 @@ console.log(req.body)
     id: req.params.id,
       }
     })
-    .then( () => res.redirect('/productos/detail/' + req.params.id) )
+    .then(product => {
+      console.log(product);
+      db.Image.create({
+        archivo: req.file ? req.file.filename:'producto-iten.png',
+        productId:product.id
+      }).then(()=>{
+        return res.redirect('/productos/detalles/' + product.id)})
+   // .then( () => res.redirect('/productos/detalles/' + req.params.id) )
     .catch(error => console.log(error))
 
 
@@ -192,9 +199,9 @@ console.log(req.body)
     return res.redirect('/productos/detalles/' + req.params.id)*/
   
 
-  .catch((error) => console.log(error));
+ // .catch((error) => console.log(error));
 
-
+      })
 } else {
   let producto = db.Product.findByPk(req.params.id);
   let categoria = db.Category.findAll({ attributes:["id","nombre"] });
@@ -202,7 +209,7 @@ console.log(req.body)
 
   Promise.all([categoria, producto])
       .then(([categoria,  producto]) => {
-        return res.render('productos/modificar', {
+        return res.render('productos-modificar', {title: 'Modificar productos',
             producto,
           
            categoria,

@@ -11,7 +11,7 @@ router.get('/detalles/:id', detalles);
 router.get('/crear', crear);
 router.post('/crear',uploadProduct.single('imagen'),productValidactor,tienda);/**/
 router.get('/modificar/:id', modificar);
-router.put('/actualizar/:id',modificarValidator, actualizar);/*put ,uploadProduct.single('imagenes')*/
+router.put('/actualizar/:id',uploadProduct.single('imagen'),modificarValidator, actualizar);/*put ,uploadProduct.single('imagenes')*/
 router.delete('/borrar/:id', destroy);/*borrar*/
 router.get('/search', search)
 module.exports = router;
