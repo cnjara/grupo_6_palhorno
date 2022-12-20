@@ -5,14 +5,12 @@ console.log('userRegister.js connected');
   const exRegs = {
     exRegAlfa: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
     exRegEmail: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
-    exRegPass:
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){6,8}$/,
+    exRegPass: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){6,8}$/,
     exRegMayu: /[A-Z]/,
     exRegMinu: /[a-z]/,
     exRegNum: /[0-9]/,
     exRegEsp: /[$@$!%*?&]/,
-    exRegMin: /.{6,}/,
-    exRegMax: /.{8}/,
+    exRegMin: /.{6,}/
   };
   
   const msgError = (element, msg, target) => {
@@ -34,7 +32,7 @@ console.log('userRegister.js connected');
       $(element).classList.remove("text-danger");
     }
   };
- /* const verifyEmail = async (email) => {
+  const verifyEmail = async (email) => {
     try {
       let response = await fetch("/api/usuarios/verify-email", {
         method: "POST",
@@ -54,7 +52,7 @@ console.log('userRegister.js connected');
     } catch (error) {
       console.error;
     }
-  };*/
+  };
 
 
 
@@ -64,10 +62,10 @@ console.log('userRegister.js connected');
       case !this.value.trim():
         msgError("errorNombre", "El nombre es obligatorio", target);
         break;
-      case this.value.trim().length < 2:
+      case this.value.trim().length < 5:
         msgError(
           "errorNombre",
-          "El nombre como mínimino debe tener dos caracteres",
+          "El nombre como mínimino debe tener 5 caracteres",
           target
         );
         break;
@@ -85,10 +83,10 @@ console.log('userRegister.js connected');
       case !this.value.trim():
         msgError("errorApellido", "El Apellido es obligatorio", target);
         break;
-      case this.value.trim().length < 2:
+      case this.value.trim().length < 5:
         msgError(
           "errorApellido",
-          "El Apellido como mínimino debe tener dos caracteres",
+          "El Apellido como mínimino debe tener 5 caracteres",
           target
         );
         break;
@@ -104,31 +102,34 @@ console.log('userRegister.js connected');
   $("telefono").addEventListener("blur", function ({ target }) {
     switch (true) {
       case !this.value.trim():
-        msgError("errorPhone", "msg", target);
+        msgError("errorPhone", "Ingrese un número", target);
         break;c
-      case this.value.trim().length < 2:
+      case this.value.trim().length != 10:
         msgError(
           "errorPhone",
-          "solo deber caracteres numericos",
+          "ingrese un numero de 10 digitos",
           target
         );
         break;
-        default:
-          validField("errorPhone", target);
-          break;
+      case !exRegs.exRegNum.test(this.value):
+        msgError("errorApellido", "Solo se aceptan numeros", target);
+        break;
+      default:
+        validField("errorPhone", target);
+        break;
     }
   });
- $("email").addEventListener("blur", function ({ target }) {
+ $("email").addEventListener("blur", async function ({ target }) {
     switch (true) {
       case !this.value.trim():
         msgError("errorEmail", "El email es obligatorio", target);
         break;
-   /*   case !exRegs.exRegEmail.test(this.value):
+      case !exRegs.exRegEmail.test(this.value):
         msgError("errorEmail", "El email tiene un formato incorrecto", target);
         break;
-   /*  case await verifyEmail(this.value):
+      case await verifyEmail(this.value):
         msgError("errorEmail", "El email ya está registrado", target);
-        break;/*/
+        break;
       default:      //con apis
         validField("errorEmail", target);
         break;
@@ -146,13 +147,6 @@ console.log('userRegister.js connected');
       case !this.value.trim():
         msgError("errorPass", "La contraseña es obligatoria", target);
         break;
-      case !exRegs.exRegPass.test(this.value):
-        msgError(
-          "errorPass",
-          "La contraseña debe tener un símbolo, una número, una mayúscula, una minúscula y entre 6 y 8 caracteres",
-          target
-        );
-        break;
       default:
         validField("errorPass", target);
         break;
@@ -165,7 +159,6 @@ console.log('userRegister.js connected');
     validPass("num", exRegs.exRegNum, target.value);
     validPass("esp", exRegs.exRegEsp, target.value);
     validPass("min", exRegs.exRegMin, target.value);
-    validPass("max", exRegs.exRegMax, target.value);
   });
   
   $("pass2").addEventListener("blur", function ({ target }) {
@@ -174,11 +167,7 @@ console.log('userRegister.js connected');
         msgError("errorPass2", "Debes verificar la contraseña", target);
         break;
       case this.value.trim() !== $('pass').value.trim():
-        msgError(
-          "errorPass2",
-          "Las contraseñas no coinciden",
-          target
-        );
+        msgError("errorPass2","Las contraseñas no coinciden",target);
         break;
       default:
         validField("errorPass2", target);

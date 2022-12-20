@@ -13,18 +13,26 @@
                 <div class="form__box__perfil">
                     <label class="label__perfil" for="nombre">Nombre</label>
                     <input class="input__perfil" type="text" id="nombre" name="nombre" style="padding-left: 5px;" value="<%= user.nombre %>">
+                    <small class="text-danger"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %> </small>
+					<small id="errorNombre" class="text-danger"></small>
                 </div>
                 <div class="form__box__perfil">
                     <label class="label__perfil" for="apellido">Apellido</label>
                     <input class="input__perfil" type="text" id="apellido" name="apellido" style="padding-left: 5px;" value="<%= user.apellido %>">
+                    <small class="text-danger"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %> </small>
+					<small id="errorApellido" class="text-danger"></small>
                 </div>
                 <div class="form__box__perfil">
-                    <label class="label__perfil" for="phone">Teléfono</label>
-                    <input class="input__perfil" type="text" id="telefono" name="phone" style="padding-left: 5px;" value="<%= user.phone %>">
+                    <label class="label__perfil" for="telefono">Teléfono</label>
+                    <input class="input__perfil" type="number" id="telefono" name="phone" style="padding-left: 5px;" value="<%= user.telefono    %>">
+                    <small class="text-danger"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %> </small>
+					<small id="errorPhone" class="text-danger"></small>
                 </div>
                 <div class="form__box__perfil">
                     <label class="label__perfil" for="email">Email</label>
                     <input class="input__perfil" type="text" id="email" name="email" style="padding-left: 5px;" readonly value="<%= user.email %>">
+                    <small class="text-danger"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %> </small>
+					<small id="errorNombre" class="text-danger"></small>
                 </div>
                 <div class="form__box__perfil">
                     <label class="label__perfil" for="avatar">Imagen del usuario</label>

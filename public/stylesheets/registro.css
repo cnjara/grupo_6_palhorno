@@ -1,10 +1,12 @@
 .form__box__imagen img {
     display: none;
 }
+
 .formularios {
     padding: 10px;
     text-align: center;
 }
+
 .control-formularios {
     display: flex;
     flex-wrap: wrap;
@@ -13,14 +15,17 @@
     margin: 30px 15% 10px;
     justify-content: center;
 }
+
 .form__box {
     display: flex;
     flex-wrap: wrap;
     width: 95%;
 }
+
 .form__label--small {
     font-size: var(--tamañoNormal);
 }
+
 .registros {
     display: flex;
     flex-direction: row;
@@ -52,31 +57,37 @@
     margin-top: 15px;
     justify-content: end;
 } */
-.controls{
+.controls {
     width: 88.5%;
     padding: 8px;
     border-radius: 10px;
     border: solid 1px var(--NegroPasa);
 
 }
-.radios{
+
+.radios {
     margin-left: 25px;
 }
-.radios input{
+
+.radios input {
     margin-right: 25px;
 }
-.checks{
+
+.checks {
     margin-left: 25px
 }
-.check inputs{
+
+.check inputs {
     margin: 0 25px 40px 0;
 }
-.boton-formularios:hover{
+
+.boton-formularios:hover {
     background-color: var(--CaobaOscuro);
 }
-.boton-formularios{
+
+.boton-formularios {
     width: 140px;
-    background-color:var(--CaobaClaro);
+    background-color: var(--CaobaClaro);
     border: none;
     font-size: var(--tamañoMedio);
     font-family: 'Ibarra Real Nova';
@@ -88,38 +99,53 @@
 }
 
 .text-danger {
-color: red;
-width: 65%;
-
+    color: red;
+    width: 65%;
 }
 
-@media (min-width:768px){
-.controls {
-    width: 70%;
+.btn-Cart {
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid transparent;
 }
-.form__box {
-   justify-content: start;
-   padding-left: 120px;
-}
-.boton-formularios {
-    margin-top: 18px;
-    width: 200px;
-}
+.body__header--user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (min-width:1024px){
+@media (min-width:768px) {
+    .controls {
+        width: 70%;
+    }
+
+    .form__box {
+        justify-content: start;
+        padding-left: 120px;
+    }
+
+    .boton-formularios {
+        margin-top: 18px;
+        width: 200px;
+    }
+}
+
+@media (min-width:1024px) {
     .formularios {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
+
     .control-formularios {
         justify-content: end;
     }
+
     .form__box__imagen {
         width: 45%;
         text-align: end;
     }
+
     .form__box__imagen img {
         display: block;
         width: 390px;
@@ -130,15 +156,33 @@ width: 65%;
         padding: 0;
         margin: 3% 0 0 21%;
     }
+
     .form__box__formulario {
         width: 55%;
     }
+
     .controls {
         width: 70%;
         margin-right: 3%;
     }
+
     .form__box {
         padding-left: 85px;
+    }
+
+    #msgPass {
+        text-align: left;
+    }
+
+    
+
+    .body__header--user{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
     }
 
 }

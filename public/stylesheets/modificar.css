@@ -107,3 +107,10 @@
     font-size: 25px;
 }
 }
+
+.div-buttons{
+    display: flex;
+    justify-content: space-around;
+    top: 10px;
+    left: 50px;
+}

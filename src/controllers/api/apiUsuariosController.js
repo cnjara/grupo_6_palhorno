@@ -107,11 +107,13 @@ module.exports= {
         console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',req.body)
         try {
             const {email} = req.body;
-            let user = await db.User.findOne({
+            const user = await db.User.findOne({
                 where : {
                     email
                 }
             })
+
+            console.log(user);
 
             return res.status(200).json({
                 ok : true,
@@ -125,7 +127,4 @@ module.exports= {
             })
         }
     }
-
-
 }
-   
