@@ -159,7 +159,7 @@
 	.reg-ing{
 		display: flex;
 		position: absolute;
-		left:60 %;
+		left:60%;
 	}
 	.usel{
 		display: none;
