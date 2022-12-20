@@ -4,7 +4,7 @@
 		<%- include('./partials/header') %>
 		<main class="body__main">
 			<h1>Login</h1>
-			<form action="/usuarios/login" method="POST" class="formulario" > <!--class="formulario"novalidate-->
+			<form action="/usuarios/login" method="POST" class="formulario" id="profile-edit"> <!--class="formulario"novalidate-->
 				<div class="control-formulario">
 					<input type="text" name="email" placeholder="Email" class="control"  id="email">
 					<small class="text-danger"><%= locals.errors && errors.email ? errors.email.msg : null %></small>
@@ -14,7 +14,7 @@
 					<input id="passwo" type="password" name="password" placeholder="Contraseña" class="control" >
 					<!--implementacion de validacion-->
 					<small   class="text-danger"><%= locals.errors && errors.contraseña ? errors.contraseña.msg : null %></small>	
-				<small  id="errorPasswo" class="text-danger" ></small>
+					<small  id="errorPass" class="text-danger" ></small>
 				</div>
 
 				<button type="submit" class="boton-formulario">Ingresar</button>
