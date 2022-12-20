@@ -90,30 +90,21 @@
 .body__header--user i:not(:hover) {
 	transition: 500ms;
 }
-.busqueda{
-	
-    position: absolute;
-    display: flex;
-    /* position: absolute; */
-    left: 72%;
-    size-adjust: 10%;
-    /* width: 0%; */
-    font-size: small;
-}
 
-.reg-ing{
-	display: flex;
-	position: absolute;
-	left: 60%;
+@media (min-width: 320px) {
+	.busqueda{
+		display: none
+	}
+	.reg-ing{
+		display: none
+	}
+	.compras{
+		display: none
+	}
+	.fas fa-address-card{
+		display: flex;
+	}
 }
-.compras{
-	display: flex;
-	position: absolute;
-	left: 68%;
-	padding: 3%;
-	
-}
-
 
 @media (min-width: 768px) {
 	.body__header--hamburguesa {
@@ -125,6 +116,23 @@
 	.body__header--user i {
 		padding: 30px;
 	}
+	.busqueda{
+	
+		position: absolute;
+		display: flex;
+		/* position: absolute; */
+		left: 72%;
+		
+		/* width: 0%; */
+		font-size: small;
+	}
+	
+	.reg-ing{
+		display: none;
+		/*position: absolute;
+		left: 72%;*/
+	}
+	
 }
 @media (min-width: 1024px) {
 	.body__header--section-1 {
@@ -140,5 +148,20 @@
 	}
 	.body__header--section-4 {
 		width: 30%;
+	}
+	.compras{
+		display: flex;
+		position: absolute;
+		left: 68%;
+		padding: 3%;
+		
+	}
+	.reg-ing{
+		display: flex;
+		position: absolute;
+		left:60 %;
+	}
+	.usel{
+		display: none;
 	}
 }
