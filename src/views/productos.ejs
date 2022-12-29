@@ -6,7 +6,7 @@
 			<h1>Productos</h1>
 			<p>Aquí encontrarás todos los productos que con tanto cariño creamos para que los disfrutes.</p>
 			<p>Puedes adquirir algunos en la tienda online y todos en la tienda física.</p>
-			<% if(locals.userLogin.rol == 1){ %> 
+			<% if(locals.userLogin && locals.userLogin.rol == 1){ %>
 			<form class="body__main__detalles--formulario__mini" action="/productos/crear" method="get">
 				<button class="button_/" type="submit">Agregar producto</button>
 			</form>
