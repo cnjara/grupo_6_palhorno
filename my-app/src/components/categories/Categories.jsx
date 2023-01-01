@@ -27,7 +27,7 @@ export const Categories = () => {
             });
         }
     });
-}, []);
+}, );
 
   return (
     <div className="col-lg-6 mb-4">
@@ -37,8 +37,8 @@ export const Categories = () => {
         </div>
         <div className="card-body">
           <div className="row">
-            {categories.data.map((category, index) => (
-              <Category {...category} key={category.name + index} />
+            {categories.data.map((category, index) => (         //name
+              <Category {...category} key={category.nombre + index} />
             ))}
           </div>
         </div>

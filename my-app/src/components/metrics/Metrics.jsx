@@ -52,7 +52,7 @@ export const Metrics = () => {
 
   useEffect(() => {
     getData("/totals")
-  }, []);
+  }, );
   
 
 

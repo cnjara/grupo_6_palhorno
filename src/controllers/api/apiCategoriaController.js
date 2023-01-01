@@ -1,23 +1,28 @@
+//const { Categories } = require("../../../my-app/src/components/categories/Categories");
 const db = require("../../database/models");
 module.exports = {
   list: async (req, res) => {
     try {
-      let categoria = await db.Category.findAll({
+      let categories = await db.Category.findAll({
         include : ['products']
       });
-    //  return res.json(categoria)
-      categoria = categoria.map(category => {
+    // return res.json(categoria)
+      categories = categories.map(category => {
       return {
-         totalProducts : category.products.length,
+      totalProducts : category.products.length, //old
           ...category.dataValues
+        /*  id: category.id,
+          name: category.name,
+          createdAt: category.createdAt,
+          updatedAt: category.updatedAt,*/
         }
     })
 
       return res.status(200).json({
         ok: true,
-       data: {
-          categoria,
-       } 
+       data:     //{categories}
+       categories,
+       
         
        })
     } catch (error) {

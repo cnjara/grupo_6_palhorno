@@ -3,7 +3,7 @@
 
 const fetchWithoutToken =async (endpoint, method= "GET", data) => {
 
-    const apiUrlBase ="http://localhost:400/api";  //"http://localhost:400/api/usuarios i/o productos"
+    const apiUrlBase ="http://localhost:4000/api";  //"http://localhost:4000/api/usuarios i/o productos"
     const url = `${apiUrlBase}/${endpoint}`
 
 
@@ -27,7 +27,7 @@ const fetchWithoutToken =async (endpoint, method= "GET", data) => {
     let result = await response.json();
 
 
-    return result
+    return result;
 
   
 }
@@ -73,5 +73,5 @@ if(method === "POST"){
 }
 export {
     fetchWithoutToken,
-    useFetchWithToken
+    useFetchWithToken,
 }
