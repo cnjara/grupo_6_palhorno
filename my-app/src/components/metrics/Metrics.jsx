@@ -5,7 +5,7 @@ import { Metric } from './Metric';
 
 export const Metrics = () => {
 
-  const [state, setState] = useState({
+const [state, setState] = useState({
     loading: true,
     products: {
       title: "Total productos",
@@ -26,35 +26,41 @@ export const Metrics = () => {
       data: 0,
     },
   });
+ 
+    
 
-  const getData = async (endpoint) => {
-    try {
-      let {data} = await fetchWithoutToken(endpoint);
-      setState({
-        loading: false,
-        products: {
-          ...state.products,
-          data: data.productsTotal,
-        },
-        users: {
-          ...state.users,
-          data: data.usersTotal,
-        },
-        categories: {
-          ...state.categories,
-          data: data.categoriesTotal,
-        },
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
-  useEffect(() => {
-    getData("/totals")
-  }, );
-  
+const getData = async (endpoint) => {
+  try {
+    let {data} = await fetchWithoutToken(endpoint);
+    console.log("Valor de Data1: ", data)
+    setState({
+      ...state,
+      loading: false,
+      products: {
+        ...state.products,
+        data: data.productsTotal,
+      },
+      users: {
+        ...state.users,    
+        data: data.usersTotal},
+categories: {
+        ...state.categories,
+        data: data.categoriesTotal,
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 
+useEffect(() => {
+  getData("/totals")
+}, []);
+
+
+
+/*/////////////////////////////////////*/
 
   return (
     <div className="row">

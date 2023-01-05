@@ -9,7 +9,8 @@ export const SideBar = () => {
 
     <Link className="sidebar-brand " to="/">
         <div className="sidebar-brand-icon">
-            <img className="w-100" src="/images/logo.jpg" alt="PalHorno"/>
+            <img className="w-100"///images/logo.jpg
+             src="" alt="PalHorno"/>
         </div>
     </Link>
 

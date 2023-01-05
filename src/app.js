@@ -7,6 +7,7 @@ var logger = require('morgan');
 
 var methodOverride = require('method-override');
 const session = require('express-session');
+const cors = require('cors');
 
 const cookieCheck = require('./middlewares/cookieCheck');
 const localsUSerCheck = require('./middlewares/localsUserCheck');
@@ -43,14 +44,16 @@ app.use(session({
 app.use(logger('dev'));
 app.use(cookieCheck);
 app.use(localsUSerCheck);
+app.use(cors());
 
 app.use('/', generalRouter);
 app.use('/productos', productosRouter);
 app.use('/usuarios', usuariosRouter);
 
+app.use('/api', require('./routes/api/apiMain'));
 app.use('/api/productos', require('./routes/api/apiProductos'));
 app.use('/api/usuarios', require('./routes/api/apiUsuarios'));
-app.use('/api/categoria',require('./routes/api/apiCategoria'));
+app.use('/api/categories',require('./routes/api/apiCategoria'));
 app.use('/api/carts',require('./routes/api/apiCarts'));
 
 app.use(express.static(path.resolve(__dirname, '../public')));

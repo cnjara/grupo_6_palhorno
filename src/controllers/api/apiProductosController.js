@@ -3,7 +3,7 @@ const { literal,} = require('sequelize');
 const fs = require ('fs');
 const path = require ('path');
 const createError = require('../../helpers');//createError
-const { count } = require('console');
+// { count } = require('console');
 
 
 
@@ -16,9 +16,12 @@ module.exports= {
   //  return res.json("estamos llegando")  
     
 try {
-    const  productos =  await db.Product.findAll({
-
-       include:[{
+   // const  productos =  await db.Product.findAll({
+    let {count, rows : productos} = await db.Product.findAndCountAll({
+    
+      
+        include:[
+       {
             association: "categoria",
             attributes:{
                 exclude:["id","createdAt","updatedAt","deletedAt"]            
@@ -39,13 +42,19 @@ try {
     ],
 
     attributes:{
-        exclude:["categoryId","createdAt", "updatedAt", "id"
+        exclude:["categoryId","createdAt", "updatedAt"
 
         ]
     }
 
 
     })
+    return res.status(200).json({
+        ok : true,
+        total : count,
+     productos
+    })
+  
        
     return res.json({productos})
 } catch (error) {
@@ -190,8 +199,8 @@ try {
                     association: "imagenes",
                     attributes:{
                         exclude:["id","createdAt","updatedAt","productId"],
-                       // include:[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']
-                       include:[[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',Product.id)`),'url']]
+                        include:[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']
+                     //  include:[[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',Product.id)`),'url']]
                     }
         
                     

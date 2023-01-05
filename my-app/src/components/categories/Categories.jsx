@@ -15,16 +15,19 @@ export const Categories = () => {
     fetchWithoutToken("/categories").then((response) => {
         if (response.ok) {
             const { data } = response;
+           // console.log("algo",data)
             setCategories({
                 ...categories,
                 loading: false,
-                data: data,
+                data: data.categories,
             });
+           // console.log("algo", categories.data)
         } else {
             setCategories({
                 ...categories,
                 error: response.error,
             });
+            
         }
     });
 }, );
@@ -37,9 +40,9 @@ export const Categories = () => {
         </div>
         <div className="card-body">
           <div className="row">
-            {categories.data.map((category, index) => (         //name
-              <Category {...category} key={category.nombre + index} />
-            ))}
+         {categories.data.map((termo)=> < Category name={termo.nombre} />)}
+         
+           
           </div>
         </div>
       </div>

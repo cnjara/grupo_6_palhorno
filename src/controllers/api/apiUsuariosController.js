@@ -12,9 +12,19 @@ module.exports= {
     list :async(req,res) => {
 
         try {
-            const  usuarios =  await db.User.findAll({
-
-                attributes:{
+            //const  usuarios =  await db.User.findAll({
+                
+            let {count, rows : users} = await db.User.findAndCountAll({
+               
+                    attributes : ['id','nombre','apellido','email']
+                })
+    
+                return res.status(200).json({
+                    ok : true,
+                    total : count,
+                    users
+                })
+                 /*   attributes:{
                     exclude:[
                        
                         
@@ -31,7 +41,7 @@ module.exports= {
                         "avatar",
                         "password", */
 
-            })
+           // })
             return res.json(usuarios)
         } catch (error) {
             console.log(error)

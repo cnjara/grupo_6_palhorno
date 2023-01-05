@@ -3,22 +3,38 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { fetchWithoutToken } from "../hooks/useFetch";
 
+
+
 export const LastProduct = () => {
   const [product, setProduct] = useState({
     loading: true,
-    data: {},
+    data:[],
   });
 
   useEffect(() => {
-    fetchWithoutToken("/products?sortBy=newest&limit=1")
-      .then(({ data }) => {
+    fetchWithoutToken("/productos")
+      .then(({ productos }) => {
+        console.log("largo: ",productos.length)
+        console.log("productos: ",productos)
+        if(productos.length != 0){
+        //  const { data } = productos;
+        console.log("que es data:",productos[productos.length-1])
         setProduct({
+          ...product,
           loading: false,
-          data: data[0],
+          data: productos[productos.length-1],
         });
-      })
+        console.log("Esto es data final: ",product.data   )
+
+      }else{
+        setProduct({
+          ...productos,
+          error: productos.error,
+      });
+      }
+             })
       .catch(() => console.error);
-  }, []);
+  }, [product]);
 
   return (
     <div className="col-lg-6 mb-4">
@@ -36,18 +52,18 @@ export const LastProduct = () => {
               <img
                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                 style={{ width: "40rem" }}
-                src={product.data.imagen[0].url}//imagen
+                src={`http://localhost:3030/api/productos/imagen/${product.data.imagenes[0].archivo}`}//imagen
                 alt=" Star Wars - Mandalorian "
               />
             </div>
-            <p>{product.data.description}</p>
+         
             <a
               className="btn btn-danger"
               target="_blank"
               rel="nofollow"
               href="/"
             >
-              View movie detail
+             
             </a>
           </div>
         </div>
