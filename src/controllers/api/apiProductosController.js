@@ -201,7 +201,9 @@ try {
                         exclude:["id","createdAt","updatedAt","productId"],
                         include:[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',archivo)`),'url']
                      //  include:[[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/productos/imagen/',Product.id)`),'url']]
+                   //include : [[literal(`CONCAT('${req.protocol}://${req.get('host')}/api/products/image/',file)`),'url']]
                     }
+
         
                     
                 

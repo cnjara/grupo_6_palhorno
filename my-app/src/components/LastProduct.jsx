@@ -48,15 +48,17 @@ export const LastProduct = () => {
             </h5>
           </div>
           <div className="card-body">
+            <p>{product.data.nombre}</p>
             <div className="text-center">
               <img
                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                 style={{ width: "40rem" }}
                 src={`http://localhost:3030/api/productos/imagen/${product.data.imagenes[0].archivo}`}//imagen
-                alt=" Star Wars - Mandalorian "
+                alt=" Star "
               />
             </div>
-         
+            <p>{product.data.descripcion}</p>
+            <p>{product.data.precio}</p>
             <a
               className="btn btn-danger"
               target="_blank"
