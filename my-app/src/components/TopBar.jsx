@@ -39,12 +39,11 @@ export const TopBar = () => {
         <li className="nav-item dropdown no-arrow">
           <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
             <span className="mr-2 d-none d-lg-inline text-gray-600 small">
-              Jordan Walke
+           Administrador
             </span>
             <img
               className="img-profile rounded-circle"
-              src= "../assets/images/jordan-walke.png"
-              alt="Avatar"
+              src= "images/logo-mini.webp" alt="PalHorno"
               width="60"
             />
           </a>

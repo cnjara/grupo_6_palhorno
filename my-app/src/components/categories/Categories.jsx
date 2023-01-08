@@ -39,7 +39,7 @@ export const Categories = () => {
           <h5 className="m-0 font-weight-bold text-gray-800">Categorías</h5>
         </div>
         <div className="card-body">
-          <div className="row">
+          <div className="row_cate">
          {categories.data.map((termo)=> < Category name={termo.nombre} />)}
          
            

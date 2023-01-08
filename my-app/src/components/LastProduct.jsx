@@ -48,7 +48,7 @@ export const LastProduct = () => {
             </h5>
           </div>
           <div className="card-body">
-            <p>{product.data.nombre}</p>
+            <p className="m-0 font-weight-bold text-gray-800">{product.data.nombre}</p>
             <div className="text-center">
               <img
                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
@@ -57,8 +57,9 @@ export const LastProduct = () => {
                 alt=" Star "
               />
             </div>
-            <p>{product.data.descripcion}</p>
-            <p>{product.data.precio}</p>
+            <p className="m-0 font-weight-bold text-gray-800">{product.data.descripcion}</p>
+            <p className="m-0 font-weight-bold text-gray-800">Precio : ${product.data.precio}</p>
+            <p className="m-0 font-weight-bold text-gray-800">Stock : {product.data.stock}U</p>
             <a
               className="btn btn-danger"
               target="_blank"
